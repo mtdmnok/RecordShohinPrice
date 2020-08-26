@@ -1,0 +1,14 @@
+package com.example.demo.controller;
+
+//@Controller
+public class moveToMenuController {
+	//ここでやりたいこと
+	//（1）画面から入力した値を受け取る　
+		//
+	//（2）受け取った値をDBの値と比較する
+		//LoginDto型のリストから該当のデータがあるかループで探す？
+	//（3）結果によって遷移先を変える
+		//return "login" もしくは　return "menu"となる？
+	
+	
+}

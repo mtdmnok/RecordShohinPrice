@@ -1,0 +1,20 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import 
+
+@Controller
+public class moveToMenuController {
+	//ここでやりたいこと
+	//（1）画面から入力した値を受け取る　
+		//@PostMapping、RequestParamで取得？
+	//（2）受け取った値をDBの値と比較する
+		//LoginDto型のリストから該当のデータがあるかループで探す？
+		//LoginControllで取得したDBデータを使用する？
+		//そもそも、LoginControllでDB取得する意味はある？
+	//（3）結果によって遷移先を変える（OK→メニュー　NG→ログイン画面）
+		//return "login" もしくは　return "menu"となる？
+	
+	@PostMapping("login")
+	
+}

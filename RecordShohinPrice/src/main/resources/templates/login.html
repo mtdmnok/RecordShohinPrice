@@ -15,7 +15,7 @@
 	<!-- 画面名表示 -->
 	<div class="systemName">ログイン画面</div>
 
-	<form action>
+	<form action="/login" method="post">
 	<!-- ID入力欄 -->
 	<div class="id">
 		<div class="titleId">
@@ -28,14 +28,14 @@
 	
 	<!-- パスワード入力欄 -->
 	<div class="passwd">
-	  <form action="login" method=get>
+	 <!--  <form action="/login" method="post">  -->
 		<div class="titlePasswd">
 			パスワード:
 		</div>
 		<div class="inputPasswd">
 				<input type="text" name="Password">
 		</div>
-	  </form>
+	  <!-- </form>  -->
 	</div>
 	
 	<input type="submit" value="ログイン">
