@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=ja>
+<html lang=ja xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <meta charset="UTF-8">
 
@@ -7,7 +7,11 @@
 </head>
 
 <body>
-	<h1 class="header">価格記録システム</h1>
+	<h2 class="header">価格記録システム</h2>
+	<h1> th:inline="text"こんにちは[[${#httpServletRequest.remoteUser}]]さん! </h1>
+	        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="ログアウト" />
+        </form>
 	<br>
 	<br>
 
