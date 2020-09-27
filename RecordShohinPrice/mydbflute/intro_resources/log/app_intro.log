@@ -1,0 +1,434 @@
+2020-09-20 23:33:10,315 [main] INFO  (LastaDiProperties@deriveSmartDeployModeFromLocation():157) - ...Loading specified properties and get by the key: intro_env_production.properties, lasta_di.smart.deploy.mode
+2020-09-20 23:33:10,322 [main] INFO  (SmartDeployMode@setValue():62) - ...Setting smart deploy mode: cool
+2020-09-20 23:33:10,349 [main] INFO  (LaContainerFactory@show():158) - ...Reading lasta_di.xml
+2020-09-20 23:33:10,391 [main] INFO  (LaContainerFactory@show():158) - ...Reading   redefiner.xml
+2020-09-20 23:33:10,511 [main] INFO  (LaContainerFactory@show():158) - ...Reading   smartdeploy.xml
+2020-09-20 23:33:10,837 [main] INFO  (LaContainerFactory@show():158) - ...Reading     smart/cooldeploy.xml
+2020-09-20 23:33:10,868 [main] INFO  (LaContainerFactory@show():158) - ...Reading app.xml
+2020-09-20 23:33:10,875 [main] INFO  (LaContainerFactory@show():158) - ...Reading   convention.xml
+2020-09-20 23:33:10,881 [main] INFO  (LaContainerFactory@show():158) - ...Reading     embedded_convention.xml
+2020-09-20 23:33:10,897 [main] INFO  (LaContainerFactory@show():158) - ...Reading   dbflute.xml
+2020-09-20 23:33:10,904 [main] INFO  (LaContainerFactory@show():158) - ...Reading     rdb.xml
+2020-09-20 23:33:10,908 [main] INFO  (LaContainerFactory@show():158) - ...Reading       jta.xml
+2020-09-20 23:33:10,931 [main] INFO  (LaContainerFactory@show():158) - ...Reading       jdbc.xml
+2020-09-20 23:33:10,934 [main] INFO  (LaContainerFactory@show():158) - ...Reading         jta.xml (recycle)
+2020-09-20 23:33:10,935 [main] INFO  (LaContainerFactory@show():158) - ...Reading         lastaflute_assist.xml
+2020-09-20 23:33:10,938 [main] INFO  (LaContainerFactory@show():158) - ...Reading           lastaflute_director.xml
+2020-09-20 23:33:11,000 [main] INFO  (LaContainerFactory@show():158) - ...Reading       tx_aop.xml
+2020-09-20 23:33:11,017 [main] INFO  (LaContainerFactory@show():158) - ...Reading         jta.xml (recycle)
+2020-09-20 23:33:11,197 [main] INFO  (LaContainerFactory@show():158) - ...Reading   lastaflute.xml
+2020-09-20 23:33:11,201 [main] INFO  (LaContainerFactory@show():158) - ...Reading     lastaflute_core.xml
+2020-09-20 23:33:11,205 [main] INFO  (LaContainerFactory@show():158) - ...Reading       lastaflute_assist.xml (recycle)
+2020-09-20 23:33:11,250 [main] INFO  (LaContainerFactory@show():158) - ...Reading     lastaflute_db.xml
+2020-09-20 23:33:11,254 [main] INFO  (LaContainerFactory@show():158) - ...Reading       jta.xml (recycle)
+2020-09-20 23:33:11,260 [main] INFO  (LaContainerFactory@show():158) - ...Reading     lastaflute_web.xml
+2020-09-20 23:33:11,264 [main] INFO  (LaContainerFactory@show():158) - ...Reading       lastaflute_core.xml (recycle)
+2020-09-20 23:33:11,265 [main] INFO  (LaContainerFactory@show():158) - ...Reading       lastaflute_db.xml (recycle)
+2020-09-20 23:33:11,266 [main] INFO  (LaContainerFactory@show():158) - ...Reading       convention.xml (recycle)
+2020-09-20 23:33:11,317 [main] INFO  (LaContainerFactory@show():158) - ...Reading smart/cooldeploy-autoregister.xml
+2020-09-20 23:33:11,320 [main] INFO  (LaContainerFactory@show():158) - ...Reading   convention.xml (recycle)
+2020-09-20 23:33:11,321 [main] INFO  (LaContainerFactory@show():158) - ...Reading   creator.xml
+2020-09-20 23:33:11,325 [main] INFO  (LaContainerFactory@show():158) - ...Reading     convention.xml (recycle)
+2020-09-20 23:33:11,326 [main] INFO  (LaContainerFactory@show():158) - ...Reading     customizer.xml
+2020-09-20 23:33:11,330 [main] INFO  (LaContainerFactory@show():158) - ...Reading       lastafw_customizer.xml
+2020-09-20 23:33:11,343 [main] INFO  (LaContainerFactory@show():158) - ...Reading       embedded_customizer.xml
+2020-09-20 23:33:11,347 [main] INFO  (LaContainerFactory@show():158) - ...Reading         tx_customizer.xml
+2020-09-20 23:33:11,361 [main] INFO  (LaContainerFactory@show():158) - ...Reading     lastafw_creator.xml
+2020-09-20 23:33:11,364 [main] INFO  (LaContainerFactory@show():158) - ...Reading       convention.xml (recycle)
+2020-09-20 23:33:11,365 [main] INFO  (LaContainerFactory@show():158) - ...Reading       customizer.xml (recycle)
+2020-09-20 23:33:11,384 [main] INFO  (LaContainerFactory@show():158) - ...Reading     embedded_creator.xml
+2020-09-20 23:33:11,388 [main] INFO  (LaContainerFactory@show():158) - ...Reading       convention.xml (recycle)
+2020-09-20 23:33:11,389 [main] INFO  (LaContainerFactory@show():158) - ...Reading       customizer.xml (recycle)
+2020-09-20 23:33:11,398 [main] INFO  (LaContainerFactory@show():158) - ...Reading   customizer.xml (recycle)
+2020-09-20 23:33:11,466 [main] INFO  (ObjectiveConfig@showBootLogging():242) - [Objective Config]
+2020-09-20 23:33:11,467 [main] INFO  (ObjectiveConfig@showBootLogging():243) -  intro_config.properties extends [intro_env_production.properties]
+2020-09-20 23:33:11,467 [main] INFO  (ObjectiveConfig@showBootLogging():246) -  checkImplicitOverride=true, propertyCount=20
+2020-09-20 23:33:11,474 [main] INFO  (HookedXADataSource@showBootLogging():78) - [XA DataSource]
+2020-09-20 23:33:11,475 [main] INFO  (HookedXADataSource@showBootLogging():79) -  driver: org.h2.Driver
+2020-09-20 23:33:11,475 [main] INFO  (HookedXADataSource@showBootLogging():80) -  url: jdbc:h2:mem:introdb;DB_CLOSE_DELAY=-1
+2020-09-20 23:33:11,476 [main] INFO  (HookedXADataSource@showBootLogging():81) -  newbornConnectionHook: null
+2020-09-20 23:33:11,584 [main] INFO  (HookedConnectionPool@showBootLogging():60) - [Connection Pool]
+2020-09-20 23:33:11,585 [main] INFO  (HookedConnectionPool@showBootLogging():61) -  maxPoolSize: 10
+2020-09-20 23:33:11,585 [main] INFO  (HookedConnectionPool@showBootLogging():62) -  minPoolSize: 0
+2020-09-20 23:33:11,585 [main] INFO  (HookedConnectionPool@showBootLogging():63) -  maxWait: 10000 milliseconds
+2020-09-20 23:33:11,585 [main] INFO  (HookedConnectionPool@showBootLogging():64) -  timeout: 600 seconds
+2020-09-20 23:33:11,586 [main] INFO  (DBFluteInitializer@announce():58) - ...Initializing DBFlute components
+2020-09-20 23:33:11,600 [main] INFO  (SimplePrimaryCipher@showBootLogging():80) - [Primary Cipher]
+2020-09-20 23:33:11,601 [main] INFO  (SimplePrimaryCipher@showBootLogging():81) -  invertibleCryptographer: {Blowfish, UTF-8}
+2020-09-20 23:33:11,601 [main] INFO  (SimplePrimaryCipher@showBootLogging():82) -  oneWayCryptographer: {SHA-256, UTF-8}
+2020-09-20 23:33:11,604 [main] INFO  (SimpleTimeManager@showBootLogging():111) - [Time Manager]
+2020-09-20 23:33:11,604 [main] INFO  (SimpleTimeManager@showBootLogging():112) -  businessTimeHandler: TypicalBusinessTimeHandler:{IntroTimeResourceProvider$$Lambda$47/434437292, IntroTimeResourceProvider$$Lambda$48/1839962989}
+2020-09-20 23:33:11,605 [main] INFO  (SimpleTimeManager@showBootLogging():116) -  currentIgnoreTransaction: false
+2020-09-20 23:33:11,605 [main] INFO  (SimpleTimeManager@showBootLogging():117) -  adjustTimeMillis: 0
+2020-09-20 23:33:11,606 [main] INFO  (SimpleTimeManager@showBootLogging():118) -  adjustAbsoluteMode: false
+2020-09-20 23:33:11,695 [main] INFO  (SimpleJsonManager@showBootLogging():147) - [JSON Manager]
+2020-09-20 23:33:11,696 [main] INFO  (SimpleJsonManager@showBootLogging():148) -  realJsonParser: GsonJsonEngine
+2020-09-20 23:33:11,698 [main] INFO  (ExceptionTranslator@showBootLogging():68) - [Exception Translator]
+2020-09-20 23:33:11,698 [main] INFO  (ExceptionTranslator@showBootLogging():69) -  exceptionTranslationProvider: null
+2020-09-20 23:33:11,703 [main] INFO  (SimpleAsyncManager@showBootLogging():242) - [Async Manager]
+2020-09-20 23:33:11,703 [main] INFO  (SimpleAsyncManager@showBootLogging():243) -  defaultConcurrentAsyncOption: {no option}
+2020-09-20 23:33:11,704 [main] INFO  (SimpleAsyncManager@showBootLogging():244) -  primaryExecutorService: ThreadPoolExecutor@37091312
+2020-09-20 23:33:11,704 [main] INFO  (SimpleAsyncManager@showBootLogging():245) -  secondaryExecutorService: ThreadPoolExecutor@66fdec9
+2020-09-20 23:33:11,704 [main] INFO  (SimpleAsyncManager@showBootLogging():246) -  tertiaryExecutorService: ThreadPoolExecutor@57abad67
+2020-09-20 23:33:11,705 [main] INFO  (Postbox@showBootLogging():81) - [Postbox]
+2020-09-20 23:33:11,705 [main] INFO  (Postbox@showBootLogging():88) -  postOffice: *no used
+2020-09-20 23:33:11,718 [main] INFO  (ActionPathResolver@showBootLogging():94) - [Action Resolver]
+2020-09-20 23:33:11,719 [main] INFO  (ActionPathResolver@showBootLogging():95) -  actionAdjustmentProvider: org.dbflute.intro.mylasta.direction.sponsor.IntroActionAdjustmentProvider@5d9b7a8a
+2020-09-20 23:33:11,720 [main] INFO  (SimpleResponseManager@showBootLogging():106) - [Response Manager]
+2020-09-20 23:33:11,721 [main] INFO  (SimpleResponseManager@showBootLogging():107) -  responseWritePerformerCreator: null
+2020-09-20 23:33:11,721 [main] INFO  (SimpleResponseManager@showBootLogging():108) -  responseDownloadPerformerCreator: null
+2020-09-20 23:33:11,722 [main] INFO  (SimpleResponseManager@showBootLogging():109) -  downloadExtensionContentTypeMap: null
+2020-09-20 23:33:11,723 [main] INFO  (SimpleSessionManager@showBootLogging():109) - [Session Manager]
+2020-09-20 23:33:11,724 [main] INFO  (SimpleSessionManager@showBootLogging():110) -  sessionSharedStorage: opt:{null}
+2020-09-20 23:33:11,724 [main] INFO  (SimpleSessionManager@showBootLogging():111) -  httpSessionArranger: opt:{null}
+2020-09-20 23:33:11,725 [main] INFO  (SimpleCookieManager@showBootLogging():93) - [Cookie Manager]
+2020-09-20 23:33:11,726 [main] INFO  (SimpleCookieManager@showBootLogging():94) -  cookieCipher: {{Blowfish, UTF-8}}
+2020-09-20 23:33:11,726 [main] INFO  (SimpleCookieManager@showBootLogging():95) -  defaultPath: /
+2020-09-20 23:33:11,726 [main] INFO  (SimpleCookieManager@showBootLogging():96) -  defaultExpire: 31556926
+2020-09-20 23:33:11,727 [main] INFO  (SimpleApiManager@showBootLogging():79) - [API Manager]
+2020-09-20 23:33:11,727 [main] INFO  (SimpleApiManager@showBootLogging():80) -  apiFailureHook: IntroApiFailureHook
+2020-09-20 23:33:11,728 [main] INFO  (SimpleRequestManager@showBootLogging():164) - [Request Manager]
+2020-09-20 23:33:11,728 [main] INFO  (SimpleRequestManager@showBootLogging():165) -  localeProvider: {acceptCookieLocale=false}
+2020-09-20 23:33:11,728 [main] INFO  (SimpleRequestManager@showBootLogging():166) -  timeZoneProvider: {useTimeZoneHandling=false, acceptCookieTimeZone=false}
+2020-09-20 23:33:11,729 [main] INFO  (SimpleCsrfManager@showBootLogging():109) - [Csrf Manager]
+2020-09-20 23:33:11,729 [main] INFO  (SimpleCsrfManager@showBootLogging():110) -  tokenHeaderName: X-CSRF-TOKEN
+2020-09-20 23:33:11,729 [main] INFO  (SimpleCsrfManager@showBootLogging():111) -  tokenParameterName: _csrf
+2020-09-20 23:33:11,730 [main] INFO  (SimpleCsrfManager@showBootLogging():112) -  tokenGenerator: org.lastaflute.web.token.SimpleCsrfManager$$Lambda$70/816944408@363042d7
+2020-09-20 23:33:11,730 [main] INFO  (SimpleDoubleSubmitManager@showBootLogging():96) - [DoubleSubmit Manager]
+2020-09-20 23:33:11,730 [main] INFO  (SimpleDoubleSubmitManager@showBootLogging():97) -  allowsVerifyTokenBeforeValidation: false
+2020-09-20 23:33:11,772 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.client.ClientInfoLogic[client_clientInfoLogic]).
+2020-09-20 23:33:11,775 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.client.ClientPhysicalLogic[client_clientPhysicalLogic]).
+2020-09-20 23:33:11,779 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.client.ClientUpdateLogic[client_clientUpdateLogic]).
+2020-09-20 23:33:11,791 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.context.AccessContextLogic[context_accessContextLogic]).
+2020-09-20 23:33:11,794 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.core.FlutyFileLogic[core_flutyFileLogic]).
+2020-09-20 23:33:11,796 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.core.MapStringLogic[core_mapStringLogic]).
+2020-09-20 23:33:11,801 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.core.PublicPropertiesLogic[core_publicPropertiesLogic]).
+2020-09-20 23:33:11,803 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.database.DatabaseInfoLogic[database_databaseInfoLogic]).
+2020-09-20 23:33:11,824 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.dfprop.DfpropInfoLogic[dfprop_dfpropInfoLogic]).
+2020-09-20 23:33:11,830 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.dfprop.DfpropPhysicalLogic[dfprop_dfpropPhysicalLogic]).
+2020-09-20 23:33:11,836 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.dfprop.DfpropUpdateLogic[dfprop_dfpropUpdateLogic]).
+2020-09-20 23:33:11,839 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.dfprop.TestConnectionLogic[dfprop_testConnectionLogic]).
+2020-09-20 23:33:11,848 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.decomment.DocumentDecommentPhysicalLogic[document_decomment_documentDecommentPhysicalLogic]).
+2020-09-20 23:33:11,852 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.DocumentAuthorLogic[document_documentAuthorLogic]).
+2020-09-20 23:33:11,856 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.DocumentDisplayLogic[document_documentDisplayLogic]).
+2020-09-20 23:33:11,858 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.DocumentPhysicalLogic[document_documentPhysicalLogic]).
+2020-09-20 23:33:11,865 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.hacomment.DocumentHacommentPhysicalLogic[document_hacomment_documentHacommentPhysicalLogic]).
+2020-09-20 23:33:11,868 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.engine.EngineInfoLogic[engine_engineInfoLogic]).
+2020-09-20 23:33:11,870 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.engine.EngineInstallLogic[engine_engineInstallLogic]).
+2020-09-20 23:33:11,871 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.engine.EnginePhysicalLogic[engine_enginePhysicalLogic]).
+2020-09-20 23:33:11,874 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.intro.IntroInfoLogic[intro_introInfoLogic]).
+2020-09-20 23:33:11,876 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.intro.IntroPhysicalLogic[intro_introPhysicalLogic]).
+2020-09-20 23:33:11,878 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.intro.IntroSystemLogic[intro_introSystemLogic]).
+2020-09-20 23:33:11,882 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.intro.IntroUpgradeLogic[intro_introUpgradeLogic]).
+2020-09-20 23:33:11,884 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.log.LogPhysicalLogic[log_logPhysicalLogic]).
+2020-09-20 23:33:11,894 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.playsql.migration.PlaysqlMigrationLogic[playsql_migration_playsqlMigrationLogic]).
+2020-09-20 23:33:11,900 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.playsql.PlaysqlPhysicalLogic[playsql_playsqlPhysicalLogic]).
+2020-09-20 23:33:11,903 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.settings.SettingsUpdateLogic[settings_settingsUpdateLogic]).
+2020-09-20 23:33:11,914 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.task.TaskExecutionLogic[task_taskExecutionLogic]).
+2020-09-20 23:33:12,021 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.alter.AlterAction[alter_alterAction]).
+2020-09-20 23:33:12,031 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.base.cls.IntroClsAssist[base_cls_introClsAssist]).
+2020-09-20 23:33:12,057 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.client.ClientAction[client_clientAction]).
+2020-09-20 23:33:12,106 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.dfprop.DfpropAction[dfprop_dfpropAction]).
+2020-09-20 23:33:12,134 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.document.decomment.DocumentDecommentAction[document_decomment_documentDecommentAction]).
+2020-09-20 23:33:12,138 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.document.DocumentAction[document_documentAction]).
+2020-09-20 23:33:12,151 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.document.hacomment.DocumentHacommentAction[document_hacomment_documentHacommentAction]).
+2020-09-20 23:33:12,161 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.engine.EngineAction[engine_engineAction]).
+2020-09-20 23:33:12,164 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.intro.IntroAction[intro_introAction]).
+2020-09-20 23:33:12,169 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.log.LogAction[log_logAction]).
+2020-09-20 23:33:12,172 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.playsql.migration.PlaysqlMigrationAction[playsql_migration_playsqlMigrationAction]).
+2020-09-20 23:33:12,177 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.playsql.PlaysqlAction[playsql_playsqlAction]).
+2020-09-20 23:33:12,186 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.settings.SettingsAction[settings_settingsAction]).
+2020-09-20 23:33:12,190 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.SwaggerAction[swaggerAction]).
+2020-09-20 23:33:12,194 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.task.TaskAction[task_taskAction]).
+2020-09-20 23:33:12,201 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.welcome.WelcomeAction[welcome_welcomeAction]).
+2020-09-20 23:33:12,202 [main] INFO  (SingletonLaContainerFactory@showBoot():120) - Lasta Di boot successfully.
+2020-09-20 23:33:12,203 [main] INFO  (SingletonLaContainerFactory@showBoot():121) -   SmartDeploy Mode: Cool Deploy
+2020-09-20 23:33:12,204 [main] INFO  (SingletonLaContainerFactory@showBoot():131) -   Smart Package: org.dbflute.intro.app
+2020-09-20 23:33:12,207 [main] INFO  (MessageResourcesHolder@acceptGateway():61) - ...Accepting the gateway of message resources: gateway:{ObjectiveMessageResources:{application=not initialized yet, cached=[no cached bundle]}}
+2020-09-20 23:33:12,208 [main] INFO  (DBFluteSystem@unlock():242) - ...Unlocking the DBFlute system
+2020-09-20 23:33:12,209 [main] INFO  (DBFluteSystem@setFinalTimeZoneProvider():218) - ...Setting finalTimeZoneProvider: IntroCurtainBeforeHook$1:{Asia/Tokyo}
+2020-09-20 23:33:12,209 [main] INFO  (DBFluteSystem@lock():232) - ...Locking the DBFlute system
+2020-09-20 23:33:12,211 [main] DEBUG (IntroDBInitializer@createSchema():70) - ...Creating IntroDB: introdb/create-schema.sql
+2020-09-20 23:33:12,415 [main] DEBUG (SimpleConnectionPool@createConnection():277) - Created physical connection: tx=null, conn=conn0: url=jdbc:h2:mem:introdb user=INTRODB
+2020-09-20 23:33:12,467 [main] DEBUG (IntroDBInitializer@registerTsv():123) - ...Registering TSV: 10-CLS_TARGET_DATABASE.tsv
+2020-09-20 23:33:12,557 [main] DEBUG (XLog@log():43) - ...Initializing sqlExecution for the key 'CLS_TARGET_DATABASE:batchInsert(List<ClsTargetDatabase>)'
+2020-09-20 23:33:12,609 [main] DEBUG (XLog@log():43) - SqlExecution Initialization Cost: [00m00s051ms]
+2020-09-20 23:33:12,616 [main] DEBUG (XLog@log():43) - /==================================================================================
+2020-09-20 23:33:12,616 [main] DEBUG (XLog@log():43) -                                                       BehaviorWritable.lumpCreate()
+2020-09-20 23:33:12,616 [main] DEBUG (XLog@log():43) -                                                       ============================/
+2020-09-20 23:33:12,630 [main] DEBUG (QLog@log():43) - 
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('mysql', 'MySQL', 'com.mysql.jdbc.Driver', 'jdbc:mysql://localhost:3306/xxx', null, 0, 0, 0, 1, 1);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('postgresql', 'PostgreSQL', 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/xxx', 'public', 1, 0, 0, 1, 2);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('oracle', 'Oracle', 'oracle.jdbc.OracleDriver', 'jdbc:oracle:thin:@localhost:1521:xxx', 'xxx', 1, 1, 1, 0, 3);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('db2', 'DB2', 'com.ibm.db2.jcc.DB2Driver', 'jdbc:db2://localhost:50000/xxx', 'xxx', 1, 1, 1, 0, 4);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('sqlserver', 'SQLServer', 'com.microsoft.sqlserver.jdbc.SQLServerDriver', 'jdbc:sqlserver://localhost:1433;DatabaseName=xxx;', 'dbo', 1, 0, 0, 0, 5);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('h2', 'H2 Database', 'org.h2.Driver', 'jdbc:h2:file:xxx', 'PUBLIC', 1, 0, 0, 1, 6);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('derby', 'Apache Derby', 'org.apache.derby.jdbc.EmbeddedDriver', 'jdbc:derby:xxx;create=true', 'xxx', 1, 1, 1, 0, 7);
+2020-09-20 23:33:12,640 [main] DEBUG (XLog@log():43) - ===========/ [00m00s023ms all-updated=(7) result={1,1,1,1,1,1,1}]
+2020-09-20 23:33:12,640 [main] DEBUG (XLog@log():43) -  
+2020-09-20 23:33:12,642 [main] DEBUG (IntroDBInitializer@registerTsv():123) - ...Registering TSV: 12-CLS_TARGET_LANGUAGE.tsv
+2020-09-20 23:33:12,648 [main] DEBUG (XLog@log():43) - ...Initializing sqlExecution for the key 'CLS_TARGET_LANGUAGE:batchInsert(List<ClsTargetLanguage>)'
+2020-09-20 23:33:12,649 [main] DEBUG (XLog@log():43) - SqlExecution Initialization Cost: [00m00s001ms]
+2020-09-20 23:33:12,650 [main] DEBUG (XLog@log():43) - /==================================================================================
+2020-09-20 23:33:12,650 [main] DEBUG (XLog@log():43) -                                                       BehaviorWritable.lumpCreate()
+2020-09-20 23:33:12,650 [main] DEBUG (XLog@log():43) -                                                       ============================/
+2020-09-20 23:33:12,651 [main] DEBUG (QLog@log():43) - 
+insert into CLS_TARGET_LANGUAGE (LANGUAGE_CODE, LANGUAGE_NAME, DISPLAY_ORDER)
+ values ('java', 'Java', 1);
+insert into CLS_TARGET_LANGUAGE (LANGUAGE_CODE, LANGUAGE_NAME, DISPLAY_ORDER)
+ values ('csharp', 'C#', 2);
+insert into CLS_TARGET_LANGUAGE (LANGUAGE_CODE, LANGUAGE_NAME, DISPLAY_ORDER)
+ values ('scala', 'Scala', 3);
+2020-09-20 23:33:12,652 [main] DEBUG (XLog@log():43) - ===========/ [00m00s001ms all-updated=(3) result={1,1,1}]
+2020-09-20 23:33:12,653 [main] DEBUG (XLog@log():43) -  
+2020-09-20 23:33:12,654 [main] DEBUG (IntroDBInitializer@registerTsv():123) - ...Registering TSV: 14-CLS_TARGET_CONTAINER.tsv
+2020-09-20 23:33:12,660 [main] DEBUG (XLog@log():43) - ...Initializing sqlExecution for the key 'CLS_TARGET_CONTAINER:batchInsert(List<ClsTargetContainer>)'
+2020-09-20 23:33:12,661 [main] DEBUG (XLog@log():43) - SqlExecution Initialization Cost: [00m00s001ms]
+2020-09-20 23:33:12,662 [main] DEBUG (XLog@log():43) - /==================================================================================
+2020-09-20 23:33:12,662 [main] DEBUG (XLog@log():43) -                                                       BehaviorWritable.lumpCreate()
+2020-09-20 23:33:12,662 [main] DEBUG (XLog@log():43) -                                                       ============================/
+2020-09-20 23:33:12,663 [main] DEBUG (QLog@log():43) - 
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('lasta_di', 'Lasta Di', 1);
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('spring', 'Spring Framework', 2);
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('guice', 'Google Guice', 3);
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('seasar', 'Seasar (S2Container)', 4);
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('cdi', 'CDI', 5);
+2020-09-20 23:33:12,665 [main] DEBUG (XLog@log():43) - ===========/ [00m00s003ms all-updated=(5) result={1,1,1,1,1}]
+2020-09-20 23:33:12,665 [main] DEBUG (XLog@log():43) -  
+2020-09-20 23:33:12,673 [main] INFO  (LastaToActionFilter@showBoot():106) - _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+2020-09-20 23:33:12,673 [main] INFO  (LastaToActionFilter@showBoot():107) -  the system has been initialized:
+2020-09-20 23:33:12,673 [main] INFO  (LastaToActionFilter@showBoot():108) - 
+2020-09-20 23:33:12,673 [main] INFO  (LastaToActionFilter@showBoot():109) -   -> Intro (Production)
+2020-09-20 23:33:12,674 [main] INFO  (LastaToActionFilter@showBoot():110) - _/_/_/_/_/_/_/_/_/_/
+2020-09-20 23:33:28,213 [main] INFO  (LastaDiProperties@deriveSmartDeployModeFromLocation():157) - ...Loading specified properties and get by the key: intro_env_production.properties, lasta_di.smart.deploy.mode
+2020-09-20 23:33:28,219 [main] INFO  (SmartDeployMode@setValue():62) - ...Setting smart deploy mode: cool
+2020-09-20 23:33:28,247 [main] INFO  (LaContainerFactory@show():158) - ...Reading lasta_di.xml
+2020-09-20 23:33:28,288 [main] INFO  (LaContainerFactory@show():158) - ...Reading   redefiner.xml
+2020-09-20 23:33:28,381 [main] INFO  (LaContainerFactory@show():158) - ...Reading   smartdeploy.xml
+2020-09-20 23:33:28,699 [main] INFO  (LaContainerFactory@show():158) - ...Reading     smart/cooldeploy.xml
+2020-09-20 23:33:28,731 [main] INFO  (LaContainerFactory@show():158) - ...Reading app.xml
+2020-09-20 23:33:28,737 [main] INFO  (LaContainerFactory@show():158) - ...Reading   convention.xml
+2020-09-20 23:33:28,743 [main] INFO  (LaContainerFactory@show():158) - ...Reading     embedded_convention.xml
+2020-09-20 23:33:28,759 [main] INFO  (LaContainerFactory@show():158) - ...Reading   dbflute.xml
+2020-09-20 23:33:28,765 [main] INFO  (LaContainerFactory@show():158) - ...Reading     rdb.xml
+2020-09-20 23:33:28,771 [main] INFO  (LaContainerFactory@show():158) - ...Reading       jta.xml
+2020-09-20 23:33:28,793 [main] INFO  (LaContainerFactory@show():158) - ...Reading       jdbc.xml
+2020-09-20 23:33:28,796 [main] INFO  (LaContainerFactory@show():158) - ...Reading         jta.xml (recycle)
+2020-09-20 23:33:28,797 [main] INFO  (LaContainerFactory@show():158) - ...Reading         lastaflute_assist.xml
+2020-09-20 23:33:28,802 [main] INFO  (LaContainerFactory@show():158) - ...Reading           lastaflute_director.xml
+2020-09-20 23:33:28,875 [main] INFO  (LaContainerFactory@show():158) - ...Reading       tx_aop.xml
+2020-09-20 23:33:28,881 [main] INFO  (LaContainerFactory@show():158) - ...Reading         jta.xml (recycle)
+2020-09-20 23:33:29,072 [main] INFO  (LaContainerFactory@show():158) - ...Reading   lastaflute.xml
+2020-09-20 23:33:29,078 [main] INFO  (LaContainerFactory@show():158) - ...Reading     lastaflute_core.xml
+2020-09-20 23:33:29,082 [main] INFO  (LaContainerFactory@show():158) - ...Reading       lastaflute_assist.xml (recycle)
+2020-09-20 23:33:29,123 [main] INFO  (LaContainerFactory@show():158) - ...Reading     lastaflute_db.xml
+2020-09-20 23:33:29,131 [main] INFO  (LaContainerFactory@show():158) - ...Reading       jta.xml (recycle)
+2020-09-20 23:33:29,135 [main] INFO  (LaContainerFactory@show():158) - ...Reading     lastaflute_web.xml
+2020-09-20 23:33:29,138 [main] INFO  (LaContainerFactory@show():158) - ...Reading       lastaflute_core.xml (recycle)
+2020-09-20 23:33:29,140 [main] INFO  (LaContainerFactory@show():158) - ...Reading       lastaflute_db.xml (recycle)
+2020-09-20 23:33:29,141 [main] INFO  (LaContainerFactory@show():158) - ...Reading       convention.xml (recycle)
+2020-09-20 23:33:29,187 [main] INFO  (LaContainerFactory@show():158) - ...Reading smart/cooldeploy-autoregister.xml
+2020-09-20 23:33:29,190 [main] INFO  (LaContainerFactory@show():158) - ...Reading   convention.xml (recycle)
+2020-09-20 23:33:29,191 [main] INFO  (LaContainerFactory@show():158) - ...Reading   creator.xml
+2020-09-20 23:33:29,194 [main] INFO  (LaContainerFactory@show():158) - ...Reading     convention.xml (recycle)
+2020-09-20 23:33:29,195 [main] INFO  (LaContainerFactory@show():158) - ...Reading     customizer.xml
+2020-09-20 23:33:29,199 [main] INFO  (LaContainerFactory@show():158) - ...Reading       lastafw_customizer.xml
+2020-09-20 23:33:29,211 [main] INFO  (LaContainerFactory@show():158) - ...Reading       embedded_customizer.xml
+2020-09-20 23:33:29,214 [main] INFO  (LaContainerFactory@show():158) - ...Reading         tx_customizer.xml
+2020-09-20 23:33:29,231 [main] INFO  (LaContainerFactory@show():158) - ...Reading     lastafw_creator.xml
+2020-09-20 23:33:29,234 [main] INFO  (LaContainerFactory@show():158) - ...Reading       convention.xml (recycle)
+2020-09-20 23:33:29,235 [main] INFO  (LaContainerFactory@show():158) - ...Reading       customizer.xml (recycle)
+2020-09-20 23:33:29,254 [main] INFO  (LaContainerFactory@show():158) - ...Reading     embedded_creator.xml
+2020-09-20 23:33:29,257 [main] INFO  (LaContainerFactory@show():158) - ...Reading       convention.xml (recycle)
+2020-09-20 23:33:29,258 [main] INFO  (LaContainerFactory@show():158) - ...Reading       customizer.xml (recycle)
+2020-09-20 23:33:29,267 [main] INFO  (LaContainerFactory@show():158) - ...Reading   customizer.xml (recycle)
+2020-09-20 23:33:29,337 [main] INFO  (ObjectiveConfig@showBootLogging():242) - [Objective Config]
+2020-09-20 23:33:29,338 [main] INFO  (ObjectiveConfig@showBootLogging():243) -  intro_config.properties extends [intro_env_production.properties]
+2020-09-20 23:33:29,338 [main] INFO  (ObjectiveConfig@showBootLogging():246) -  checkImplicitOverride=true, propertyCount=20
+2020-09-20 23:33:29,343 [main] INFO  (HookedXADataSource@showBootLogging():78) - [XA DataSource]
+2020-09-20 23:33:29,344 [main] INFO  (HookedXADataSource@showBootLogging():79) -  driver: org.h2.Driver
+2020-09-20 23:33:29,344 [main] INFO  (HookedXADataSource@showBootLogging():80) -  url: jdbc:h2:mem:introdb;DB_CLOSE_DELAY=-1
+2020-09-20 23:33:29,344 [main] INFO  (HookedXADataSource@showBootLogging():81) -  newbornConnectionHook: null
+2020-09-20 23:33:29,436 [main] INFO  (HookedConnectionPool@showBootLogging():60) - [Connection Pool]
+2020-09-20 23:33:29,436 [main] INFO  (HookedConnectionPool@showBootLogging():61) -  maxPoolSize: 10
+2020-09-20 23:33:29,436 [main] INFO  (HookedConnectionPool@showBootLogging():62) -  minPoolSize: 0
+2020-09-20 23:33:29,437 [main] INFO  (HookedConnectionPool@showBootLogging():63) -  maxWait: 10000 milliseconds
+2020-09-20 23:33:29,437 [main] INFO  (HookedConnectionPool@showBootLogging():64) -  timeout: 600 seconds
+2020-09-20 23:33:29,437 [main] INFO  (DBFluteInitializer@announce():58) - ...Initializing DBFlute components
+2020-09-20 23:33:29,453 [main] INFO  (SimplePrimaryCipher@showBootLogging():80) - [Primary Cipher]
+2020-09-20 23:33:29,453 [main] INFO  (SimplePrimaryCipher@showBootLogging():81) -  invertibleCryptographer: {Blowfish, UTF-8}
+2020-09-20 23:33:29,453 [main] INFO  (SimplePrimaryCipher@showBootLogging():82) -  oneWayCryptographer: {SHA-256, UTF-8}
+2020-09-20 23:33:29,455 [main] INFO  (SimpleTimeManager@showBootLogging():111) - [Time Manager]
+2020-09-20 23:33:29,456 [main] INFO  (SimpleTimeManager@showBootLogging():112) -  businessTimeHandler: TypicalBusinessTimeHandler:{IntroTimeResourceProvider$$Lambda$47/977674685, IntroTimeResourceProvider$$Lambda$48/431570856}
+2020-09-20 23:33:29,456 [main] INFO  (SimpleTimeManager@showBootLogging():116) -  currentIgnoreTransaction: false
+2020-09-20 23:33:29,456 [main] INFO  (SimpleTimeManager@showBootLogging():117) -  adjustTimeMillis: 0
+2020-09-20 23:33:29,457 [main] INFO  (SimpleTimeManager@showBootLogging():118) -  adjustAbsoluteMode: false
+2020-09-20 23:33:29,548 [main] INFO  (SimpleJsonManager@showBootLogging():147) - [JSON Manager]
+2020-09-20 23:33:29,549 [main] INFO  (SimpleJsonManager@showBootLogging():148) -  realJsonParser: GsonJsonEngine
+2020-09-20 23:33:29,551 [main] INFO  (ExceptionTranslator@showBootLogging():68) - [Exception Translator]
+2020-09-20 23:33:29,552 [main] INFO  (ExceptionTranslator@showBootLogging():69) -  exceptionTranslationProvider: null
+2020-09-20 23:33:29,554 [main] INFO  (SimpleAsyncManager@showBootLogging():242) - [Async Manager]
+2020-09-20 23:33:29,555 [main] INFO  (SimpleAsyncManager@showBootLogging():243) -  defaultConcurrentAsyncOption: {no option}
+2020-09-20 23:33:29,555 [main] INFO  (SimpleAsyncManager@showBootLogging():244) -  primaryExecutorService: ThreadPoolExecutor@366ac49b
+2020-09-20 23:33:29,555 [main] INFO  (SimpleAsyncManager@showBootLogging():245) -  secondaryExecutorService: ThreadPoolExecutor@6ad59d92
+2020-09-20 23:33:29,555 [main] INFO  (SimpleAsyncManager@showBootLogging():246) -  tertiaryExecutorService: ThreadPoolExecutor@56f0cc85
+2020-09-20 23:33:29,556 [main] INFO  (Postbox@showBootLogging():81) - [Postbox]
+2020-09-20 23:33:29,556 [main] INFO  (Postbox@showBootLogging():88) -  postOffice: *no used
+2020-09-20 23:33:29,568 [main] INFO  (ActionPathResolver@showBootLogging():94) - [Action Resolver]
+2020-09-20 23:33:29,569 [main] INFO  (ActionPathResolver@showBootLogging():95) -  actionAdjustmentProvider: org.dbflute.intro.mylasta.direction.sponsor.IntroActionAdjustmentProvider@4535b6d5
+2020-09-20 23:33:29,570 [main] INFO  (SimpleResponseManager@showBootLogging():106) - [Response Manager]
+2020-09-20 23:33:29,570 [main] INFO  (SimpleResponseManager@showBootLogging():107) -  responseWritePerformerCreator: null
+2020-09-20 23:33:29,571 [main] INFO  (SimpleResponseManager@showBootLogging():108) -  responseDownloadPerformerCreator: null
+2020-09-20 23:33:29,571 [main] INFO  (SimpleResponseManager@showBootLogging():109) -  downloadExtensionContentTypeMap: null
+2020-09-20 23:33:29,572 [main] INFO  (SimpleSessionManager@showBootLogging():109) - [Session Manager]
+2020-09-20 23:33:29,573 [main] INFO  (SimpleSessionManager@showBootLogging():110) -  sessionSharedStorage: opt:{null}
+2020-09-20 23:33:29,574 [main] INFO  (SimpleSessionManager@showBootLogging():111) -  httpSessionArranger: opt:{null}
+2020-09-20 23:33:29,574 [main] INFO  (SimpleCookieManager@showBootLogging():93) - [Cookie Manager]
+2020-09-20 23:33:29,575 [main] INFO  (SimpleCookieManager@showBootLogging():94) -  cookieCipher: {{Blowfish, UTF-8}}
+2020-09-20 23:33:29,575 [main] INFO  (SimpleCookieManager@showBootLogging():95) -  defaultPath: /
+2020-09-20 23:33:29,575 [main] INFO  (SimpleCookieManager@showBootLogging():96) -  defaultExpire: 31556926
+2020-09-20 23:33:29,576 [main] INFO  (SimpleApiManager@showBootLogging():79) - [API Manager]
+2020-09-20 23:33:29,576 [main] INFO  (SimpleApiManager@showBootLogging():80) -  apiFailureHook: IntroApiFailureHook
+2020-09-20 23:33:29,576 [main] INFO  (SimpleRequestManager@showBootLogging():164) - [Request Manager]
+2020-09-20 23:33:29,577 [main] INFO  (SimpleRequestManager@showBootLogging():165) -  localeProvider: {acceptCookieLocale=false}
+2020-09-20 23:33:29,577 [main] INFO  (SimpleRequestManager@showBootLogging():166) -  timeZoneProvider: {useTimeZoneHandling=false, acceptCookieTimeZone=false}
+2020-09-20 23:33:29,578 [main] INFO  (SimpleCsrfManager@showBootLogging():109) - [Csrf Manager]
+2020-09-20 23:33:29,578 [main] INFO  (SimpleCsrfManager@showBootLogging():110) -  tokenHeaderName: X-CSRF-TOKEN
+2020-09-20 23:33:29,579 [main] INFO  (SimpleCsrfManager@showBootLogging():111) -  tokenParameterName: _csrf
+2020-09-20 23:33:29,579 [main] INFO  (SimpleCsrfManager@showBootLogging():112) -  tokenGenerator: org.lastaflute.web.token.SimpleCsrfManager$$Lambda$70/69673470@40844aab
+2020-09-20 23:33:29,580 [main] INFO  (SimpleDoubleSubmitManager@showBootLogging():96) - [DoubleSubmit Manager]
+2020-09-20 23:33:29,580 [main] INFO  (SimpleDoubleSubmitManager@showBootLogging():97) -  allowsVerifyTokenBeforeValidation: false
+2020-09-20 23:33:29,618 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.client.ClientInfoLogic[client_clientInfoLogic]).
+2020-09-20 23:33:29,621 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.client.ClientPhysicalLogic[client_clientPhysicalLogic]).
+2020-09-20 23:33:29,626 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.client.ClientUpdateLogic[client_clientUpdateLogic]).
+2020-09-20 23:33:29,632 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.context.AccessContextLogic[context_accessContextLogic]).
+2020-09-20 23:33:29,633 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.core.FlutyFileLogic[core_flutyFileLogic]).
+2020-09-20 23:33:29,635 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.core.MapStringLogic[core_mapStringLogic]).
+2020-09-20 23:33:29,641 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.core.PublicPropertiesLogic[core_publicPropertiesLogic]).
+2020-09-20 23:33:29,643 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.database.DatabaseInfoLogic[database_databaseInfoLogic]).
+2020-09-20 23:33:29,657 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.dfprop.DfpropInfoLogic[dfprop_dfpropInfoLogic]).
+2020-09-20 23:33:29,660 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.dfprop.DfpropPhysicalLogic[dfprop_dfpropPhysicalLogic]).
+2020-09-20 23:33:29,664 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.dfprop.DfpropUpdateLogic[dfprop_dfpropUpdateLogic]).
+2020-09-20 23:33:29,668 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.dfprop.TestConnectionLogic[dfprop_testConnectionLogic]).
+2020-09-20 23:33:29,677 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.decomment.DocumentDecommentPhysicalLogic[document_decomment_documentDecommentPhysicalLogic]).
+2020-09-20 23:33:29,681 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.DocumentAuthorLogic[document_documentAuthorLogic]).
+2020-09-20 23:33:29,684 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.DocumentDisplayLogic[document_documentDisplayLogic]).
+2020-09-20 23:33:29,687 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.DocumentPhysicalLogic[document_documentPhysicalLogic]).
+2020-09-20 23:33:29,693 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.document.hacomment.DocumentHacommentPhysicalLogic[document_hacomment_documentHacommentPhysicalLogic]).
+2020-09-20 23:33:29,695 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.engine.EngineInfoLogic[engine_engineInfoLogic]).
+2020-09-20 23:33:29,696 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.engine.EngineInstallLogic[engine_engineInstallLogic]).
+2020-09-20 23:33:29,697 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.engine.EnginePhysicalLogic[engine_enginePhysicalLogic]).
+2020-09-20 23:33:29,700 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.intro.IntroInfoLogic[intro_introInfoLogic]).
+2020-09-20 23:33:29,701 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.intro.IntroPhysicalLogic[intro_introPhysicalLogic]).
+2020-09-20 23:33:29,702 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.intro.IntroSystemLogic[intro_introSystemLogic]).
+2020-09-20 23:33:29,703 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.intro.IntroUpgradeLogic[intro_introUpgradeLogic]).
+2020-09-20 23:33:29,706 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.log.LogPhysicalLogic[log_logPhysicalLogic]).
+2020-09-20 23:33:29,715 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.playsql.migration.PlaysqlMigrationLogic[playsql_migration_playsqlMigrationLogic]).
+2020-09-20 23:33:29,720 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.playsql.PlaysqlPhysicalLogic[playsql_playsqlPhysicalLogic]).
+2020-09-20 23:33:29,723 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.settings.SettingsUpdateLogic[settings_settingsUpdateLogic]).
+2020-09-20 23:33:29,733 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.logic.task.TaskExecutionLogic[task_taskExecutionLogic]).
+2020-09-20 23:33:29,839 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.alter.AlterAction[alter_alterAction]).
+2020-09-20 23:33:29,846 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.base.cls.IntroClsAssist[base_cls_introClsAssist]).
+2020-09-20 23:33:29,875 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.client.ClientAction[client_clientAction]).
+2020-09-20 23:33:29,916 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.dfprop.DfpropAction[dfprop_dfpropAction]).
+2020-09-20 23:33:29,944 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.document.decomment.DocumentDecommentAction[document_decomment_documentDecommentAction]).
+2020-09-20 23:33:29,950 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.document.DocumentAction[document_documentAction]).
+2020-09-20 23:33:29,962 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.document.hacomment.DocumentHacommentAction[document_hacomment_documentHacommentAction]).
+2020-09-20 23:33:29,972 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.engine.EngineAction[engine_engineAction]).
+2020-09-20 23:33:29,978 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.intro.IntroAction[intro_introAction]).
+2020-09-20 23:33:29,985 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.log.LogAction[log_logAction]).
+2020-09-20 23:33:29,988 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.playsql.migration.PlaysqlMigrationAction[playsql_migration_playsqlMigrationAction]).
+2020-09-20 23:33:29,994 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.playsql.PlaysqlAction[playsql_playsqlAction]).
+2020-09-20 23:33:30,010 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.settings.SettingsAction[settings_settingsAction]).
+2020-09-20 23:33:30,016 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.SwaggerAction[swaggerAction]).
+2020-09-20 23:33:30,021 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.task.TaskAction[task_taskAction]).
+2020-09-20 23:33:30,034 [main] DEBUG (LaLogger@log():118) - Registering component definition of class(org.dbflute.intro.app.web.welcome.WelcomeAction[welcome_welcomeAction]).
+2020-09-20 23:33:30,037 [main] INFO  (SingletonLaContainerFactory@showBoot():120) - Lasta Di boot successfully.
+2020-09-20 23:33:30,038 [main] INFO  (SingletonLaContainerFactory@showBoot():121) -   SmartDeploy Mode: Cool Deploy
+2020-09-20 23:33:30,039 [main] INFO  (SingletonLaContainerFactory@showBoot():131) -   Smart Package: org.dbflute.intro.app
+2020-09-20 23:33:30,044 [main] INFO  (MessageResourcesHolder@acceptGateway():61) - ...Accepting the gateway of message resources: gateway:{ObjectiveMessageResources:{application=not initialized yet, cached=[no cached bundle]}}
+2020-09-20 23:33:30,044 [main] INFO  (DBFluteSystem@unlock():242) - ...Unlocking the DBFlute system
+2020-09-20 23:33:30,045 [main] INFO  (DBFluteSystem@setFinalTimeZoneProvider():218) - ...Setting finalTimeZoneProvider: IntroCurtainBeforeHook$1:{Asia/Tokyo}
+2020-09-20 23:33:30,045 [main] INFO  (DBFluteSystem@lock():232) - ...Locking the DBFlute system
+2020-09-20 23:33:30,047 [main] DEBUG (IntroDBInitializer@createSchema():70) - ...Creating IntroDB: introdb/create-schema.sql
+2020-09-20 23:33:30,232 [main] DEBUG (SimpleConnectionPool@createConnection():277) - Created physical connection: tx=null, conn=conn0: url=jdbc:h2:mem:introdb user=INTRODB
+2020-09-20 23:33:30,280 [main] DEBUG (IntroDBInitializer@registerTsv():123) - ...Registering TSV: 10-CLS_TARGET_DATABASE.tsv
+2020-09-20 23:33:30,369 [main] DEBUG (XLog@log():43) - ...Initializing sqlExecution for the key 'CLS_TARGET_DATABASE:batchInsert(List<ClsTargetDatabase>)'
+2020-09-20 23:33:30,413 [main] DEBUG (XLog@log():43) - SqlExecution Initialization Cost: [00m00s045ms]
+2020-09-20 23:33:30,420 [main] DEBUG (XLog@log():43) - /==================================================================================
+2020-09-20 23:33:30,421 [main] DEBUG (XLog@log():43) -                                                       BehaviorWritable.lumpCreate()
+2020-09-20 23:33:30,421 [main] DEBUG (XLog@log():43) -                                                       ============================/
+2020-09-20 23:33:30,438 [main] DEBUG (QLog@log():43) - 
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('mysql', 'MySQL', 'com.mysql.jdbc.Driver', 'jdbc:mysql://localhost:3306/xxx', null, 0, 0, 0, 1, 1);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('postgresql', 'PostgreSQL', 'org.postgresql.Driver', 'jdbc:postgresql://localhost:5432/xxx', 'public', 1, 0, 0, 1, 2);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('oracle', 'Oracle', 'oracle.jdbc.OracleDriver', 'jdbc:oracle:thin:@localhost:1521:xxx', 'xxx', 1, 1, 1, 0, 3);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('db2', 'DB2', 'com.ibm.db2.jcc.DB2Driver', 'jdbc:db2://localhost:50000/xxx', 'xxx', 1, 1, 1, 0, 4);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('sqlserver', 'SQLServer', 'com.microsoft.sqlserver.jdbc.SQLServerDriver', 'jdbc:sqlserver://localhost:1433;DatabaseName=xxx;', 'dbo', 1, 0, 0, 0, 5);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('h2', 'H2 Database', 'org.h2.Driver', 'jdbc:h2:file:xxx', 'PUBLIC', 1, 0, 0, 1, 6);
+insert into CLS_TARGET_DATABASE (DATABASE_CODE, DATABASE_NAME, JDBC_DRIVER_FQCN, URL_TEMPLATE, DEFAULT_SCHEMA, SCHEMA_REQUIRED_FLG, SCHEMA_UPPER_CASE_FLG, USER_INPUT_ASSIST_FLG, EMBEDDED_JAR_FLG, DISPLAY_ORDER)
+ values ('derby', 'Apache Derby', 'org.apache.derby.jdbc.EmbeddedDriver', 'jdbc:derby:xxx;create=true', 'xxx', 1, 1, 1, 0, 7);
+2020-09-20 23:33:30,452 [main] DEBUG (XLog@log():43) - ===========/ [00m00s029ms all-updated=(7) result={1,1,1,1,1,1,1}]
+2020-09-20 23:33:30,452 [main] DEBUG (XLog@log():43) -  
+2020-09-20 23:33:30,454 [main] DEBUG (IntroDBInitializer@registerTsv():123) - ...Registering TSV: 12-CLS_TARGET_LANGUAGE.tsv
+2020-09-20 23:33:30,461 [main] DEBUG (XLog@log():43) - ...Initializing sqlExecution for the key 'CLS_TARGET_LANGUAGE:batchInsert(List<ClsTargetLanguage>)'
+2020-09-20 23:33:30,462 [main] DEBUG (XLog@log():43) - SqlExecution Initialization Cost: [00m00s001ms]
+2020-09-20 23:33:30,463 [main] DEBUG (XLog@log():43) - /==================================================================================
+2020-09-20 23:33:30,463 [main] DEBUG (XLog@log():43) -                                                       BehaviorWritable.lumpCreate()
+2020-09-20 23:33:30,463 [main] DEBUG (XLog@log():43) -                                                       ============================/
+2020-09-20 23:33:30,463 [main] DEBUG (QLog@log():43) - 
+insert into CLS_TARGET_LANGUAGE (LANGUAGE_CODE, LANGUAGE_NAME, DISPLAY_ORDER)
+ values ('java', 'Java', 1);
+insert into CLS_TARGET_LANGUAGE (LANGUAGE_CODE, LANGUAGE_NAME, DISPLAY_ORDER)
+ values ('csharp', 'C#', 2);
+insert into CLS_TARGET_LANGUAGE (LANGUAGE_CODE, LANGUAGE_NAME, DISPLAY_ORDER)
+ values ('scala', 'Scala', 3);
+2020-09-20 23:33:30,464 [main] DEBUG (XLog@log():43) - ===========/ [00m00s001ms all-updated=(3) result={1,1,1}]
+2020-09-20 23:33:30,465 [main] DEBUG (XLog@log():43) -  
+2020-09-20 23:33:30,466 [main] DEBUG (IntroDBInitializer@registerTsv():123) - ...Registering TSV: 14-CLS_TARGET_CONTAINER.tsv
+2020-09-20 23:33:30,473 [main] DEBUG (XLog@log():43) - ...Initializing sqlExecution for the key 'CLS_TARGET_CONTAINER:batchInsert(List<ClsTargetContainer>)'
+2020-09-20 23:33:30,475 [main] DEBUG (XLog@log():43) - SqlExecution Initialization Cost: [00m00s002ms]
+2020-09-20 23:33:30,475 [main] DEBUG (XLog@log():43) - /==================================================================================
+2020-09-20 23:33:30,475 [main] DEBUG (XLog@log():43) -                                                       BehaviorWritable.lumpCreate()
+2020-09-20 23:33:30,476 [main] DEBUG (XLog@log():43) -                                                       ============================/
+2020-09-20 23:33:30,476 [main] DEBUG (QLog@log():43) - 
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('lasta_di', 'Lasta Di', 1);
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('spring', 'Spring Framework', 2);
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('guice', 'Google Guice', 3);
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('seasar', 'Seasar (S2Container)', 4);
+insert into CLS_TARGET_CONTAINER (CONTAINER_CODE, CONTAINER_NAME, DISPLAY_ORDER)
+ values ('cdi', 'CDI', 5);
+2020-09-20 23:33:30,478 [main] DEBUG (XLog@log():43) - ===========/ [00m00s002ms all-updated=(5) result={1,1,1,1,1}]
+2020-09-20 23:33:30,478 [main] DEBUG (XLog@log():43) -  
+2020-09-20 23:33:30,485 [main] INFO  (LastaToActionFilter@showBoot():106) - _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+2020-09-20 23:33:30,485 [main] INFO  (LastaToActionFilter@showBoot():107) -  the system has been initialized:
+2020-09-20 23:33:30,485 [main] INFO  (LastaToActionFilter@showBoot():108) - 
+2020-09-20 23:33:30,485 [main] INFO  (LastaToActionFilter@showBoot():109) -   -> Intro (Production)
+2020-09-20 23:33:30,485 [main] INFO  (LastaToActionFilter@showBoot():110) - _/_/_/_/_/_/_/_/_/_/
+2020-09-20 23:43:12,826 [LastaDi-JTA-TimeoutManager] DEBUG (ConnectionWrapperImpl@closeReally():142) - Closed the physical connection: 
+HookedConnectionWrapper:{closed, xaConnection:{xaResource:{null, status=0}}@2a05f1dd}@24c20aed
+ closeReally(): caller1::org.lastaflute.db.dbcp.HookedConnectionWrapper@closeReally(), caller5::java.lang.Thread@run(), null, null
+2020-09-20 23:43:30,641 [LastaDi-JTA-TimeoutManager] DEBUG (ConnectionWrapperImpl@closeReally():142) - Closed the physical connection: 
+HookedConnectionWrapper:{closed, xaConnection:{xaResource:{null, status=0}}@58357020}@56f29556
+ closeReally(): caller1::org.lastaflute.db.dbcp.HookedConnectionWrapper@closeReally(), caller5::java.lang.Thread@run(), null, null
