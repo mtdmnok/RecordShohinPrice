@@ -1,3 +1,4 @@
+package com.example.demo.conf;
 //参考サイト通りに記述しているが、エラーになってしまいます。
 
 //<!DOCTYPE html>
