@@ -5965,3 +5965,12 @@ Binding(CTRL+R,
 
 !ENTRY org.eclipse.jdt.debug 2 0 2020-10-18 23:19:45.379
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-10-23 03:03:13.035
+!MESSAGE No repository found at file:/C:/Users/yamam/Downloads/sts-4.6.1.RELEASE/configuration/org.eclipse.osgi/202/data/listener_1925729951/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2020-10-23 03:03:17.312
+!MESSAGE No repository found at file:/C:/Users/yamam/Downloads/sts-4.6.1.RELEASE/.eclipseextension.
+
+!ENTRY org.eclipse.ui 2 2 2020-11-08 22:02:31.167
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
