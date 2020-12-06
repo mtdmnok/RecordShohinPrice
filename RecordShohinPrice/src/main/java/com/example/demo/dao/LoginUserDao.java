@@ -31,12 +31,12 @@ public class LoginUserDao {
 
         String query = "";
         query += "SELECT * ";
-        query += "FROM m_user ";
+        query += "FROM record_shohin_price.m_user ";
         query += "WHERE user_name = :userName "; //setParameterで引数の値を代入できるようにNamedParameterを利用
         
-        //ここで値を取ってきているのかと思い、変数を置いて値を見ようと試みたのですが、エラーになってしまいます。
-        //まず、ここでDBから値を取ってくるのは合っているでしょうか・・・？
-        String test = em.createNativeQuery(query, LoginUser.class).getParameter(userName).toString();
+        //取得した値の確認用
+        //String test = em.createNativeQuery(query, LoginUser.class).setParameter("userName", userName).getSingleResult().toString();
+        //System.out.println(test);
 
         //EntityManagerで取得された結果はオブジェクトとなるので、LoginUser型へキャストが必要となる
         return (LoginUser)em.createNativeQuery(query, LoginUser.class).setParameter("userName", userName).getSingleResult();

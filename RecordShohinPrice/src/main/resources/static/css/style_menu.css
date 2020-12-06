@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
-h1 {
+.h1 {
+	background-color: #CCFFFF !important;
+}
+
+h2 {
 	background-color: #CCFFFF !important;
 }
 
