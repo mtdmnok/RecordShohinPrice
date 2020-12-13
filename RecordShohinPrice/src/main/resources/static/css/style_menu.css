@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-.h1 {
-	background-color: #CCFFFF !important;
-}
 
 h2 {
 	background-color: #CCFFFF !important;
@@ -10,4 +7,17 @@ h2 {
 
 #systemName{
 	background-color: #CCFFFF !important;
+}
+
+.btn-menu,
+a.btn-menu {
+  color: #000000;
+  background-color: #c0c0c0;
+  width:20vw;
+  height:10vh;
+}
+.btn-menu:hover,
+a.btn-menu:hover {
+  color: #000000;
+  background: #808080;
 }
