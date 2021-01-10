@@ -5,7 +5,7 @@
 
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/style-login.css">
+<link rel="stylesheet" href="./css/style-login.css">
 </head>
 
 <body>
@@ -15,34 +15,6 @@
 	<!-- 画面名表示 -->
 	<div class="systemName">ログイン画面</div>
 
-
-
-<!--	<form action="/login" method="post"> -->
-	<!-- ID入力欄 -->
-<!--	<div class="id">
-		<div class="titleId">
-			ID:
-		</div>
-		<div class="inputId">
-				<input type="text" name="ID">
-		</div>
-	</div>
--->	
-	<!-- パスワード入力欄 -->
-<!-- 	<div class="passwd">  -->
-	 <!--  <form action="/login" method="post">  -->
-<!--		<div class="titlePasswd">
-			パスワード:
-		</div>
-		<div class="inputPasswd">
-				<input type="text" name="Password">
-		</div>
-	 </form> 
-	</div>
-	<input type="submit" value="ログイン">
-	</form>
--->
-	
 	<div th:if="${param.error}">
             ユーザー名かパスワードが違います
         </div>

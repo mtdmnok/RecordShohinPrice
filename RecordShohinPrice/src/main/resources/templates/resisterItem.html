@@ -2,7 +2,7 @@
 <html lang=ja xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/style_resiterItem">
+<link rel="stylesheet" href="css/style_resisterItem.css">
 </head>
 
 <body>
@@ -18,34 +18,60 @@
 	<div>商品の購入情報を入力してください。</div>
 	<br>
 	<br>
+	<form method="post" action="/" th:object="${formModel}">	
 	<!-- 日付 -->
 	<div>
-		日付：&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="date" name="purchaseDate"> 
+		日付：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" name="purchaseDate" th:value="*{purchaseDate}"> 
 	</div>
+	<br>
 	
 	<!-- 店舗 -->
 	<div>
-		店舗：&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="shop" name="purchaseShop"> 
+		店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" name="purchaseShop" th:value="*{purchaseShop}"> 
 	</div>
+	<br>
 	
 	<!-- 品目-->
 	<div>
-		品目：&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="category" name="purchaseCategory"> 
+		品目：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" name="purchaseCategory" th:value="*{purchaseCategory}"> 
 	</div>
+	<br>
 			
 	<!-- 商品名 -->
 	<div>
-		商品名：
-		<input type="item" name="purchaseItem"> 
+		商品名：&nbsp;
+		<input type="text" name="purchaseItem" th:value="*{purchaseItem}"> 
 	</div>
+	<br>
 	
 	<!-- 価格 -->
 	<div>
-		価格：&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="price" name="purchasePrice"> 
+		価格：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" name="purchasePrice" th:value="*{purchasePrice}"> 
 	</div>
+	
+	<br>
+	<br>
+	
+	<!-- 登録ボタン -->
+	<input type="submit" value="登録">
+	</form>
+	&nbsp;
+	
+	<!-- マスタ登録ボタン -->
+	<input type="button" value="マスタ登録">
+	&nbsp;
+	
+	<!-- クリアボタン -->
+	<input type="button" value="クリア">
+	&nbsp;
+	
+	<!-- メニューボタン -->
+	<input type="button" value="メニュー">
+	&nbsp;
+	
 </body>
 </html>

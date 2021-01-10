@@ -35,7 +35,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.authorizeRequests()
-			.antMatchers("/","home").permitAll() // "/" と /home は全ユーザーがアクセス可能
+			.antMatchers("/","home", "/css/*").permitAll() // "/" と /home は全ユーザーがアクセス可能
 			.anyRequest()
 			.authenticated();
 		

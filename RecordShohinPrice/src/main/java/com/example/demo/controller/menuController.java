@@ -3,14 +3,18 @@ package com.example.demo.controller;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.demo.form.menuForm;
 
 @Controller
 @SessionAttributes(types = menuForm.class)
+
 public class menuController {
 	
 	/**
@@ -33,7 +37,7 @@ public class menuController {
 	 * @param  menuForm Formオブジェクト
 	 * @return 購入品登録画面へのパス
 	 */
-	@PostMapping("/menu")
+	@GetMapping("/regist")
 	public String resisterItem(menuForm menuForm) {
 		return "resisterItem";
 	}
