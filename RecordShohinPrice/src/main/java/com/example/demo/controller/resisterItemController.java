@@ -19,7 +19,7 @@ public class resisterItemController {
 	@Autowired
 	resisterItemRepository repository;
 	
-	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@RequestMapping(value = "/resisterItem", method = RequestMethod.POST)
 	@Transactional(readOnly = false)
 	public ModelAndView form(
 			@ModelAttribute("formModel") resisterItemEntity resisterItemEntity,

@@ -2,6 +2,7 @@ package com.example.demo.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,20 +15,29 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "m_record")
+@Table(name ="m_record")
 public class resisterItemEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="sequence")
 	private Integer sequence; 
-	
+	@Column(name="user_id")
 	private String user_id;
+	@Column(name="purchase_date")
 	private Date purchase_date;
+	@Column(name="shop_id")
 	private String shop_id;
+	@Column(name="category_id")
 	private String category_id;
+	@Column(name="item_id")
 	private String item_id;
+	@Column(name="price")
 	private Integer price;
+	@Column(name="created_at")
 	private Date created_at;
+	@Column(name="updated_at")
 	private Date updated_at;
+	
 	public Integer getSequence() {
 		return sequence;
 	}

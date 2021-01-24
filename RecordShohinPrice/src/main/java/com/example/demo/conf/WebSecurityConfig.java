@@ -45,6 +45,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.defaultSuccessUrl("/menu") //認証成功時の遷移先
 			.usernameParameter("username").passwordParameter("password")
 			.and();
+		
+		http
+			.csrf().disable();
 	}
 	
 //	  /**
