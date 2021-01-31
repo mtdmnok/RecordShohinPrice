@@ -2,6 +2,9 @@ package com.example.demo.controller;
 
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,7 +26,7 @@ public class resisterItemController {
 	@Transactional(readOnly = false)
 	public ModelAndView form(
 			@ModelAttribute("formModel") resisterItemEntity resisterItemEntity,
-			ModelAndView mav) {
+			ModelAndView mav) throws ParseException {
 		repository.saveAndFlush(resisterItemEntity);
 		return new ModelAndView("redirect:/");
 	}

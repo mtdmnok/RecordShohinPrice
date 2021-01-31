@@ -18,13 +18,13 @@ import lombok.Data;
 @Table(name ="m_record")
 public class resisterItemEntity {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="sequence")
 	private Integer sequence; 
 	@Column(name="user_id")
 	private String user_id;
-	@Column(name="purchase_date")
-	private Date purchase_date;
+	@Column(name="purchace_date")
+	private Date purchace_date;
 	@Column(name="shop_id")
 	private String shop_id;
 	@Column(name="category_id")
@@ -51,10 +51,10 @@ public class resisterItemEntity {
 		this.user_id = user_id;
 	}
 	public Date getPurchase_date() {
-		return purchase_date;
+		return purchace_date;
 	}
-	public void setPurchase_date(Date purchase_date) {
-		this.purchase_date = purchase_date;
+	public void setPurchase_date(Date purchace_date) {
+		this.purchace_date = purchace_date;
 	}
 	public String getShop_id() {
 		return shop_id;
