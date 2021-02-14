@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -84,12 +85,16 @@ public class resisterItemEntity {
 		return created_at;
 	}
 	public void setCreated_at(Date created_at) {
-		this.created_at = created_at;
+		//this.created_at = created_at;
+		Calendar calendar = Calendar.getInstance();
+		this.created_at = calendar.getTime();
 	}
 	public Date getUpdated_at() {
 		return updated_at;
 	}
 	public void setUpdated_at(Date updated_at) {
-		this.updated_at = updated_at;
+		Calendar calendar = Calendar.getInstance();
+		//this.updated_at = updated_at;
+		this.updated_at = calendar.getTime();
 	}	
 }

@@ -4,6 +4,7 @@ package com.example.demo.controller;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +28,19 @@ public class resisterItemController {
 	public ModelAndView form(
 			@ModelAttribute("formModel") resisterItemEntity resisterItemEntity,
 			ModelAndView mav) throws ParseException {
+		
+		Calendar calendar = Calendar.getInstance();
+        //作成日
+		resisterItemEntity.setCreated_at(calendar.getTime());
+		//更新日			
+		resisterItemEntity.setUpdated_at(calendar.getTime());
+		
 		repository.saveAndFlush(resisterItemEntity);
 		return new ModelAndView("redirect:/");
+	}
+
+	private void If(boolean b) {
+		// TODO Auto-generated method stub
+		
 	}
 }
