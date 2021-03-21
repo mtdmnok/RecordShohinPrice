@@ -29,7 +29,12 @@
 	<!-- 店舗 -->
 	<div>
 		店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="text" name="shop_id"> 
+
+		
+		<select class="selectTest" name="shop">
+				<option th:each="selectItem : ${selectMap}" th:value="selectItem.key" th:inline="text">[[$selectItem.value]]</option>
+		<option th:value="${selectItem.key}" th:text="${selectItem.value}">[[$selectItem.value]]</option>
+		</select>
 	</div>
 	<br>
 	

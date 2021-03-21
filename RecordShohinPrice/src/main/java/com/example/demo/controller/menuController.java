@@ -1,8 +1,12 @@
 package com.example.demo.controller;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,7 +42,14 @@ public class menuController {
 	 * @return 購入品登録画面へのパス
 	 */
 	@GetMapping("/regist")
-	public String resisterItem(menuForm menuForm) {
+	public String resisterItem(menuForm menuForm, Model model) {
+		
+		//まず、選択肢を直接書いてみる→将来的にDBからの値
+		Map<String,String> selectMap = new LinkedHashMap<String,String>();
+		selectMap.put("key_A", "選択肢１");
+		selectMap.put("key_B", "選択肢2");
+		model.addAttribute(selectMap);
+		
 		return "resisterItem";
 	}
 }

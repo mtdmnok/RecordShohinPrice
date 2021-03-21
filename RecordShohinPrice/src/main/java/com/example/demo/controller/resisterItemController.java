@@ -5,13 +5,17 @@ package com.example.demo.controller;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.entity.resisterItemEntity;
@@ -26,21 +30,40 @@ public class resisterItemController {
 	@RequestMapping(value = "/resisterItem", method = RequestMethod.POST)
 	@Transactional(readOnly = false)
 	public ModelAndView form(
-			@ModelAttribute("formModel") resisterItemEntity resisterItemEntity,
+			@RequestParam("purchace_date") String dateString,
+			@RequestParam("shop_id") String shopId,
+			@RequestParam("category_id") String categoryId,
+			@RequestParam("item_id") String itemId,
+			@RequestParam("price") Integer price,
+			//@ModelAttribute("formModel") resisterItemEntity resisterItemEntity,
 			ModelAndView mav) throws ParseException {
+		
+		//DBに保存するためのエンティティのインスタンス生成
+		resisterItemEntity entity = new resisterItemEntity();
+		
+		//ユーザーid
+		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		entity.setUser_id(user.getUsername());
+		//日付
+		SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy-MM-dd");
+		entity.setPurchase_date(sdFormat.parse(dateString));
+		//店舗
+		entity.setShop_id(shopId);
+		//品目
+		entity.setCategory_id(categoryId);
+		//商品名
+		entity.setItem_id(itemId);
+		//価格
+		entity.setPrice(price);
 		
 		Calendar calendar = Calendar.getInstance();
         //作成日
-		resisterItemEntity.setCreated_at(calendar.getTime());
+		entity.setCreated_at(calendar.getTime());
 		//更新日			
-		resisterItemEntity.setUpdated_at(calendar.getTime());
+		entity.setUpdated_at(calendar.getTime());
 		
-		repository.saveAndFlush(resisterItemEntity);
+		repository.saveAndFlush(entity);
 		return new ModelAndView("redirect:/");
 	}
 
-	private void If(boolean b) {
-		// TODO Auto-generated method stub
-		
-	}
 }

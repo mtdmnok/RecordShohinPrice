@@ -18,6 +18,12 @@ import lombok.Data;
 @Entity
 @Table(name ="m_record")
 public class resisterItemEntity {
+	
+	//コンストラクタ
+	public resisterItemEntity() {
+		super();
+	}	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="sequence")
