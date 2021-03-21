@@ -48,7 +48,7 @@ public class menuController {
 		Map<String,String> selectMap = new LinkedHashMap<String,String>();
 		selectMap.put("key_A", "選択肢１");
 		selectMap.put("key_B", "選択肢2");
-		model.addAttribute(selectMap);
+		model.addAttribute("selectItem", selectMap);
 		
 		return "resisterItem";
 	}

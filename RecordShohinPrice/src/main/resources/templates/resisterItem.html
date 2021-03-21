@@ -32,8 +32,8 @@
 
 		
 		<select class="selectTest" name="shop">
-				<option th:each="selectItem : ${selectMap}" th:value="selectItem.key" th:inline="text">[[$selectItem.value]]</option>
-		<option th:value="${selectItem.key}" th:text="${selectItem.value}">[[$selectItem.value]]</option>
+				<option th:each="selectItem : selectItem" th:value="selectItem.key" th:inline="text">[[$selectItem.value]]</option>
+		<!-- <option th:value="${selectItem.key}" th:text="${selectItem.value}">[[$selectItem.value]]</option> -->
 		</select>
 	</div>
 	<br>
