@@ -29,12 +29,11 @@
 	<!-- 店舗 -->
 	<div>
 		店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
 		
-		<select class="selectTest" name="shop">
-				<option th:each="selectItem : selectItem" th:value="selectItem.key" th:inline="text">[[$selectItem.value]]</option>
-		<!-- <option th:value="${selectItem.key}" th:text="${selectItem.value}">[[$selectItem.value]]</option> -->
-		</select>
+	
+		<select class="selectTest" name="shop"> 
+		<option th:each="item : ${selectItem}" th:value="${item.key}" th:inline="text">[[$item.value]]</option>
+		</select> 
 	</div>
 	<br>
 	

@@ -10470,3 +10470,45 @@ Binding(CTRL+R,
 
 !ENTRY org.eclipse.jdt.debug 2 0 2021-03-22 01:06:10.074
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.ui 2 2 2021-03-27 15:06:34.766
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 15:34:47.229
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 15:34:55.988
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 15:34:56.000
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 15:34:59.305
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 15:34:59.758
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 15:35:01.794
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 15:35:12.482
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 15:36:33.693
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.js 4 0 2021-03-27 16:17:13.052
+!MESSAGE Unable to run Chrome / Chromium. Verify you have a configured Chrome / Chromium runtime environment and try again.
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.js 4 0 2021-03-27 16:17:37.463
+!MESSAGE Unable to run Chrome / Chromium. Verify you have a configured Chrome / Chromium runtime environment and try again.
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 16:18:10.547
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.js 4 0 2021-03-27 16:34:07.521
+!MESSAGE Unable to run Chrome / Chromium. Verify you have a configured Chrome / Chromium runtime environment and try again.
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 16:34:24.344
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
