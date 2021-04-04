@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
@@ -14,12 +16,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.example.demo.entity.shopEntity;
 import com.example.demo.form.menuForm;
+import com.example.demo.repository.shopRepository;
+import com.example.demo.service.shopService;
 
 @Controller
 @SessionAttributes(types = menuForm.class)
 
 public class menuController {
+	
+	@Autowired 
+	shopRepository shpRepository;
 	
 	/**
 	 * Formオブジェクトを初期化して返却する（この方法で良いのかわかりません・・・）
@@ -37,18 +45,19 @@ public class menuController {
 	}
 	
 	/**
-	 * 購入品登録画面に遷移する
+	 * 購入品登録画面に遷移す
 	 * @param  menuForm Formオブジェクト
 	 * @return 購入品登録画面へのパス
 	 */
 	@GetMapping("/regist")
 	public String resisterItem(menuForm menuForm, Model model) {
 		
-		//まず、選択肢を直接書いてみる→将来的にDBからの値
+		//店舗　まず、選択肢を直接書いてみる→将来的にDBからの値
 		Map<String,String> selectMap = new LinkedHashMap<String,String>();
 		selectMap.put("key_A", "選択肢１");
 		selectMap.put("key_B", "選択肢2");
 		model.addAttribute("selectItem", selectMap);
+		model.addAttribute("shop", shpRepository.findAll());
 		
 		return "resisterItem";
 	}

@@ -10512,3 +10512,21 @@ Binding(CTRL+R,
 
 !ENTRY org.eclipse.jdt.debug 2 0 2021-03-27 16:34:24.344
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.js 4 0 2021-04-05 00:00:09.857
+!MESSAGE Unable to run Chrome / Chromium. Verify you have a configured Chrome / Chromium runtime environment and try again.
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-04-05 00:00:45.448
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.js 4 0 2021-04-05 00:03:00.969
+!MESSAGE Unable to run Chrome / Chromium. Verify you have a configured Chrome / Chromium runtime environment and try again.
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.js 4 0 2021-04-05 00:06:02.049
+!MESSAGE Unable to run Chrome / Chromium. Verify you have a configured Chrome / Chromium runtime environment and try again.
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-04-05 00:06:18.475
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-04-05 00:13:46.278
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread

@@ -32,7 +32,11 @@
 		
 	
 		<select class="selectTest" name="shop"> 
-		<option th:each="item : ${selectItem}" th:value="${item.key}" th:inline="text">[[$item.value]]</option>
+
+			
+			<option th:each="item : ${shop}" th:inline="text">
+					[[${item.shop_name}]]
+			</option>
 		</select> 
 	</div>
 	<br>
