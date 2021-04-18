@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.demo.entity.shopEntity;
 import com.example.demo.form.menuForm;
+import com.example.demo.repository.categoryRepository;
+import com.example.demo.repository.itemRepository;
 import com.example.demo.repository.shopRepository;
 import com.example.demo.service.shopService;
 
@@ -28,6 +30,10 @@ public class menuController {
 	
 	@Autowired 
 	shopRepository shpRepository;
+	@Autowired
+	categoryRepository ctgryRepository;
+	@Autowired
+	itemRepository itmRepository;
 	
 	/**
 	 * Formオブジェクトを初期化して返却する（この方法で良いのかわかりません・・・）
@@ -36,7 +42,6 @@ public class menuController {
 	 */
 	@ModelAttribute("menuForm")
 	public menuForm createMenuForm() {
-		//ここで、ログイン名をセットしたいがエラーとなってしまいます。
 		menuForm menuForm = new menuForm();
 		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String loginName = user.getUsername();//get logged in username
@@ -53,11 +58,13 @@ public class menuController {
 	public String resisterItem(menuForm menuForm, Model model) {
 		
 		//店舗　まず、選択肢を直接書いてみる→将来的にDBからの値
-		Map<String,String> selectMap = new LinkedHashMap<String,String>();
-		selectMap.put("key_A", "選択肢１");
-		selectMap.put("key_B", "選択肢2");
-		model.addAttribute("selectItem", selectMap);
+//		Map<String,String> selectMap = new LinkedHashMap<String,String>();
+//		selectMap.put("key_A", "選択肢１");
+//		selectMap.put("key_B", "選択肢2");
+//		model.addAttribute("selectItem", selectMap);
 		model.addAttribute("shop", shpRepository.findAll());
+		model.addAttribute("category", ctgryRepository.findAll());
+		model.addAttribute("item", itmRepository.findAll());
 		
 		return "resisterItem";
 	}
