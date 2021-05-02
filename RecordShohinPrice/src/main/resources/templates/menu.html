@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang=ja xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html lang=ja xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style_menu.css">
@@ -7,10 +8,10 @@
 
 <body>
 	<h2 class="header">価格記録システム</h2>
-	<h1> こんにちは[[${#httpServletRequest.remoteUser}]]さん! </h1>
-	        <form th:action="@{/logout}" method="post">
-            <input type="submit" value="ログアウト" />
-        </form>
+	<h1>こんにちは[[${#httpServletRequest.remoteUser}]]さん!</h1>
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" value="ログアウト" />
+	</form>
 	<br>
 	<br>
 
@@ -18,12 +19,13 @@
 	<div class="systemName">メニュー画面</div>
 
 	<!-- <form action="/resisterItem1" method="post"> -->
-		<button onclick="location.href='/regist'" class="btn-menu">購入品登録</button>
-		<button onclick="location.href='./index.html'" class="btn-menu">検索</button>
-		<button onclick="location.href='./index.html'" class="btn-menu">グラフ</button>
-		<br> <br>
-		<button onclick="location.href='./index.html'" class="btn-menu">マスタ管理</button>
-		<button onclick="location.href='./index.html'" class="btn-menu">ログアウト</button>
+	<button onclick="location.href='/regist'" class="btn-menu">購入品登録</button>
+	<button onclick="location.href='./index.html'" class="btn-menu">検索</button>
+	<button onclick="location.href='./index.html'" class="btn-menu">グラフ</button>
+	<br>
+	<br>
+	<button onclick="location.href='./index.html'" class="btn-menu">マスタ管理</button>
+	<button onclick="location.href='./index.html'" class="btn-menu">ログアウト</button>
 	<!-- </form> -->
 
 

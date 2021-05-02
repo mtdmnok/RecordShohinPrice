@@ -30,7 +30,7 @@
 	<div>
 		店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<select class="selectShop" name="shop_id"> 
-			<option th:each="item : ${shop}" th:inline="text" >
+			<option th:each="item : ${shop}" th:value="${item.shop_id}" th:inline="text" >
 					[[${item.shop_name}]]
 			</option>
 		</select> 
@@ -41,7 +41,7 @@
 	<div>
 		品目：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<select class="selectCategory" name="category_id">
-			<option th:each="item : ${category}" th:inline="text">
+			<option th:each="item : ${category}" th:value="${item.category_id}" th:inline="text">
 					[[${item.category}]]
 			</option>
 		</select>
@@ -52,7 +52,7 @@
 	<div>
 		商品名：&nbsp;
 		<select class="selectItem" name="item_id">
-			<option th:each="item : ${item}" th:inline="text">
+			<option th:each="item : ${item}" th:value="${item.item_id}" th:inline="text">
 					[[${item.item}]]
 			</option>
 		</select>
@@ -82,7 +82,7 @@
 	&nbsp;
 	
 	<!-- メニューボタン -->
-	<input type="button" value="メニュー">
+	<input type="button" value="メニュー" onclick="location.href='/menu'">
 	&nbsp;
 	
 		</form>

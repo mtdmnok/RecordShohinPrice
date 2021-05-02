@@ -12,7 +12,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,7 +37,6 @@ public class resisterItemController {
 			@RequestParam("category_id") String categoryId,
 			@RequestParam("item_id") String itemId,
 			@RequestParam("price") Integer price,
-			//@ModelAttribute("formModel") resisterItemEntity resisterItemEntity,
 			ModelAndView mav) throws ParseException {
 		
 		//DBに保存するためのエンティティのインスタンス生成
@@ -64,6 +65,18 @@ public class resisterItemController {
 		
 		repository.saveAndFlush(entity);
 		return new ModelAndView("redirect:/");
+		
+
+				
+		
+	}
+	
+	/**
+	 * メニュー画面に遷移する
+	 */
+	@RequestMapping(path = "menu", method = RequestMethod.POST)
+	public String moveToMenu() {
+				return "menu";
 	}
 
 }
