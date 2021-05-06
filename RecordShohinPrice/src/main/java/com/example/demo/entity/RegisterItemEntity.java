@@ -1,6 +1,6 @@
 package com.example.demo.entity;
 
-import java.util.Calendar;
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -10,41 +10,39 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
-
 import lombok.Data;
 
+/**
+ * m_record
+ */
 @Data
 @Entity
 @Table(name ="m_record")
-public class resisterItemEntity {
-	
-	//コンストラクタ
-	public resisterItemEntity() {
-		super();
-	}	
-	
+public class RegisterItemEntity extends BaseEntity implements Serializable {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="sequence")
-	private Integer sequence; 
+	private Integer sequence;
+
 	@Column(name="user_id")
 	private String user_id;
+
 	@Column(name="purchace_date")
 	private Date purchace_date;
+
 	@Column(name="shop_id")
 	private String shop_id;
+
 	@Column(name="category_id")
 	private String category_id;
+
 	@Column(name="item_id")
 	private String item_id;
+
 	@Column(name="price")
 	private Integer price;
-	@Column(name="created_at")
-	private Date created_at;
-	@Column(name="updated_at")
-	private Date updated_at;
-	
+
 	public Integer getSequence() {
 		return sequence;
 	}
@@ -87,20 +85,4 @@ public class resisterItemEntity {
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
-	public Date getCreated_at() {
-		return created_at;
-	}
-	public void setCreated_at(Date created_at) {
-		//this.created_at = created_at;
-		Calendar calendar = Calendar.getInstance();
-		this.created_at = calendar.getTime();
-	}
-	public Date getUpdated_at() {
-		return updated_at;
-	}
-	public void setUpdated_at(Date updated_at) {
-		Calendar calendar = Calendar.getInstance();
-		//this.updated_at = updated_at;
-		this.updated_at = calendar.getTime();
-	}	
 }

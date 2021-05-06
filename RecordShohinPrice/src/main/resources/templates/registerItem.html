@@ -14,29 +14,29 @@
 
 	<!-- 画面名表示 -->
 	<div class="systemName">購入品登録画面</div>
-	
+
 	<div>商品の購入情報を入力してください。</div>
 	<br>
 	<br>
-	<form method="post" action="/resisterItem">	
+	<form method="post" action="/registerItem">
 	<!-- 日付 -->
 	<div>
 		日付：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="Date" name="purchace_date"> 
+		<input type="Date" name="purchace_date">
 	</div>
 	<br>
-	
+
 	<!-- 店舗 -->
 	<div>
 		店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<select class="selectShop" name="shop_id"> 
+		<select class="selectShop" name="shop_id">
 			<option th:each="item : ${shop}" th:inline="text" >
 					[[${item.shop_name}]]
 			</option>
-		</select> 
+		</select>
 	</div>
 	<br>
-	
+
 	<!-- 品目-->
 	<div>
 		品目：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -47,7 +47,7 @@
 		</select>
 	</div>
 	<br>
-			
+
 	<!-- 商品名 -->
 	<div>
 		商品名：&nbsp;
@@ -58,34 +58,34 @@
 		</select>
 	</div>
 	<br>
-	
+
 	<!-- 価格 -->
 	<div>
 		価格：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="text" name="price" th:value="*{price}"> 
+		<input type="text" name="price" th:value="*{price}">
 	</div>
-	
+
 	<br>
 	<br>
-	
+
 	<!-- 登録ボタン -->
 	<input type="submit" value="登録">
 
 	&nbsp;
-	
+
 	<!-- マスタ登録ボタン -->
 	<input type="button" value="マスタ登録">
 	&nbsp;
-	
+
 	<!-- クリアボタン -->
 	<input type="reset" name="reset" value="クリア"/>
 	&nbsp;
-	
+
 	<!-- メニューボタン -->
 	<input type="button" value="メニュー">
 	&nbsp;
-	
+
 		</form>
-	
+
 </body>
 </html>
