@@ -64,7 +64,9 @@ public class resisterItemController {
 		entity.setUpdated_at(calendar.getTime());
 		
 		repository.saveAndFlush(entity);
-		return new ModelAndView("redirect:/");
+		//return new ModelAndView("redirect:/");
+		
+		return new ModelAndView("resistDB_OK");
 		
 
 				
