@@ -12707,3 +12707,57 @@ java.lang.RuntimeException
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(Unknown Source)
 	at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
 	at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:31.871
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:31.887
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@57fe6f2d[org.springframework.tooling.boot.ls:1.17.0.202004200519(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:31.887
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.196
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.196
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@57fe6f2d[org.springframework.tooling.boot.ls:1.17.0.202004200519(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.196
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.305
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.307
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@57fe6f2d[org.springframework.tooling.boot.ls:1.17.0.202004200519(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.309
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.408
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.413
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@57fe6f2d[org.springframework.tooling.boot.ls:1.17.0.202004200519(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.413
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.448
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.453
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@57fe6f2d[org.springframework.tooling.boot.ls:1.17.0.202004200519(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.456
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.580
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.580
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@57fe6f2d[org.springframework.tooling.boot.ls:1.17.0.202004200519(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-05-10 10:42:32.580
+!MESSAGE SpringBootLanguageServer exists!

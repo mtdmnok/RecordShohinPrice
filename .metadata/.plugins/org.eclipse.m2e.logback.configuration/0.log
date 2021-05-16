@@ -5499,3 +5499,6 @@
 2021-05-10 00:20:47,476 [Worker-129: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\NewRecordShohinPrice\RecordShohinPrice\src\test\resources
 2021-05-10 00:21:39,645 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-05-10 00:21:39,648 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-05-10 00:21:39,651 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 8 resources
+2021-05-10 00:21:39,655 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-05-10 00:21:39,655 [Worker-113: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\NewRecordShohinPrice\RecordShohinPrice\src\test\resources
