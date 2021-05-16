@@ -4,15 +4,15 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.demo.entity.itemEntity;
-import com.example.demo.repository.itemRepository;
+import com.example.demo.entity.ItemEntity;
+import com.example.demo.repository.ItemRepository;
 
-public class itemService {
+public class ItemService {
 	
 	@Autowired
-	itemRepository repository;
+	ItemRepository repository;
 	
-	public List<itemEntity> findAll() {
+	public List<ItemEntity> findAll() {
 		return repository.findAll();
 	}
 }

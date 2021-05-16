@@ -5,16 +5,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.categoryEntity;
-import com.example.demo.repository.categoryRepository;
+import com.example.demo.entity.CategoryEntity;
+import com.example.demo.repository.CategoryRepository;
 
 @Service
-public class categoryService {
+public class CategoryService {
 
 	@Autowired
-	categoryRepository repository;
+	CategoryRepository repository;
 	
-	public List<categoryEntity> findAll() {
+	public List<CategoryEntity> findAll() {
 		return repository.findAll();
 	}
 }

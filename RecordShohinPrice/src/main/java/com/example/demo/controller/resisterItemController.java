@@ -20,14 +20,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.demo.entity.resisterItemEntity;
-import com.example.demo.repository.resisterItemRepository;
+import com.example.demo.entity.ResisterItemEntity;
+import com.example.demo.repository.ResisterItemRepository;
 
 @Controller
-public class resisterItemController {
+public class ResisterItemController {
 
 	@Autowired
-	resisterItemRepository repository;
+	ResisterItemRepository repository;
 	
 	@RequestMapping(value = "/resisterItem", method = RequestMethod.POST)
 	@Transactional(readOnly = false)
@@ -40,7 +40,7 @@ public class resisterItemController {
 			ModelAndView mav) throws ParseException {
 		
 		//DBに保存するためのエンティティのインスタンス生成
-		resisterItemEntity entity = new resisterItemEntity();
+		ResisterItemEntity entity = new ResisterItemEntity();
 		
 		//ユーザーid
 		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -59,9 +59,9 @@ public class resisterItemController {
 		
 		Calendar calendar = Calendar.getInstance();
         //作成日
-		entity.setCreated_at(calendar.getTime());
+		entity.setCreatedAt(calendar.getTime());
 		//更新日			
-		entity.setUpdated_at(calendar.getTime());
+		entity.setUpdatedAt(calendar.getTime());
 		
 		repository.saveAndFlush(entity);
 		//return new ModelAndView("redirect:/");

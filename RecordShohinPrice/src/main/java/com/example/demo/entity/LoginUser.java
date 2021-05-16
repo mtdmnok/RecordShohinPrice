@@ -1,5 +1,7 @@
 package com.example.demo.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,7 +14,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "m_user") 
-public class LoginUser {
+public class LoginUser extends BaseEntity implements Serializable{
 	
 	@Column(name = "user_id")
 	@Id

@@ -3,7 +3,7 @@ package com.example.demo.form;
 import lombok.Getter;
 import lombok.Setter;
 
-public class menuForm {
+public class MenuForm {
 	
 	/** ログイン名  **/
 	@Getter

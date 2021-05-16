@@ -16,24 +16,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import com.example.demo.entity.shopEntity;
-import com.example.demo.form.menuForm;
-import com.example.demo.repository.categoryRepository;
-import com.example.demo.repository.itemRepository;
-import com.example.demo.repository.shopRepository;
-import com.example.demo.service.shopService;
+import com.example.demo.entity.ShopEntity;
+import com.example.demo.form.MenuForm;
+import com.example.demo.repository.CategoryRepository;
+import com.example.demo.repository.ItemRepository;
+import com.example.demo.repository.ShopRepository;
+import com.example.demo.service.ShopService;
 
 @Controller
-@SessionAttributes(types = menuForm.class)
+@SessionAttributes(types = MenuForm.class)
 
-public class menuController {
+public class MenuController {
 	
 	@Autowired 
-	shopRepository shpRepository;
+	ShopRepository shpRepository;
 	@Autowired
-	categoryRepository ctgryRepository;
+	CategoryRepository ctgryRepository;
 	@Autowired
-	itemRepository itmRepository;
+	ItemRepository itmRepository;
 	
 	/**
 	 * Formオブジェクトを初期化して返却する（この方法で良いのかわかりません・・・）
@@ -41,8 +41,8 @@ public class menuController {
 	 * @return Formオブジェクト
 	 */
 	@ModelAttribute("menuForm")
-	public menuForm createMenuForm() {
-		menuForm menuForm = new menuForm();
+	public MenuForm createMenuForm() {
+		MenuForm menuForm = new MenuForm();
 		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String loginName = user.getUsername();//get logged in username
 		menuForm.setName(loginName);
@@ -55,7 +55,7 @@ public class menuController {
 	 * @return 購入品登録画面へのパス
 	 */
 	@GetMapping("/regist")
-	public String resisterItem(menuForm menuForm, Model model) {
+	public String resisterItem(MenuForm menuForm, Model model) {
 		
 		//店舗　まず、選択肢を直接書いてみる→将来的にDBからの値
 //		Map<String,String> selectMap = new LinkedHashMap<String,String>();
