@@ -14,7 +14,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "m_user") 
-public class LoginUser extends BaseEntity implements Serializable{
+public class LoginUser implements Serializable{
 	
 	@Column(name = "user_id")
 	@Id

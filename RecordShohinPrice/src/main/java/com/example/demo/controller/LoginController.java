@@ -25,8 +25,8 @@ public class LoginController {
 	 * @return
 	 */
 	//入力したIDとパスワードを取得
-	@RequestMapping(value="/menu", method=RequestMethod.GET)
-	public String login() {
-		return "menu";
-	}
+//	@RequestMapping(value="/menu", method=RequestMethod.GET)
+//	public String login() {
+//		return "menu";
+//	}
 }

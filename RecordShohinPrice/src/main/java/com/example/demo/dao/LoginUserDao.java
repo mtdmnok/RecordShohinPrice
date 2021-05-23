@@ -35,8 +35,8 @@ public class LoginUserDao {
         query += "WHERE user_name = :userName "; //setParameterで引数の値を代入できるようにNamedParameterを利用
         
         //取得した値の確認用
-        //String test = em.createNativeQuery(query, LoginUser.class).setParameter("userName", userName).getSingleResult().toString();
-        //System.out.println(test);
+//        String test = em.createNativeQuery(query, LoginUser.class).setParameter("userName", userName).getSingleResult().toString();
+//        System.out.println(test);
 
         //EntityManagerで取得された結果はオブジェクトとなるので、LoginUser型へキャストが必要となる
         return (LoginUser)em.createNativeQuery(query, LoginUser.class).setParameter("userName", userName).getSingleResult();
