@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* プルダウンリスト */
+.selectShop {
+	width:30vw
+}
+.selectCategory{
+	width:30vw
+}
+.selectItem{
+	width:30vw
+}
+
+
+
+
+/* テーブル */
+
+table {
+  border-collapse: collapse;
+  width: 50vw;
+
+}
+
+table th {
+	background-color: #66cdaa;
+}
+
+.resistTable {
+	  align:left;
+}
+
+.cellRadio {
+	width:10vw
+}
+
+.cellShop {
+	width:30vw
+}
+
+.cellCetegory {
+	width:30vw
+}
+
+.cellItem {
+	width:30vw
+}
+
+
+/* ボタン */
+button {
+	width:10vw;
+}

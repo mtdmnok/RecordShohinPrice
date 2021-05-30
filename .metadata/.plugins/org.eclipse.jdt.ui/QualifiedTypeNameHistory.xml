@@ -36,4 +36,9 @@
 <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
 <fullyQualifiedTypeName name="com.example.demo.entity.resisterItemEntity"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.example.demo.repository.ShopRepository"/>
+<fullyQualifiedTypeName name="com.example.demo.repository.CategoryRepository"/>
+<fullyQualifiedTypeName name="com.example.demo.repository.ItemRepository"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 </qualifiedTypeNameHistroy>

@@ -3,31 +3,28 @@
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./css/style_menu.css">
+<link rel="stylesheet" href="./css/style_master.css">
 </head>
 
 <body>
 	<h2 class="header">価格記録システム</h2>
-	<h1>こんにちは[[${#httpServletRequest.remoteUser}]]さん!</h1>
-	<form th:action="@{/logout}" method="post">
-		<input type="submit" value="ログアウト" />
-	</form>
+	<h1>ユーザー：[[${#httpServletRequest.remoteUser}]]さん</h1>
 	<br>
 	<br>
 
 	<!-- 画面名表示 -->
 	<div class="systemName">マスタ画面</div>
+	<br>
+
 
 	<form method="post" action="">
-
 		<div>
-			店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <select class="selectShop"
-				name="shop_id">
+			店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<select class="selectShop"	name="shop_id">
 				<option th:each="item : ${shop}" th:value="${item.shop_id}"
 					th:inline="text">[[${item.shop_name}]]</option>
 			</select>
 		</div>
-		<br>
 
 		<!-- 品目-->
 		<div>
@@ -37,49 +34,65 @@
 					th:inline="text">[[${item.category}]]</option>
 			</select>
 		</div>
-		<br>
 
 		<!-- 商品名 -->
 		<div>
-			商品名：&nbsp; <select class="selectItem" name="item_id">
+			商品名：&nbsp;&nbsp; <select class="selectItem" name="item_id">
 				<option th:each="item : ${item}" th:value="${item.item_id}"
 					th:inline="text">[[${item.item}]]</option>
 			</select>
 		</div>
-		<br>
-
 		<!-- 検索ボタン -->
 		<button onclick="location.href='./index.html'" class="btn-menu">検索</button>
-		<br>
-		<br>
+		<br> <br> <br>
 
-		<table border="1">
-			<thread><tr>
-				<th></th>
-				<th>店舗</th>
-				<th>品目</th>
-				<th>品名</th>
-			</tr></thread>
+		<table border="1" class="resistTable">
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<th class="cellRadio"></th>
+				<th class="cellShop">店舗</th>
+				<th class="cellCetegory">品目</th>
+				<th class="cellItem">品名</th>
+			</tr>
+			<tr>
+				<td><input type="radio"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+			</tr>
+			<tr>
+				<td><input type="radio"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+			</tr>
+			<tr>
+				<td><input type="radio"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+			</tr>
+			<tr>
+				<td><input type="radio"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+			</tr>
+			<tr>
+				<td><input type="radio"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
 			</tr>
 		</table>
-		
-		<br>
-		<br>
+
+		<br> <br>
 
 		<button onclick="location.href='/regist'" class="btn-menu">登録</button>
 		<button onclick="location.href='/regist'" class="btn-menu">修正</button>
 		<button onclick="location.href='/regist'" class="btn-menu">購入品登録</button>
 		<button onclick="location.href='./index.html'" class="btn-menu">メニュー</button>
 
-		<!-- </form> -->
-
 	</form>
-
 
 </body>
 
