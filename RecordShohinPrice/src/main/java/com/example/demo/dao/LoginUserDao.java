@@ -9,7 +9,7 @@ import com.example.demo.entity.LoginUser;
 
 /**
  * DBへのアクセスメソッドを呼び出すDao
- * @author aoi
+ * 
  *
  */
 @Repository
