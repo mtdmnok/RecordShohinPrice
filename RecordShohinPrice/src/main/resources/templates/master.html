@@ -64,29 +64,12 @@
 				<td><input type="text"></input></td>
 				<td><input type="text"></input></td>
 			</tr>
-			<tr>
+			
+			<tr th:each="result : ${resultList}" th:object="${result}">
 				<td><input type="radio"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-			</tr>
-			<tr>
-				<td><input type="radio"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-			</tr>
-			<tr>
-				<td><input type="radio"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-			</tr>
-			<tr>
-				<td><input type="radio"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
+				<td th:text="*{shop_id}"></td>
+				<td th:text="*{category_id}"></td>
+				<td th:text="*{item_id}"></td>
 			</tr>
 			</tbody>
 		</table>

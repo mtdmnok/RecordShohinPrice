@@ -56,19 +56,22 @@ public class MasterController {
 			@RequestParam("shop_id") String shopId,
 			@RequestParam("category_id") String categoryId,
 			@RequestParam("item_id") String itemId){
+		//レコードリスト
+		List<RecordEntity> targetRecordList = masterDao.findRecord(shopId, categoryId, itemId);
 		
-		List<RecordEntity> targetList = masterDao.findRecord(shopId, categoryId, itemId);
 		//返却用
 		ArrayList<MasterResultEntity> resultList = new ArrayList();
 		
-		for(RecordEntity record : targetList) {
+		for(RecordEntity record : targetRecordList) {
 			MasterResultEntity t = new MasterResultEntity();
 			//ユーザーID
 			t.setUser_id(record.getUser_id());
 			//購入日
 			t.setPurchace_date(record.getPurchace_date());
 			//店舗ID
-			t.setShop_id(record.getShop_id());
+			//t.setShop_id(record.getShop_id());
+			//店舗名
+			t.setShop_id(shopRepository.findShop(record.getShop_id()));
 			//カテゴリーID
 			t.setCategory_id(record.getCategory_id());
 			//品物ID
@@ -78,7 +81,10 @@ public class MasterController {
 			resultList.add(t);
 		}
 		model.addAttribute("resultList", resultList);
-		return "result";
+		//model.addAttribute("shop", shopRepository.findById(targetRecordList.get));
+		//model.addAttribute("category", categoryRepository.findAll());
+		//model.addAttribute("item", itemRepository.findAll());
+		return "master";
 //	return new ModelAndView("");
 	}
 			
