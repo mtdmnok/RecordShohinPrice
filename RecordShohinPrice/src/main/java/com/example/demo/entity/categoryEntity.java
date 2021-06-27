@@ -23,17 +23,17 @@ public class CategoryEntity extends BaseEntity implements Serializable {
 	
 	@Id
 	@Column(name="category_id")
-	private Integer category_id;
+	private String category_id;
 	@Column(name="category")
 	private String category;
 //	@Column(name="created_at")
 //	private Date created_at;
 //	@Column(name="updated_at")
 //	private Date updated_at;
-	public Integer getCategory_id() {
+	public String getCategory_id() {
 		return category_id;
 	}
-	public void setCategory_id(Integer category_id) {
+	public void setCategory_id(String category_id) {
 		this.category_id = category_id;
 	}
 	public String getCategory() {

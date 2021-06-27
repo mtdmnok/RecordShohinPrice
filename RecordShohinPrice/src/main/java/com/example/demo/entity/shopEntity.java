@@ -22,17 +22,17 @@ public class ShopEntity extends BaseEntity implements Serializable {
 	
 	@Id
 	@Column(name="shop_id")
-	private Integer shop_id;
+	private String shop_id;
 	@Column(name="shop_name")
 	private String shop_name;
 //	@Column(name="created_at")
 //	private Date created_at;
 //	@Column(name="updated_at")
 //	private Date updated_at;
-	public Integer getShop_id() {
+	public String getShop_id() {
 		return shop_id;
 	}
-	public void setShop_id(Integer shop_id) {
+	public void setShop_id(String shop_id) {
 		this.shop_id = shop_id;
 	}
 	public String getShop_name() {

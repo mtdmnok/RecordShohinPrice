@@ -10,40 +10,39 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.RecordEntity;
-import com.example.demo.entity.ShopEntity;
-import com.example.demo.repository.ShopRepository;
+import com.example.demo.entity.CategoryEntity;
+import com.example.demo.repository.CategoryRepository;
 
 @Service
-public class ShopDao implements ShopRepository{
+public class CategoryDao implements CategoryRepository{
 
 	@Autowired
-	ShopRepository shopRepository;
+	CategoryRepository categoryRepository;
 	
-	public ShopEntity findShop(String shop_id) {
-		return shopRepository.findShop(shop_id);
+	public CategoryEntity findCategory(String category_id) {
+		return categoryRepository.findCategory(category_id);
 	}
 
 	@Override
-	public List<ShopEntity> findAll() {
+	public List<CategoryEntity> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<ShopEntity> findAll(Sort sort) {
+	public List<CategoryEntity> findAll(Sort sort) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<ShopEntity> findAllById(Iterable<Long> ids) {
+	public List<CategoryEntity> findAllById(Iterable<Long> ids) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends ShopEntity> List<S> saveAll(Iterable<S> entities) {
+	public <S extends CategoryEntity> List<S> saveAll(Iterable<S> entities) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -55,13 +54,13 @@ public class ShopDao implements ShopRepository{
 	}
 
 	@Override
-	public <S extends ShopEntity> S saveAndFlush(S entity) {
+	public <S extends CategoryEntity> S saveAndFlush(S entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void deleteInBatch(Iterable<ShopEntity> entities) {
+	public void deleteInBatch(Iterable<CategoryEntity> entities) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -73,37 +72,37 @@ public class ShopDao implements ShopRepository{
 	}
 
 	@Override
-	public ShopEntity getOne(Long id) {
+	public CategoryEntity getOne(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends ShopEntity> List<S> findAll(Example<S> example) {
+	public <S extends CategoryEntity> List<S> findAll(Example<S> example) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends ShopEntity> List<S> findAll(Example<S> example, Sort sort) {
+	public <S extends CategoryEntity> List<S> findAll(Example<S> example, Sort sort) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Page<ShopEntity> findAll(Pageable pageable) {
+	public Page<CategoryEntity> findAll(Pageable pageable) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends ShopEntity> S save(S entity) {
+	public <S extends CategoryEntity> S save(S entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Optional<ShopEntity> findById(Long id) {
+	public Optional<CategoryEntity> findById(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -127,13 +126,13 @@ public class ShopDao implements ShopRepository{
 	}
 
 	@Override
-	public void delete(ShopEntity entity) {
+	public void delete(CategoryEntity entity) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteAll(Iterable<? extends ShopEntity> entities) {
+	public void deleteAll(Iterable<? extends CategoryEntity> entities) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -145,26 +144,27 @@ public class ShopDao implements ShopRepository{
 	}
 
 	@Override
-	public <S extends ShopEntity> Optional<S> findOne(Example<S> example) {
+	public <S extends CategoryEntity> Optional<S> findOne(Example<S> example) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends ShopEntity> Page<S> findAll(Example<S> example, Pageable pageable) {
+	public <S extends CategoryEntity> Page<S> findAll(Example<S> example, Pageable pageable) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public <S extends ShopEntity> long count(Example<S> example) {
+	public <S extends CategoryEntity> long count(Example<S> example) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public <S extends ShopEntity> boolean exists(Example<S> example) {
+	public <S extends CategoryEntity> boolean exists(Example<S> example) {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	
 }

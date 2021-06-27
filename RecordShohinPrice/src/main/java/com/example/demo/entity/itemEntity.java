@@ -21,17 +21,17 @@ public class ItemEntity extends BaseEntity implements Serializable{
 
 	@Id
 	@Column(name="item_id")
-	private Integer item_id;
+	private String item_id;
 	@Column(name="item")
 	private String item;
 //	@Column(name="created_at")
 //	private Date created_at;
 //	@Column(name="updated_at")
 //	private Date updated_at;
-	public Integer getItem_id() {
+	public String getItem_id() {
 		return item_id;
 	}
-	public void setItem_id(Integer item_id) {
+	public void setItem_id(String item_id) {
 		this.item_id = item_id;
 	}
 	public String getItem() {

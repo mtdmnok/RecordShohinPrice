@@ -71,11 +71,14 @@ public class MasterController {
 			//店舗ID
 			//t.setShop_id(record.getShop_id());
 			//店舗名
-			t.setShop_id(shopRepository.findShop(record.getShop_id()));
+			t.setShop_id(shopRepository.findShop(record.getShop_id()).getShop_name());
 			//カテゴリーID
-			t.setCategory_id(record.getCategory_id());
+			//t.setCategory_id(record.getCategory_id());
+			//カテゴリー
+			t.setCategory_id(categoryRepository.findCategory(record.getCategory_id()).getCategory());
 			//品物ID
 			t.setItem_id(record.getItem_id());
+			t.setItem_id(itemRepository.findItem(record.getItem_id()).getItem());
 			//価格
 			t.setPrice(record.getPrice());
 			resultList.add(t);
