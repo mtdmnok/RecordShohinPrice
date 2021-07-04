@@ -4,9 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style_master.css">
+
+<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+<script type="text/javascript" src="/js/master.js"></script>
+
 </head>
 
 <body>
+	
 	<h2 class="header">価格記録システム</h2>
 	<h1>ユーザー：[[${#httpServletRequest.remoteUser}]]さん</h1>
 	<br>
@@ -19,6 +25,7 @@
 
 	<form method="post" action="/resistMaster">
 		<div>
+		<input type="radio" name="selectItem" value="1">
 			店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 			<select class="selectShop"	name="shop_id">
 				<option th:each="item : ${shop}" th:value="${item.shop_id}"
@@ -28,6 +35,7 @@
 
 		<!-- 品目-->
 		<div>
+		<input type="radio" name="selectItem" value="2">
 			品目：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <select class="selectCategory"
 				name="category_id">
 				<option th:each="item : ${category}" th:value="${item.category_id}"
@@ -37,16 +45,29 @@
 
 		<!-- 商品名 -->
 		<div>
+		<input type="radio" name="selectItem" value="3">
 			商品名：&nbsp;&nbsp; <select class="selectItem" name="item_id">
 				<option th:each="item : ${item}" th:value="${item.item_id}"
 					th:inline="text">[[${item.item}]]</option>
 			</select>
 		</div>
+		
+		<!-- ユーザー名 -->
+		<div>
+		<input type="radio" name="selectItem" value="4">
+			ユーザー名：&nbsp;&nbsp; <select class="selectItem" name="user_id">
+				<option th:each="item : ${user}" th:value="${item}"
+					th:inline="text">[[${item.userName}]]</option>
+			</select>
+		</div>
+		
 		<!-- 検索ボタン -->
 		<input type="submit" value="検索">
 		<br> <br> <br>
 
 			<table border="1" class="resistTable">
+			
+			<!-- 項目 -->
 			<thread>
 				<tr>
 					<th class="cellRadio"></th>
@@ -58,24 +79,27 @@
 			
 			<tbody>
 			
-			<tr>
-				<td><input type="radio"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-			</tr>
-			
-			<tr th:each="result : ${resultList}" th:object="${result}">
-				<td><input type="radio"></input></td>
-				<td th:text="*{shop_id}"></td>
+			　<!-- 検索結果表示 -->
+			　<tr th:each="result : ${resultList}" th:object="${result}">
+			　	<td><input type="radio"></input></td>
+			　	<td th:text="*{shop_id}"></td>
 				<td th:text="*{category_id}"></td>
 				<td th:text="*{item_id}"></td>
-			</tr>
+			　</tr>
+			
+			　<!-- 入力欄 -->
+			　<tr>
+				<td><input type="radio"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+				<td><input type="text"></input></td>
+			　</tr>
 			</tbody>
 		</table>
 
 		<br> <br>
 
+		<!-- ボタン -->
 		<button onclick="location.href='/regist'" class="btn-menu">登録</button>
 		<button onclick="location.href='/regist'" class="btn-menu">修正</button>
 		<button onclick="location.href='/regist'" class="btn-menu">購入品登録</button>

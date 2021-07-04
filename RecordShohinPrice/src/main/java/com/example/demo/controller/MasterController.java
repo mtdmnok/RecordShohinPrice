@@ -14,12 +14,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.MasterDao;
+import com.example.demo.entity.LoginUser;
 import com.example.demo.entity.MasterResultEntity;
 import com.example.demo.entity.RecordEntity;
 import com.example.demo.repository.CategoryRepository;
 import com.example.demo.repository.ItemRepository;
 import com.example.demo.repository.ResisterItemRepository;
 import com.example.demo.repository.ShopRepository;
+import com.example.demo.repository.UserRepository;
 import com.sun.xml.messaging.saaj.packaging.mime.internet.ParseException;
 
 @Controller
@@ -33,6 +35,8 @@ public class MasterController {
 	CategoryRepository categoryRepository;
 	@Autowired
 	ItemRepository itemRepository;
+	@Autowired
+	UserRepository userRepository;
 
 	/**
 	 * マスタ画面
@@ -42,6 +46,7 @@ public class MasterController {
 		model.addAttribute("shop", shopRepository.findAll());
 		model.addAttribute("category", categoryRepository.findAll());
 		model.addAttribute("item", itemRepository.findAll());
+		model.addAttribute("user", userRepository.findAll());
 		return "master";
 	}
 	
@@ -55,7 +60,8 @@ public class MasterController {
 	public String result(Model model, 
 			@RequestParam("shop_id") String shopId,
 			@RequestParam("category_id") String categoryId,
-			@RequestParam("item_id") String itemId){
+			@RequestParam("item_id") String itemId,
+			@RequestParam("user_id") String userId) {
 		//レコードリスト
 		List<RecordEntity> targetRecordList = masterDao.findRecord(shopId, categoryId, itemId);
 		
@@ -84,9 +90,11 @@ public class MasterController {
 			resultList.add(t);
 		}
 		model.addAttribute("resultList", resultList);
-		//model.addAttribute("shop", shopRepository.findById(targetRecordList.get));
-		//model.addAttribute("category", categoryRepository.findAll());
-		//model.addAttribute("item", itemRepository.findAll());
+		model.addAttribute("shop", shopRepository.findAll());
+		model.addAttribute("category", categoryRepository.findAll());
+		model.addAttribute("item", itemRepository.findAll());
+		model.addAttribute("user", userRepository.findAll());
+
 		return "master";
 //	return new ModelAndView("");
 	}
