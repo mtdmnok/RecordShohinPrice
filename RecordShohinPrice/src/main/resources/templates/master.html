@@ -5,9 +5,8 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/style_master.css">
 
-<script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
-<script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
-<script type="text/javascript" src="/js/master.js"></script>
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="master.js"></script>
 
 </head>
 
@@ -62,7 +61,7 @@
 		</div>
 		
 		<!-- 検索ボタン -->
-		<input type="submit" value="検索">
+		<input type="submit" value="検索" id="searchBtn">
 		<br> <br> <br>
 
 			<table border="1" class="resistTable">
@@ -93,6 +92,31 @@
 				<td><input type="text"></input></td>
 				<td><input type="text"></input></td>
 				<td><input type="text"></input></td>
+			　</tr>
+			</tbody>
+			</table>
+			
+		<table border="1" class="resistTable" id="resistTable">
+		<thread>
+				<tr>
+					<th class="cellRadio"></th>
+					<th class="cellShop" id="test"></th>
+				</tr>
+		</thread>
+			
+			<tbody>
+			
+			　<!-- 検索結果表示 -->
+			　<tr th:each="result : ${resultList}" th:object="${result}">
+			　	<td><input type="radio"></input></td>
+			　	<td th:text="*{shop_id}"></td>
+			　</tr>
+			
+			　<!-- 入力欄 -->
+			　<tr>
+				<td><input type="radio"></input></td>
+				<td><input type="text"></input></td>
+	
 			　</tr>
 			</tbody>
 		</table>

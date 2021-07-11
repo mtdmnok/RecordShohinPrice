@@ -1,15 +1,17 @@
 
-$(function(){
-	$('input[name="selectItem"]:radio').change(function(){
-		var raioval = $(this).val();
-		if(radioval == 1){
-			$('.cellShop').text('テスト');
-		}else{
-			
-		}	
-				
+
+//$(document).ready(function(){
+//	$("#searchBtn").click(function(){
+//		var radioVal = document.getElementsByName("selectItem").val();
+//		$("#test").text(radioVal);
+//	});
+//});
+
+
+$("#searchBtn").on("click", function(){
+	var radioVal = document.getElementsByName("selectItem").val();
+		$("#test").text(radioVal);
 	});
-});
 
 
 

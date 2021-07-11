@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.User"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetailsService"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetails"/>
@@ -16,8 +13,6 @@
 <fullyQualifiedTypeName name="com.example.demo.dto.LoginDto"/>
 <fullyQualifiedTypeName name="com.example.demo.frontinterface.DemoUserInfo"/>
 <fullyQualifiedTypeName name="com.example.demo.dao.LoginDao"/>
-<fullyQualifiedTypeName name="lombok.Data"/>
-<fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
@@ -28,9 +23,6 @@
 <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
 <fullyQualifiedTypeName name="com.example.demo.entity.resisterItemEntity"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="com.example.demo.repository.ShopRepository"/>
-<fullyQualifiedTypeName name="com.example.demo.repository.CategoryRepository"/>
-<fullyQualifiedTypeName name="com.example.demo.repository.ItemRepository"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
@@ -38,21 +30,34 @@
 <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 <fullyQualifiedTypeName name="com.sun.xml.messaging.saaj.packaging.mime.internet.ParseException"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
-<fullyQualifiedTypeName name="javax.persistence.Entity"/>
-<fullyQualifiedTypeName name="javax.persistence.Table"/>
-<fullyQualifiedTypeName name="java.io.Serializable"/>
-<fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="javax.management.Query"/>
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="com.example.demo.repository.RecordRepository"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
-<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
 <fullyQualifiedTypeName name="com.example.demo.dao.MasterDao"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.example.demo.entity.RecordEntity"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.example.demo.entity.MasterResultEntity"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.example.demo.repository.ShopRepository"/>
+<fullyQualifiedTypeName name="com.example.demo.entity.ShopEntity"/>
+<fullyQualifiedTypeName name="com.example.demo.repository.CategoryRepository"/>
+<fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="com.example.demo.entity.BaseEntity"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.example.demo.repository.ItemRepository"/>
+<fullyQualifiedTypeName name="com.example.demo.entity.ItemEntity"/>
+<fullyQualifiedTypeName name="com.example.demo.entity.CategoryEntity"/>
+<fullyQualifiedTypeName name="com.example.demo.dao.CategoryDao"/>
+<fullyQualifiedTypeName name="com.example.demo.dao.ShopDao"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+<fullyQualifiedTypeName name="com.example.demo.entity.LoginUser"/>
+<fullyQualifiedTypeName name="com.example.demo.repository.UserRepository"/>
 </qualifiedTypeNameHistroy>
