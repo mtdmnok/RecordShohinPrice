@@ -82,7 +82,6 @@ INDEX VERSION 1.131+C:\NewRecordShohinPrice\.metadata\.plugins\org.eclipse.jdt.c
 2322285977.index
 3654703567.index
 1767001029.index
-139115291.index
 3501760855.index
 2067989772.index
 3585313854.index

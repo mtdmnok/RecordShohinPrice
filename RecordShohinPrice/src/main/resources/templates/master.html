@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="./css/style_master.css">
 
 <script src="js/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="js/master.js"></script>
+<script src="js/master.js"></script>
 
 </head>
 
@@ -21,86 +21,49 @@
 	<div class="systemName">マスタ画面</div>
 	<br>
 
-
 	<form method="post" action="/resistMaster">
 		<div>
-		<input type="radio" name="selectItem" value="1">
-			店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<select class="selectShop"	name="shop_id">
-				<option th:each="item : ${shop}" th:value="${item.shop_id}"
-					th:inline="text">[[${item.shop_name}]]</option>
-			</select>
+			<input type="radio" name="selectItem" value="1">
+				店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<input type = "text" class="selectShop" name="shop_id" value="">
+			
 		</div>
 
 		<!-- 品目-->
 		<div>
-		<input type="radio" name="selectItem" value="2">
-			品目：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <select class="selectCategory"
-				name="category_id">
-				<option th:each="item : ${category}" th:value="${item.category_id}"
-					th:inline="text">[[${item.category}]]</option>
-			</select>
+			<input type="radio" name="selectItem" value="2">
+				品目：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<input type="text" class="selectCategory"　name="category_id" value="">
+		
 		</div>
 
 		<!-- 商品名 -->
 		<div>
-		<input type="radio" name="selectItem" value="3">
-			商品名：&nbsp;&nbsp; <select class="selectItem" name="item_id">
-				<option th:each="item : ${item}" th:value="${item.item_id}"
-					th:inline="text">[[${item.item}]]</option>
-			</select>
+			<input type="radio" name="selectItem" value="3">
+				商品名：&nbsp;&nbsp; 
+			<input type="text" class="selectItem" name="item_id" value="">
+			
 		</div>
 		
 		<!-- ユーザー名 -->
 		<div>
-		<input type="radio" name="selectItem" value="4">
-			ユーザー名：&nbsp;&nbsp; <select class="selectItem" name="user_id">
-				<option th:each="item : ${user}" th:value="${item}"
-					th:inline="text">[[${item.userName}]]</option>
-			</select>
+			<input type="radio" name="selectItem" value="4">
+				ユーザー名：&nbsp;&nbsp; 
+			<input type="text" class="selectItem" name="user_id" value="">
+			
 		</div>
 		
 		<!-- 検索ボタン -->
 		<input type="submit" value="検索" id="searchBtn">
 		<br> <br> <br>
 
-			<table border="1" class="resistTable">
 			
-			<!-- 項目 -->
-			<thread>
-				<tr>
-					<th class="cellRadio"></th>
-					<th class="cellShop">店舗</th>
-					<th class="cellCetegory">品目</th>
-					<th class="cellItem">品名</th>
-				</tr>
-			</thread>
-			
-			<tbody>
-			
-			　<!-- 検索結果表示 -->
-			　<tr th:each="result : ${resultList}" th:object="${result}">
-			　	<td><input type="radio"></input></td>
-			　	<td th:text="*{shop_id}"></td>
-				<td th:text="*{category_id}"></td>
-				<td th:text="*{item_id}"></td>
-			　</tr>
-			
-			　<!-- 入力欄 -->
-			　<tr>
-				<td><input type="radio"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-				<td><input type="text"></input></td>
-			　</tr>
-			</tbody>
-			</table>
-			
+		<!-- テーブル -->
 		<table border="1" class="resistTable" id="resistTable">
 		<thread>
 				<tr>
-					<th class="cellRadio"></th>
-					<th class="cellShop" id="test"></th>
+					<th class="cellRadio"> </th>
+					<th class="cellShop" id="test"> 選択項目 </th>
 				</tr>
 		</thread>
 			

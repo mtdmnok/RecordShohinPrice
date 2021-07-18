@@ -68,6 +68,9 @@ public class MasterController {
 		//返却用
 		ArrayList<MasterResultEntity> resultList = new ArrayList();
 		
+		//ラジオボタン取得
+		//String selectedRadio = 
+		
 		for(RecordEntity record : targetRecordList) {
 			MasterResultEntity t = new MasterResultEntity();
 			//ユーザーID
