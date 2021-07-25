@@ -20,10 +20,10 @@ public class ShopDao implements ShopRepository{
 	@Autowired
 	ShopRepository shopRepository;
 	
-	public ShopEntity findShop(String shop_id) {
-		return shopRepository.findShop(shop_id);
+	public ShopEntity findShop(String shop_name) {
+		return shopRepository.findShop(shop_name);
 	}
-
+	
 	@Override
 	public List<ShopEntity> findAll() {
 		// TODO Auto-generated method stub
