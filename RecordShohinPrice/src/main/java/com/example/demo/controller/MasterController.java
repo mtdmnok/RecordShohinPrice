@@ -18,6 +18,7 @@ import com.example.demo.dao.ShopDao;
 import com.example.demo.entity.LoginUser;
 import com.example.demo.entity.MasterResultEntity;
 import com.example.demo.entity.RecordEntity;
+import com.example.demo.entity.ShopEntity;
 import com.example.demo.repository.CategoryRepository;
 import com.example.demo.repository.ItemRepository;
 import com.example.demo.repository.ResisterItemRepository;
@@ -61,14 +62,14 @@ public class MasterController {
 	
 	@RequestMapping(value = "/resistMaster", method = RequestMethod.POST)
 	public String result(Model model, 
-			@RequestParam("shop_id") String shopId,
-			@RequestParam("category_id") String categoryId,
-			@RequestParam("item_id") String itemId,
-			@RequestParam("user_id") String userId,
-			@RequestParam("selectItem") String item) {
+			@RequestParam(name = "shop_name", required = false) String shopName,
+			@RequestParam(name = "category_name", required = false) String categoryName,
+			@RequestParam(name = "item_name", required = false) String itemName,
+			@RequestParam(name = "user_name", required = false) String userName,
+			@RequestParam(name = "selectItem", required = false) String item) {
 		//レコードリスト
 		//List<RecordEntity> targetRecordList = masterDao.findRecord(shopId, categoryId, itemId);
-		List<String> targetRecordList = (List<String>) shopDao.findShop(shopId);
+		List<String> targetRecordList = (List<String>) shopDao.findShop(shopName);
 		
 		//返却用
 		ArrayList<MasterResultEntity> resultList = new ArrayList();
@@ -100,9 +101,37 @@ public class MasterController {
 		model.addAttribute("category", categoryRepository.findAll());
 		model.addAttribute("item", itemRepository.findAll());
 		model.addAttribute("user", userRepository.findAll());
-
-		return "master";
+	return "master";
 //	return new ModelAndView("");
+	}
+	
+	@RequestMapping(value = "/resistMaster", params = "searchBtn", method = RequestMethod.POST)
+	public String search(Model model,
+			@RequestParam(name = "shop_name", required = false) String shopName,
+			@RequestParam(name = "category_name", required = false) String categoryName,
+			@RequestParam(name = "item_name", required = false) String itemName,
+			@RequestParam(name = "user_name", required = false) String userName,
+			@RequestParam(name = "selectRadioItem", required = false) String radioItem) {
+		
+		//レコードリスト
+		//選択したラジオボタンにより取得するデータを変更
+		//店舗
+		String test = "%" + shopName + "%";
+		List<ShopEntity> targetRecordList = (List<ShopEntity>) shopRepository.findShop("%" + shopName + "%");
+		model.addAttribute("resultList", targetRecordList);
+		//品目
+		//商品名
+		//ユーザー名
+		
+		//検索用
+		model.addAttribute("shop", shopRepository.findAll());
+		model.addAttribute("category", categoryRepository.findAll());
+		model.addAttribute("item", itemRepository.findAll());
+		model.addAttribute("user", userRepository.findAll());
+		
+		//List<RecordEntity> targetRecordList = masterDao.findRecord(shopId, categoryId, itemId);) {
+		
+		return "master";
 	}
 			
 }

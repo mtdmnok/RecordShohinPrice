@@ -6,9 +6,9 @@ $(function(){
 
 
 
-$('#searchBtn').click(function() {
-	var shop = $('input[name="shop_id"]').val();
-})
+//$('#searchBtn').click(function() {
+//	var shop = $('input[name="shop_id"]').val();
+//})
 
 //document.getElementById("searchBtn").onclick = function(){
 //	var shop = $('input[name="shop_id"]').val();
@@ -34,7 +34,7 @@ $('#searchBtn').click(function() {
 
 //　ラジオボタンを選択すると、表の項目名が変化する
 $(function(){
-	$( 'input[name="selectItem"]:radio' ).change( function() {
+	$( 'input[name="selectRadioItem"]:radio' ).change( function() {
 		var radioval = $(this).val();
 		if(radioval == 1){
 			$('table#resistTable tbody tr th:nth-child(2)').text('店舗');

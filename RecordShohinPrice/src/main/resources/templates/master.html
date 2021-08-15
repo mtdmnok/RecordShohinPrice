@@ -21,35 +21,35 @@
 
 	<form method="post" action="/resistMaster">
 		<div>
-			<input type="radio" name="selectItem" value="1">
+			<input type="radio" name="selectRadioItem" value="1">
 				店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type = "text" class="selectShop" name="shop_id" value="">
+			<input type = "text" class="selectShop" name="shop_name" value="">
 		</div>
 
 		<!-- 品目-->
 		<div>
-			<input type="radio" name="selectItem" value="2">
+			<input type="radio" name="selectRadioItem" value="2">
 				品目：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="text" class="selectCategory"　name="category_id" value="">
+			<input type="text" class="selectCategory"　name="category_name" value="">
 		</div>
 
 		<!-- 商品名 -->
 		<div>
-			<input type="radio" name="selectItem" value="3">
+			<input type="radio" name="selectRadioItem" value="3">
 				商品名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="text" class="selectItem" name="item_id" value="">
+			<input type="text" class="selectItem" name="item_name" value="">
 		</div>
 		
 		<!-- ユーザー名 -->
 		<div>
-			<input type="radio" name="selectItem" value="4">
+			<input type="radio" name="selectRadioItem" value="4">
 				ユーザー名：&nbsp;&nbsp; 
-			<input type="text" class="selectItem" name="user_id" value="">
+			<input type="text" class="selectItem" name="user_name" value="">
 		</div>
 		<br>
 		
 		<!-- 検索ボタン -->
-		<input type="submit" value="検索" id="searchBtn" onclick="OnButtonClick">
+		<input type="submit" value="検索" name="searchBtn" id="searchBtn" onclick="OnButtonClick">
 		<br> <br>
 
 			
@@ -67,7 +67,7 @@
 			　<!-- 検索結果表示 -->
 			　<tr th:each="result : ${resultList}" th:object="${result}">
 			　	<td><input type="radio" class="tableRadio"></input></td>
-			　	<td th:text="*{shop_id}"></td>
+			　	<td th:text="*{shop_name}"></td>
 			　</tr>
 			
 			　<!-- 入力欄 -->
