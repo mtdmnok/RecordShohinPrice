@@ -15,6 +15,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.dao.MasterDao;
 import com.example.demo.dao.ShopDao;
+import com.example.demo.entity.CategoryEntity;
+import com.example.demo.entity.ItemEntity;
 import com.example.demo.entity.LoginUser;
 import com.example.demo.entity.MasterResultEntity;
 import com.example.demo.entity.RecordEntity;
@@ -69,7 +71,7 @@ public class MasterController {
 			@RequestParam(name = "selectItem", required = false) String item) {
 		//レコードリスト
 		//List<RecordEntity> targetRecordList = masterDao.findRecord(shopId, categoryId, itemId);
-		List<String> targetRecordList = (List<String>) shopDao.findShop(shopName);
+		//List<String> targetRecordList = (List<String>) shopDao.findShop(shopName);
 		
 		//返却用
 		ArrayList<MasterResultEntity> resultList = new ArrayList();
@@ -96,7 +98,7 @@ public class MasterController {
 //			t.setPrice(record.getPrice());
 //			resultList.add(t);
 //		}
-		model.addAttribute("resultList", targetRecordList);
+		//model.addAttribute("resultList", targetRecordList);
 		model.addAttribute("shop", shopRepository.findAll());
 		model.addAttribute("category", categoryRepository.findAll());
 		model.addAttribute("item", itemRepository.findAll());
@@ -104,6 +106,7 @@ public class MasterController {
 	return "master";
 //	return new ModelAndView("");
 	}
+	
 	
 	@RequestMapping(value = "/resistMaster", params = "searchBtn", method = RequestMethod.POST)
 	public String search(Model model,
@@ -115,19 +118,33 @@ public class MasterController {
 		
 		//レコードリスト
 		//選択したラジオボタンにより取得するデータを変更
-		//店舗
-		String test = "%" + shopName + "%";
-		List<ShopEntity> targetRecordList = (List<ShopEntity>) shopRepository.findShop("%" + shopName + "%");
+		
+		//店舗の場合
+		if (radioItem == "1") {
+		List<ShopEntity> targetRecordList = shopRepository.findShop("%" + shopName + "%");
 		model.addAttribute("resultList", targetRecordList);
-		//品目
-		//商品名
-		//ユーザー名
+		} else if (radioItem == "2") {
+			//品目の場合
+			List<CategoryEntity> targetRecordList = categoryRepository.findCategory("%" + categoryName + "%");
+			model.addAttribute("resultList", targetRecordList);
+		} else if (radioItem == "3") {
+			//商品名の場合
+			List<ItemEntity> targetRecordList = itemRepository.findItem("%" + itemName + "%");
+			model.addAttribute("resultList", targetRecordList);
+		} else if (radioItem == "4") {
+			//ユーザー名の場合
+			List<LoginUser> targetRecordList = userRepository.findLikeUser("%" + userName + "%");
+			model.addAttribute("resultList", targetRecordList);
+		}
+		
+
 		
 		//検索用
 		model.addAttribute("shop", shopRepository.findAll());
 		model.addAttribute("category", categoryRepository.findAll());
 		model.addAttribute("item", itemRepository.findAll());
 		model.addAttribute("user", userRepository.findAll());
+		model.addAttribute("selectRadioItem", radioItem);
 		
 		//List<RecordEntity> targetRecordList = masterDao.findRecord(shopId, categoryId, itemId);) {
 		

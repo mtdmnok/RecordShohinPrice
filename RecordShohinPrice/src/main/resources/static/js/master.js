@@ -5,7 +5,6 @@ $(function(){
 })
 
 
-
 //$('#searchBtn').click(function() {
 //	var shop = $('input[name="shop_id"]').val();
 //})

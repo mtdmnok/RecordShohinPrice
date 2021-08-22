@@ -20,7 +20,7 @@ public class ShopDao implements ShopRepository{
 	@Autowired
 	ShopRepository shopRepository;
 	
-	public ShopEntity findShop(String shop_name) {
+	public List<ShopEntity> findShop(String shop_name) {
 		return shopRepository.findShop(shop_name);
 	}
 	
