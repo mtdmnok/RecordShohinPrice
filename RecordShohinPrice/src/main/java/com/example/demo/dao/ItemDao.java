@@ -19,7 +19,7 @@ public class ItemDao implements ItemRepository {
 	@Autowired
 	ItemRepository itemRepository;
 	
-	public ItemEntity findItem(String item_id) {
+	public List<ItemEntity> findItem(String item_id) {
 		return itemRepository.findItem(item_id);
 	}
 

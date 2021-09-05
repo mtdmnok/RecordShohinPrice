@@ -19,7 +19,7 @@ public class CategoryDao implements CategoryRepository{
 	@Autowired
 	CategoryRepository categoryRepository;
 	
-	public CategoryEntity findCategory(String category_id) {
+	public List<CategoryEntity> findCategory(String category_id) {
 		return categoryRepository.findCategory(category_id);
 	}
 

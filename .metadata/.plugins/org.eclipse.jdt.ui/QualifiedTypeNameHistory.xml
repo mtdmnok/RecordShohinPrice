@@ -38,9 +38,7 @@
 <fullyQualifiedTypeName name="com.example.demo.entity.RecordEntity"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.example.demo.entity.MasterResultEntity"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.example.demo.repository.ShopRepository"/>
-<fullyQualifiedTypeName name="com.example.demo.entity.ShopEntity"/>
 <fullyQualifiedTypeName name="com.example.demo.repository.CategoryRepository"/>
 <fullyQualifiedTypeName name="lombok.Data"/>
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
@@ -52,12 +50,14 @@
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="com.example.demo.repository.ItemRepository"/>
-<fullyQualifiedTypeName name="com.example.demo.entity.ItemEntity"/>
-<fullyQualifiedTypeName name="com.example.demo.entity.CategoryEntity"/>
 <fullyQualifiedTypeName name="com.example.demo.dao.CategoryDao"/>
 <fullyQualifiedTypeName name="com.example.demo.dao.ShopDao"/>
 <fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
 <fullyQualifiedTypeName name="com.example.demo.entity.LoginUser"/>
 <fullyQualifiedTypeName name="com.example.demo.repository.UserRepository"/>
+<fullyQualifiedTypeName name="com.example.demo.entity.ShopEntity"/>
+<fullyQualifiedTypeName name="com.example.demo.entity.ItemEntity"/>
+<fullyQualifiedTypeName name="com.example.demo.entity.CategoryEntity"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
