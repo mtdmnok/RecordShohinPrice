@@ -35,13 +35,13 @@ function OnButtonClick() {
 //	}
 	
 	
-	var dt = {searchBtn:searchBtn, inputItem:inputItem};
+	var dt = {selectRadioItem:selectRadioItem, inputItem:inputItem};
 	
 	$.ajax({
-		url: "/resistMaster",
+		url: "/resistMaster2",
 		dataType; "text",
 		type: "GET",
-		data:dt
+		data: dt
 		// Ajaxが正常終了した場合
 	}).done(function(data, textStatus, jqXHR){
 		if(!data){

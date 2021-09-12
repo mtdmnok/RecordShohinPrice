@@ -2994,3 +2994,107 @@ java.lang.InterruptedException
 	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:149)
 	at org.eclipse.wst.jsdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:81)
 	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-09-12 23:54:44.944
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverInfo(LSPTextHover.java:108)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:41)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-09-12 23:55:52.318
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-09-12 23:57:16.068
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-09-13 00:05:02.738
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
+	at java.util.concurrent.CompletableFuture.get(Unknown Source)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverInfo(LSPTextHover.java:108)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:41)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.core 4 0 2021-09-13 00:05:34.230
+!MESSAGE Failed to connect to Standalone V8 VM
+!STACK 0
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.AbstractSocketWrapper.<init>(AbstractSocketWrapper.java:35)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.SocketWrapper.<init>(SocketWrapper.java:29)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.SocketConnection.attach(SocketConnection.java:290)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.SocketConnection.start(SocketConnection.java:445)
+	at org.eclipse.wst.jsdt.chromium.internal.standalonev8.StandaloneVmImpl.attachImpl(StandaloneVmImpl.java:121)
+	at org.eclipse.wst.jsdt.chromium.internal.standalonev8.StandaloneVmImpl.attach(StandaloneVmImpl.java:79)
+	at org.eclipse.wst.jsdt.chromium.debug.core.model.JavascriptVmEmbedderFactory$4$1.attach(JavascriptVmEmbedderFactory.java:207)
+	at org.eclipse.wst.jsdt.chromium.debug.core.model.DebugTargetImpl.attach(DebugTargetImpl.java:74)
+	at org.eclipse.wst.jsdt.js.node.internal.launch.NodeDebugConnector.attach(NodeDebugConnector.java:118)
+	at org.eclipse.wst.jsdt.js.node.internal.launch.NodeLaunchConfigurationDelegate$DebuggerConnectRunnable.run(NodeLaunchConfigurationDelegate.java:190)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.core 4 0 2021-09-13 00:07:03.893
+!MESSAGE Failed to connect to Standalone V8 VM
+!STACK 0
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.AbstractSocketWrapper.<init>(AbstractSocketWrapper.java:35)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.SocketWrapper.<init>(SocketWrapper.java:29)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.SocketConnection.attach(SocketConnection.java:290)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.SocketConnection.start(SocketConnection.java:445)
+	at org.eclipse.wst.jsdt.chromium.internal.standalonev8.StandaloneVmImpl.attachImpl(StandaloneVmImpl.java:121)
+	at org.eclipse.wst.jsdt.chromium.internal.standalonev8.StandaloneVmImpl.attach(StandaloneVmImpl.java:79)
+	at org.eclipse.wst.jsdt.chromium.debug.core.model.JavascriptVmEmbedderFactory$4$1.attach(JavascriptVmEmbedderFactory.java:207)
+	at org.eclipse.wst.jsdt.chromium.debug.core.model.DebugTargetImpl.attach(DebugTargetImpl.java:74)
+	at org.eclipse.wst.jsdt.js.node.internal.launch.NodeDebugConnector.attach(NodeDebugConnector.java:118)
+	at org.eclipse.wst.jsdt.js.node.internal.launch.NodeLaunchConfigurationDelegate$DebuggerConnectRunnable.run(NodeLaunchConfigurationDelegate.java:190)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.chromium.debug.core 4 0 2021-09-13 00:23:06.328
+!MESSAGE Failed to connect to Standalone V8 VM
+!STACK 0
+java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.AbstractSocketWrapper.<init>(AbstractSocketWrapper.java:35)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.SocketWrapper.<init>(SocketWrapper.java:29)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.SocketConnection.attach(SocketConnection.java:290)
+	at org.eclipse.wst.jsdt.chromium.internal.transport.SocketConnection.start(SocketConnection.java:445)
+	at org.eclipse.wst.jsdt.chromium.internal.standalonev8.StandaloneVmImpl.attachImpl(StandaloneVmImpl.java:121)
+	at org.eclipse.wst.jsdt.chromium.internal.standalonev8.StandaloneVmImpl.attach(StandaloneVmImpl.java:79)
+	at org.eclipse.wst.jsdt.chromium.debug.core.model.JavascriptVmEmbedderFactory$4$1.attach(JavascriptVmEmbedderFactory.java:207)
+	at org.eclipse.wst.jsdt.chromium.debug.core.model.DebugTargetImpl.attach(DebugTargetImpl.java:74)
+	at org.eclipse.wst.jsdt.js.node.internal.launch.NodeDebugConnector.attach(NodeDebugConnector.java:118)
+	at org.eclipse.wst.jsdt.js.node.internal.launch.NodeLaunchConfigurationDelegate$DebuggerConnectRunnable.run(NodeLaunchConfigurationDelegate.java:190)
+	at java.lang.Thread.run(Unknown Source)
