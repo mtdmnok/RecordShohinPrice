@@ -21,37 +21,38 @@
 	<div class="systemName">マスタ画面</div>
 	<br>
 
-	<form name="form1" method="post" action="/resistMaster">
+	<!-- 不明点：下記のactionに記載した処理に、ボタン押下時飛んでる気がするので、formタグは不要でしょうか・・・？ -->
+	<!-- <form onsubmit="return false;" name="form1" method="post" action="/resistMaster"> -->
 		<div>
-			<input type="radio" name="selectRadioItem" value="1">
+			<input type="radio" name="selectRadioItem" value="1" id="radio1">
 				店舗：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type = "text" class="selectShop" name="shop_name" value="">
 		</div>
 
 		<!-- 品目-->
 		<div>
-			<input type="radio" name="selectRadioItem" value="2">
+			<input type="radio" name="selectRadioItem" value="2" id="radio2">
 				品目：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type="text" class="selectCategory"　name="category_name" value="">
 		</div>
 
 		<!-- 商品名 -->
 		<div>
-			<input type="radio" name="selectRadioItem" value="3">
+			<input type="radio" name="selectRadioItem" value="3" id="radio3">
 				商品名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<input type="text" class="selectItem" name="item_name" value="">
 		</div>
 		
 		<!-- ユーザー名 -->
 		<div>
-			<input type="radio" name="selectRadioItem" value="4">
+			<input type="radio" name="selectRadioItem" value="4" id="radio4">
 				ユーザー名：&nbsp;&nbsp; 
 			<input type="text" class="selectItem" name="user_name" value="">
 		</div>
 		<br>
 		
 		<!-- 検索ボタン -->
-		<input type="submit" value="検索" name="searchBtn" id="searchBtn" onclick="OnButtonClick">
+		<input type="button" value="検索" name="searchBtn" id="searchBtn" onclick="OnButtonClick();">
 		<br> <br>
 
 			
@@ -88,7 +89,7 @@
 		<button onclick="location.href='/regist'" class="btn-menu">購入品登録</button>
 		<button onclick="location.href='./index.html'" class="btn-menu">メニュー</button>
 
-	</form>
+	<!-- </form> -->
 
 </body>
 

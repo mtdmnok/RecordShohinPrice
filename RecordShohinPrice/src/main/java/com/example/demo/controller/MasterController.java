@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -7,6 +9,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,6 +30,8 @@ import com.example.demo.repository.ItemRepository;
 import com.example.demo.repository.ResisterItemRepository;
 import com.example.demo.repository.ShopRepository;
 import com.example.demo.repository.UserRepository;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.xml.messaging.saaj.packaging.mime.internet.ParseException;
 
 @Controller
@@ -123,31 +128,47 @@ public class MasterController {
 			@RequestParam("selectRadioItem") String selectRadioItem,
 			@RequestParam("inputItem") String inputItem) {
 		
-		List targetRecordList = null;
+		//List targetRecordList = null;
 		
 		//店舗の場合
 		if (selectRadioItem == "1") {
-//			List<ShopEntity> targetRecordList = shopRepository.findShop("%" + inputItem + "%");
+			List<ShopEntity> targetRecordList = shopRepository.findShop("%" + inputItem + "%");
+			if(targetRecordList == null || targetRecordList.size() == 0) {
+				return null;
+			}
+			for(ShopEntity targetList : targetRecordList) {
+				// エンコード
+				targetList.setShop_id(encode(targetList.getShop_id()));
+				targetList.setShop_name(encode(targetList.getShop_name()));
+			}
+			//getJsonを呼び出すのは、型が違うのでやり方がわからない。
+			ArrayList<String> retVal = new ArrayList<String>();
+			ObjectMapper objectMapper = new ObjectMapper();
+			try {
+				retVal.add( objectMapper.writeValueAsString(targetRecordList));
+			} catch (JsonProcessingException e) {
+			System.err.println(e);
+			}
+			return retVal;
 			
-		targetRecordList = shopRepository.findShop("%" + inputItem + "%");
-
-		//model.addAttribute("resultList", targetRecordList);
 		} else if (selectRadioItem == "2") {
 			//品目の場合
-			//List<CategoryEntity> targetRecordList = categoryRepository.findCategory("%" + inputItem + "%");
-			targetRecordList = categoryRepository.findCategory("%" + inputItem + "%");
-			//model.addAttribute("resultList", targetRecordList);
+			List<CategoryEntity> targetRecordList = categoryRepository.findCategory("%" + inputItem + "%");
+			if(targetRecordList == null || targetRecordList.size() == 0) {
+				return null;
+			}
 		} else if (selectRadioItem == "3") {
 			//商品名の場合
-			//List<ItemEntity> targetRecordList = itemRepository.findItem("%" + inputItem + "%");
-			targetRecordList = itemRepository.findItem("%" + inputItem + "%");
-			//model.addAttribute("resultList", targetRecordList);
+			List<ItemEntity> targetRecordList = itemRepository.findItem("%" + inputItem + "%");
+			if(targetRecordList == null || targetRecordList.size() == 0) {
+				return null;
+			}
 		} else if (selectRadioItem == "4") {
 			//ユーザー名の場合
-			//List<LoginUser> targetRecordList = userRepository.findLikeUser("%" + inputItem + "%");
-			targetRecordList = userRepository.findLikeUser("%" + inputItem + "%");
-			return targetRecordList;
-			//model.addAttribute("resultList", targetRecordList);
+			List<LoginUser> targetRecordList = userRepository.findLikeUser("%" + inputItem + "%");
+			if(targetRecordList == null || targetRecordList.size() == 0) {
+				return null;
+			}
 		}
 		
 		
@@ -162,7 +183,41 @@ public class MasterController {
 		
 		//List<RecordEntity> targetRecordList = masterDao.findRecord(shopId, categoryId, itemId);) {
 		//return "master";
-		return targetRecordList;
+		return null;
 	}
-			
+	
+	/**
+	 * 引数の文字列をエンコードする
+	 * @param data 任意の文字列
+	 * @return エンコード後の文字列
+	 */
+	private String encode(String data){
+		// 引数がnullまたは空文字列の場合は、その値を返す
+		if(StringUtils.isEmpty(data)) {
+			return data;
+		}
+		String retVal = null;
+		try {
+			retVal = URLEncoder.encode(data, "UTF-8");
+		}catch (UnsupportedEncodingException e) {
+			System.err.println(e);
+		}		
+		return retVal;
+	}
+	
+	/**
+	 * 引数のentityオブジェクトをJSON文字列に変換する
+	 * @param targetRecordList オブジェクトのリスト
+	 * @return 変換後のJSON文字列
+	 */
+	private String getJson(List<Object> targetRecordList) {
+		String retVal = null;
+		ObjectMapper objectMapper = new ObjectMapper();
+		try {
+			retVal = objectMapper.writeValueAsString(targetRecordList);
+		} catch (JsonProcessingException e) {
+		System.err.println(e);
+		}
+		return retVal;
+	}
 }

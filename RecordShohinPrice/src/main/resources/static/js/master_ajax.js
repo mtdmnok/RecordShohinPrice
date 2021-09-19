@@ -7,10 +7,22 @@ function OnButtonClick() {
 	// 入力項目
 	var inputItem = "";
 	
+	// ラジオボタンの値取得でエラーとなってしまう。
+	check1 = document.getElementedById("radio1");
+	check2 = document.getElementedById("radio2");
+	check3 = document.getElementedById("radio3");
+	check4 = document.getElementedById("radio4");
+	
+	if (check1 == true) {
+		inputItem = document.getElementById('shop_name').value;
+	}
+	
+	//　以下、やり方がだめ・・・？
+	
 	// 選択されている項目を特定
-	for(var i=1; i<document.form1.selectRadioItem.length, i++){
+	//for(var i=1; i<document.selectRadioItem.length; i++){
 		// i番目のラジオボタンがチェックされているか判定
-		if(document.form1.selectRadioItem[i-1].checked){
+		if(document.selectRadioItem[i-1].checked){
 			selectedItem = i;
 			if(i==1){
 				inputItem = document.getElementById('shop_name').value;
@@ -21,25 +33,17 @@ function OnButtonClick() {
 			} else if(i==4){
 				inputItem = document.getElementById('user_name').value;
 			}
-			break;
+			//break;
 		}
-	}
+	//}
 	
-	
-	// java側に引き渡す値をセット
-//	let request = new XMLHttpRequest();
-//	request.open("get", "/resistMaster?searchBtn=" + searchBtn + "&inputItem=" + inputItem, true);
-//	request.send(null);
-//	request.onload = function(event){
-//		const userData = JSON.parse(request.responseText);
-//	}
 	
 	
 	var dt = {selectRadioItem:selectRadioItem, inputItem:inputItem};
 	
 	$.ajax({
 		url: "/resistMaster2",
-		dataType; "text",
+		dataType: "text",
 		type: "GET",
 		data: dt
 		// Ajaxが正常終了した場合
