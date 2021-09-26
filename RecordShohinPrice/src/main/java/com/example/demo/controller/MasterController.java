@@ -124,11 +124,9 @@ public class MasterController {
 	
 	@GetMapping(value = "/resistMaster2")
 	@ResponseBody
-	public List search(
+	public ArrayList<String> search(
 			@RequestParam("selectRadioItem") String selectRadioItem,
 			@RequestParam("inputItem") String inputItem) {
-		
-		//List targetRecordList = null;
 		
 		//店舗の場合
 		if (selectRadioItem == "1") {
@@ -142,14 +140,18 @@ public class MasterController {
 				targetList.setShop_name(encode(targetList.getShop_name()));
 			}
 			//getJsonを呼び出すのは、型が違うのでやり方がわからない。
-			ArrayList<String> retVal = new ArrayList<String>();
-			ObjectMapper objectMapper = new ObjectMapper();
-			try {
-				retVal.add( objectMapper.writeValueAsString(targetRecordList));
-			} catch (JsonProcessingException e) {
-			System.err.println(e);
-			}
-			return retVal;
+//			String retVal = null;
+//			ArrayList<String> arrayRetVal = new ArrayList<String>();
+//			ObjectMapper objectMapper = new ObjectMapper();
+//			try {
+//				for(ShopEntity targetList : targetRecordList) {
+//					retVal = objectMapper.writeValueAsString(targetList);
+//					arrayRetVal.add(retVal);
+//				}
+//			} catch (JsonProcessingException e) {
+//			System.err.println(e);
+//			}
+			return getJsonShop(targetRecordList);
 			
 		} else if (selectRadioItem == "2") {
 			//品目の場合
@@ -157,18 +159,35 @@ public class MasterController {
 			if(targetRecordList == null || targetRecordList.size() == 0) {
 				return null;
 			}
+			for(CategoryEntity targetList : targetRecordList) {
+				// エンコード
+				targetList.setCategory_id(encode(targetList.getCategory_id()));
+				targetList.setCategory(encode(targetList.getCategory()));
+			}
+			return getJsonCategory(targetRecordList);
 		} else if (selectRadioItem == "3") {
 			//商品名の場合
 			List<ItemEntity> targetRecordList = itemRepository.findItem("%" + inputItem + "%");
 			if(targetRecordList == null || targetRecordList.size() == 0) {
 				return null;
 			}
+			for(ItemEntity targetList : targetRecordList) {
+				// エンコード
+				targetList.setItem_id(encode(targetList.getItem_id()));
+				targetList.setItem(encode(targetList.getItem()));
+			}
+			return getJsonItem(targetRecordList);
 		} else if (selectRadioItem == "4") {
 			//ユーザー名の場合
 			List<LoginUser> targetRecordList = userRepository.findLikeUser("%" + inputItem + "%");
 			if(targetRecordList == null || targetRecordList.size() == 0) {
 				return null;
 			}
+			for(LoginUser targetList : targetRecordList) {
+				// エンコード
+				targetList.setUserName(encode(targetList.getUserName()));
+			}
+			return getJsonUser(targetRecordList);
 		}
 		
 		
@@ -206,18 +225,82 @@ public class MasterController {
 	}
 	
 	/**
-	 * 引数のentityオブジェクトをJSON文字列に変換する
-	 * @param targetRecordList オブジェクトのリスト
+	 * 引数のShopEntityオブジェクトをJSON文字列に変換する
+	 * @param ShopEntityのリスト
 	 * @return 変換後のJSON文字列
 	 */
-	private String getJson(List<Object> targetRecordList) {
+	private ArrayList<String> getJsonShop(List<ShopEntity> targetRecordList) {
 		String retVal = null;
+		ArrayList<String> arrayRetVal = new ArrayList<String>();
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {
-			retVal = objectMapper.writeValueAsString(targetRecordList);
+			for(ShopEntity targetList : targetRecordList) {
+				retVal = objectMapper.writeValueAsString(targetList);
+				arrayRetVal.add(retVal);
+			}
 		} catch (JsonProcessingException e) {
 		System.err.println(e);
 		}
-		return retVal;
+		return arrayRetVal;
+	}
+	
+	/**
+	 * 引数のCategoryEntityオブジェクトをJSON文字列に変換する
+	 * @param CategoryEntityのリスト
+	 * @return 変換後のJSON文字列
+	 */
+	private ArrayList<String> getJsonCategory(List<CategoryEntity> targetRecordList) {
+		String retVal = null;
+		ArrayList<String> arrayRetVal = new ArrayList<String>();
+		ObjectMapper objectMapper = new ObjectMapper();
+		try {
+			for(CategoryEntity targetList : targetRecordList) {
+				retVal = objectMapper.writeValueAsString(targetList);
+				arrayRetVal.add(retVal);
+			}
+		} catch (JsonProcessingException e) {
+		System.err.println(e);
+		}
+		return arrayRetVal;
+	}
+	
+	/**
+	 * 引数のItemEntityオブジェクトをJSON文字列に変換する
+	 * @param ItemEntityのリスト
+	 * @return 変換後のJSON文字列
+	 */
+	private ArrayList<String> getJsonItem(List<ItemEntity> targetRecordList) {
+		String retVal = null;
+		ArrayList<String> arrayRetVal = new ArrayList<String>();
+		ObjectMapper objectMapper = new ObjectMapper();
+		try {
+			for(ItemEntity targetList : targetRecordList) {
+				retVal = objectMapper.writeValueAsString(targetList);
+				arrayRetVal.add(retVal);
+			}
+		} catch (JsonProcessingException e) {
+		System.err.println(e);
+		}
+		return arrayRetVal;
+	}
+	
+	/**
+	 * 引数のLoginUserオブジェクトをJSON文字列に変換する
+	 * @param LoginUserのリスト
+	 * @return 変換後のJSON文字列
+	 */
+	private ArrayList<String> getJsonUser(List<LoginUser> targetRecordList) {
+		String retVal = null;
+		ArrayList<String> arrayRetVal = new ArrayList<String>();
+		ObjectMapper objectMapper = new ObjectMapper();
+		try {
+			for(LoginUser targetList : targetRecordList) {
+				retVal = objectMapper.writeValueAsString(targetList);
+				arrayRetVal.add(retVal);
+			}
+		} catch (JsonProcessingException e) {
+		System.err.println(e);
+		}
+		return arrayRetVal;
 	}
 }

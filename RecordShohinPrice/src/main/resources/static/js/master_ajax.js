@@ -8,16 +8,15 @@ function OnButtonClick() {
 	var inputItem = "";
 	
 	// ラジオボタンの値取得でエラーとなってしまう。
-	check1 = document.getElementedById("radio1");
-	check2 = document.getElementedById("radio2");
-	check3 = document.getElementedById("radio3");
-	check4 = document.getElementedById("radio4");
+	check1 = document.getElementById("radio1");
+	check2 = document.getElementById("radio2");
+	check3 = document.getElementById("radio3");
+	check4 = document.getElementById("radio4");
 	
 	if (check1 == true) {
 		inputItem = document.getElementById('shop_name').value;
 	}
 	
-	//　以下、やり方がだめ・・・？
 	
 	// 選択されている項目を特定
 	//for(var i=1; i<document.selectRadioItem.length; i++){
