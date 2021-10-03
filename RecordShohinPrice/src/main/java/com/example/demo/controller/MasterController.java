@@ -129,7 +129,7 @@ public class MasterController {
 			@RequestParam("inputItem") String inputItem) {
 		
 		//店舗の場合
-		if (selectRadioItem == "1") {
+		if (selectRadioItem.equals("1")) {
 			List<ShopEntity> targetRecordList = shopRepository.findShop("%" + inputItem + "%");
 			if(targetRecordList == null || targetRecordList.size() == 0) {
 				return null;
@@ -153,7 +153,7 @@ public class MasterController {
 //			}
 			return getJsonShop(targetRecordList);
 			
-		} else if (selectRadioItem == "2") {
+		} else if (selectRadioItem.equals("2")) {
 			//品目の場合
 			List<CategoryEntity> targetRecordList = categoryRepository.findCategory("%" + inputItem + "%");
 			if(targetRecordList == null || targetRecordList.size() == 0) {
@@ -165,7 +165,7 @@ public class MasterController {
 				targetList.setCategory(encode(targetList.getCategory()));
 			}
 			return getJsonCategory(targetRecordList);
-		} else if (selectRadioItem == "3") {
+		} else if (selectRadioItem.equals("3")) {
 			//商品名の場合
 			List<ItemEntity> targetRecordList = itemRepository.findItem("%" + inputItem + "%");
 			if(targetRecordList == null || targetRecordList.size() == 0) {
@@ -177,7 +177,7 @@ public class MasterController {
 				targetList.setItem(encode(targetList.getItem()));
 			}
 			return getJsonItem(targetRecordList);
-		} else if (selectRadioItem == "4") {
+		} else if (selectRadioItem.equals("4")) {
 			//ユーザー名の場合
 			List<LoginUser> targetRecordList = userRepository.findLikeUser("%" + inputItem + "%");
 			if(targetRecordList == null || targetRecordList.size() == 0) {

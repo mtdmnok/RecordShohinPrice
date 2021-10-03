@@ -6,6 +6,7 @@ function OnButtonClick() {
 	var selectedItem = 0;
 	// 入力項目
 	var inputItem = "";
+	var targetItem = "";
 	
 	// ラジオボタンの値取得でエラーとなってしまう。
 	check1 = document.getElementById("radio1");
@@ -13,32 +14,34 @@ function OnButtonClick() {
 	check3 = document.getElementById("radio3");
 	check4 = document.getElementById("radio4");
 	
-	if (check1 == true) {
-		inputItem = document.getElementById('shop_name').value;
+	if (check1.checked == true) {
+		inputItem = document.getElementsByName('shop_name');
+		targetItem = inputItem[0].value;
+		selectedItem = "1"
 	}
 	
 	
 	// 選択されている項目を特定
-	//for(var i=1; i<document.selectRadioItem.length; i++){
-		// i番目のラジオボタンがチェックされているか判定
-		if(document.selectRadioItem[i-1].checked){
-			selectedItem = i;
-			if(i==1){
-				inputItem = document.getElementById('shop_name').value;
-			} else if(i==2){
-				inputItem = document.getElementById('category_name').value;
-			} else if(i==3){
-				inputItem = document.getElementById('item_name').value;
-			} else if(i==4){
-				inputItem = document.getElementById('user_name').value;
-			}
-			//break;
-		}
-	//}
+//	for(var i=1; i<document.selectRadioItem.length; i++){
+//		// i番目のラジオボタンがチェックされているか判定
+//		if(document.selectRadioItem[i-1].checked){
+//			selectedItem = i;
+//			if(i==1){
+//				inputItem = document.getElementsByName('shop_name');
+//			} else if(i==2){
+//				inputItem = document.getElementsByName('category_name');
+//			} else if(i==3){
+//				inputItem = document.getElementsByName('item_name');
+//			} else if(i==4){
+//				inputItem = document.getElementsByName('user_name');
+//			}
+//			//break;
+//		}
+//	}
+//	
 	
 	
-	
-	var dt = {selectRadioItem:selectRadioItem, inputItem:inputItem};
+	var dt = {selectRadioItem:selectedItem, inputItem:targetItem};
 	
 	$.ajax({
 		url: "/resistMaster2",
@@ -51,8 +54,10 @@ function OnButtonClick() {
 			alert("該当するデータはありません");
 			return;
 		}
+		console.log(data);
 		// データをテーブルタグに表示
 		const tableList = JSON.parse(data);
+		console.log(tableList);
 		let i = 0;
 		for(i=0; i<tableList.length; i++){
 			let trTag = $("<tr />");
