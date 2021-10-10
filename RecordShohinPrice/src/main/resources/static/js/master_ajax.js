@@ -14,11 +14,28 @@ function OnButtonClick() {
 	check3 = document.getElementById("radio3");
 	check4 = document.getElementById("radio4");
 	
+	// 店舗
 	if (check1.checked == true) {
 		inputItem = document.getElementsByName('shop_name');
 		targetItem = inputItem[0].value;
 		selectedItem = "1"
+	// 品名
+	} else if (check2.checked == true) {
+		inputItem = document.getElementsByName('category_name');
+		targetItem = inputItem[0].value;
+		selectedItem = "2"
+	// 商品名
+	}　else if (check3.checked == true) {
+		inputItem = document.getElementsByName('item_name');
+		targetItem = inputItem[0].value;
+		selectedItem = "3"
+	// ユーザー名
+	}　else if (check4.checked == true) {
+		inputItem = document.getElementsByName('user_name');
+		targetItem = inputItem[0].value;
+		selectedItem = "4"
 	}
+	
 	
 	
 	// 選択されている項目を特定
@@ -57,11 +74,12 @@ function OnButtonClick() {
 		console.log(data);
 		// データをテーブルタグに表示
 		const tableList = JSON.parse(data);
-		console.log(tableList);
+		console.log(JSON.parse(tableList[0]).shop_name);
 		let i = 0;
 		for(i=0; i<tableList.length; i++){
 			let trTag = $("<tr />");
-			trTag.append($("<td></td>").text(decodeURI(tableList[i].shop_name)));
+			trTag.append("<td><input type=\"radio\" class=\"tableRadio\"></input></td>");
+			trTag.append($("<td></td>").text(decodeURI(JSON.parse(tableList[i]).shop_name)));
             $('#resistTable').append(trTag);
 		}
 		// Ajaxが異常終了した場合
