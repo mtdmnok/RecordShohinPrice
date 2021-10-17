@@ -38,26 +38,6 @@ function OnButtonClick() {
 	
 	
 	
-	// 選択されている項目を特定
-//	for(var i=1; i<document.selectRadioItem.length; i++){
-//		// i番目のラジオボタンがチェックされているか判定
-//		if(document.selectRadioItem[i-1].checked){
-//			selectedItem = i;
-//			if(i==1){
-//				inputItem = document.getElementsByName('shop_name');
-//			} else if(i==2){
-//				inputItem = document.getElementsByName('category_name');
-//			} else if(i==3){
-//				inputItem = document.getElementsByName('item_name');
-//			} else if(i==4){
-//				inputItem = document.getElementsByName('user_name');
-//			}
-//			//break;
-//		}
-//	}
-//	
-	
-	
 	var dt = {selectRadioItem:selectedItem, inputItem:targetItem};
 	
 	$.ajax({

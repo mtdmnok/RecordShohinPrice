@@ -5,32 +5,6 @@ $(function(){
 })
 
 
-//$('#searchBtn').click(function() {
-//	var shop = $('input[name="shop_id"]').val();
-//})
-
-//document.getElementById("searchBtn").onclick = function(){
-//	var shop = $('input[name="shop_id"]').val();
-//	var category = $('input["category_id"]').val();
-//	var item = $('input["item_id"]').val();
-//	var user = $('input["user_id"]').val();
-//	//入力が無い場合、""を代入する？
-//	if(category == null){
-//		$('input["category_id"]').val("");
-//	}
-//};
-
-//$('#searchBtn').on('click', function(){
-//	var shop = $('input[name="shop_id"]').val();
-//	var category = $('input["category_id"]').val();
-//	var item = $('input["item_id"]').val();
-//	var user = $('input["user_id"]').val();
-//	//入力が無い場合、""を代入する？
-//	if(category == null){
-//		$('input["category_id"]').val("");
-//	}
-//});
-
 //　ラジオボタンを選択すると、表の項目名が変化する
 $(function(){
 	$( 'input[name="selectRadioItem"]:radio' ).change( function() {
@@ -47,5 +21,74 @@ $(function(){
 	});
 });
 
+
+
+// 【　クリックしたテーブルのセルを編集可能にする　】
+
+
+
+// これだと、テーブルをクリックしたときに反応する。しかし、セルの選択はできない。
+$(function(){
+	var tt = document.getElementById("resistTable");
+	tt.onclick = function(){
+		$(this).addClass('editing');
+		$(this).html('<input type="text" value="' + $(this).text() +'" />');
+		$(this).children().first().focus();
+	}
+});
+
+// テーブルをクリックしても、反応しない。
+$(function() {
+	$('#resistTable td').on('click', function() {
+		if (! $(this).hasClass('editing')) {
+			$(this).addClass('editing');
+			$(this).html('<input type="text" value="' + $(this).text() +'" />');
+			$(this).children().first().focus();
+		}
+	});
+	$('#target-table td').on('blur', 'input[type="text"]', function() {
+		$(this).parent().removeClass('editing');
+		$(this).parent().text($(this).val());
+	});
+});
+
+// 反応しない。
+$(function() {
+	  $("td").dblclick(function() {
+	    var td = $(this), originalContent = td.text();
+
+	    td.addClass("cellEditing");
+	    td.data("originalContent", originalContent);
+	    var el = document.createElement("input"), $el = $(el);
+	    $el.attr({type: "text", value: originalContent});
+	    td.empty();
+	    td.append(el);
+	    $el.focus();
+
+	    $el.keypress(function(e) {
+	      if (e.which == 13) {
+	        var text = $(this), newContent = text.val(), td = text.parent();
+	        td.text(newContent);
+	        td.removeData("originalContent");
+	        td.removeClass("cellEditing");
+	      }
+	    });
+
+	    var resetContent = function(e) {
+	      var td = $(e.target).parent();
+	      td.text(td.data("originalContent"));
+	      td.removeData("originalContent");
+	      td.removeClass("cellEditing");
+	    };
+
+	    $el.keydown(function(e) {
+	      if (e.which == 27) {
+	        resetContent(e);
+	      }
+	    });
+
+	    $el.blur(resetContent);
+	  });
+	});
 
 

@@ -139,18 +139,6 @@ public class MasterController {
 				targetList.setShop_id(encode(targetList.getShop_id()));
 				targetList.setShop_name(encode(targetList.getShop_name()));
 			}
-			//getJsonを呼び出すのは、型が違うのでやり方がわからない。
-//			String retVal = null;
-//			ArrayList<String> arrayRetVal = new ArrayList<String>();
-//			ObjectMapper objectMapper = new ObjectMapper();
-//			try {
-//				for(ShopEntity targetList : targetRecordList) {
-//					retVal = objectMapper.writeValueAsString(targetList);
-//					arrayRetVal.add(retVal);
-//				}
-//			} catch (JsonProcessingException e) {
-//			System.err.println(e);
-//			}
 			return getJsonShop(targetRecordList);
 			
 		} else if (selectRadioItem.equals("2")) {
@@ -165,6 +153,7 @@ public class MasterController {
 				targetList.setCategory(encode(targetList.getCategory()));
 			}
 			return getJsonCategory(targetRecordList);
+			
 		} else if (selectRadioItem.equals("3")) {
 			//商品名の場合
 			List<ItemEntity> targetRecordList = itemRepository.findItem("%" + inputItem + "%");
@@ -177,6 +166,7 @@ public class MasterController {
 				targetList.setItem(encode(targetList.getItem()));
 			}
 			return getJsonItem(targetRecordList);
+			
 		} else if (selectRadioItem.equals("4")) {
 			//ユーザー名の場合
 			List<LoginUser> targetRecordList = userRepository.findLikeUser("%" + inputItem + "%");
