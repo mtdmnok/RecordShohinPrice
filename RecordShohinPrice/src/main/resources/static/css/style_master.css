@@ -26,6 +26,22 @@ table th {
 	background-color: #66cdaa;
 }
 
+* {
+  font-family: Consolas;
+}
+​
+.editableTable {
+  border: solid 1px;
+  width: 100%;
+}
+​
+.editableTable td {
+  border: solid 1px;
+}
+​
+.editableTable .cellEditing {
+  padding: 0;
+}
 .resistTable {
 	  align:left;
 }
