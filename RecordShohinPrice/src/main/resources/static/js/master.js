@@ -62,7 +62,25 @@ $(function() {
 	});
 });
 
-
+function editRow(obj){
+	var objTR = obj.parentNode.parentNode;
+	var rowId = objTR.sectionRowIndex;
+	var objInp = document.getElementById("txt" + rowId);
+	var objBtn = document.getElementById("edtBtn" + rowId);
+	if(!objInp || !objBtn){
+		return;
+	}
+	if(objBtn.value == "編集"){
+		objInp.style.cssText = "border:1px solid #888;"
+		objInp.readOnly = false;
+		objInp.focus();
+		objBtn.value = "確定";
+	} else {
+		objInp.style.cssText = "border:none;"
+			objInp.readOnly = true;
+		objBtn.value = "編集";
+	}
+}
 
 
 

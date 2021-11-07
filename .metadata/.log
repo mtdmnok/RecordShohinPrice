@@ -5152,3 +5152,75 @@ java.lang.RuntimeException
 
 !ENTRY org.eclipse.jdt.debug 2 0 2021-10-31 23:48:14.682
 !MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:32:54.815
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.aaIZjtWa
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:32:54.816
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.aaIZjtWa
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:32:54.817
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:32:54.818
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.aaIZjtWa => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:31.861
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:31.862
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@39b58f7d[org.springframework.tooling.boot.ls:1.17.0.202004200519(id=636)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:31.863
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.606
+!MESSAGE Boot LS startup time from start to initialized: 4741ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.665
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.OqEdLMVvisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.666
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.667
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.668
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.669
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.670
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.670
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.671
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.OqEdLMVv => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.700
+!MESSAGE classpath=138 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.708
+!MESSAGE buffering callback sts4.classpath.OqEdLMVv RecordShohinPrice false 138
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.709
+!MESSAGE executing callback sts4.classpath.OqEdLMVv 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-07 16:39:36.745
+!MESSAGE executing callback sts4.classpath.OqEdLMVv SUCCESS [done]
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-11-07 16:56:39.313
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-11-07 17:18:35.354
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-11-07 23:17:08.112
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
+
+!ENTRY org.eclipse.jdt.debug 2 0 2021-11-07 23:32:00.538
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread

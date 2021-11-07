@@ -57,9 +57,14 @@ function OnButtonClick() {
 		console.log(JSON.parse(tableList[0]).shop_name);
 		let i = 0;
 		for(i=0; i<tableList.length; i++){
+			var seq = i + 1;
+			var txtSeq = "txt" + String(seq);
+			var btnSeq = "edtBtn" + String(seq);
 			let trTag = $("<tr />");
-			trTag.append("<td><input type=\"radio\" class=\"tableRadio\"></input></td>");
-			trTag.append($("<td></td>").text(decodeURI(JSON.parse(tableList[i]).shop_name)));
+			trTag.append("<td><input type=\"radio\" class=\"tableRadio\" id=\"rd\" + seq ></input></td>");
+			//trTag.append($("<td></td>").text(decodeURI(JSON.parse(tableList[i]).shop_name));
+			trTag.append("<td><input type= \"text\" value= \"" + decodeURI(JSON.parse(tableList[i]).shop_name)+ "\"" + "id=" + txtSeq +" style=\"border: none;\" readOnly></input></td>")
+			trTag.append("<td><input class=\"edtbtn\" type=\"button\" id=\"" + btnSeq + "\"value=\"編集\" onclick=\"editRow(this)\"</td>");
             $('#resistTable').append(trTag);
 		}
 		// Ajaxが異常終了した場合
@@ -67,3 +72,4 @@ function OnButtonClick() {
 		alert("エラーが発生してデータ取得できませんでした");
 	});
 }
+
