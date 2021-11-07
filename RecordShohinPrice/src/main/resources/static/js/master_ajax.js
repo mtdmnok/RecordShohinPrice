@@ -65,6 +65,8 @@ function OnButtonClick() {
 			//trTag.append($("<td></td>").text(decodeURI(JSON.parse(tableList[i]).shop_name));
 			trTag.append("<td><input type= \"text\" value= \"" + decodeURI(JSON.parse(tableList[i]).shop_name)+ "\"" + "id=" + txtSeq +" style=\"border: none;\" readOnly></input></td>")
 			trTag.append("<td><input class=\"edtbtn\" type=\"button\" id=\"" + btnSeq + "\"value=\"編集\" onclick=\"editRow(this)\"</td>");
+			//placeholder使う場合
+			trTag.append("<td width=\"20%\"><input type= \"text\" placeholder= \"" + decodeURI(JSON.parse(tableList[i]).shop_name) +"\"" +"></input></td>")
             $('#resistTable').append(trTag);
 		}
 		// Ajaxが異常終了した場合
