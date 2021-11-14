@@ -8,7 +8,6 @@ function OnButtonClick() {
 	var inputItem = "";
 	var targetItem = "";
 	
-	// ラジオボタンの値取得でエラーとなってしまう。
 	check1 = document.getElementById("radio1");
 	check2 = document.getElementById("radio2");
 	check3 = document.getElementById("radio3");
@@ -61,12 +60,17 @@ function OnButtonClick() {
 			var txtSeq = "txt" + String(seq);
 			var btnSeq = "edtBtn" + String(seq);
 			let trTag = $("<tr />");
-			trTag.append("<td><input type=\"radio\" class=\"tableRadio\" id=\"rd\" + seq ></input></td>");
+			if(i==0){
+				trTag.append("<td><input type=\"radio\"  name=\"radioResult\" class=\"tableRadio\" id=\"rd\"" + seq + " checked></input></td>");
+			} else {
+				trTag.append("<td><input type=\"radio\" name=\"radioResult\" class=\"tableRadio\" id=\"rd\"" + seq + "></input></td>");
+			}
 			//trTag.append($("<td></td>").text(decodeURI(JSON.parse(tableList[i]).shop_name));
 			trTag.append("<td><input type= \"text\" value= \"" + decodeURI(JSON.parse(tableList[i]).shop_name)+ "\"" + "id=" + txtSeq +" style=\"border: none;\" readOnly></input></td>")
+			trTag.append("<input type= \"hidden\" value= \"" + decodeURI(JSON.parse(tableList[i]).shop_id)+ "\"" + "id=" + txtSeq +" readOnly></input>")
 			trTag.append("<td><input class=\"edtbtn\" type=\"button\" id=\"" + btnSeq + "\"value=\"編集\" onclick=\"editRow(this)\"</td>");
 			//placeholder使う場合
-			trTag.append("<td width=\"20%\"><input type= \"text\" placeholder= \"" + decodeURI(JSON.parse(tableList[i]).shop_name) +"\"" +"></input></td>")
+//			trTag.append("<td width=\"20%\"><input type= \"text\" placeholder= \"" + decodeURI(JSON.parse(tableList[i]).shop_name) +"\"" +"></input></td>")
             $('#resistTable').append(trTag);
 		}
 		// Ajaxが異常終了した場合
