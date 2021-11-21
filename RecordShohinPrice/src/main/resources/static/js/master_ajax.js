@@ -53,7 +53,8 @@ function OnButtonClick() {
 		console.log(data);
 		// データをテーブルタグに表示
 		const tableList = JSON.parse(data);
-		console.log(JSON.parse(tableList[0]).shop_name);
+		// マップで受け取ったとき、どうやって値を取り出したらよいかわからない・・・。
+		console.log(JSON.parse(tableList[0]).value);
 		let i = 0;
 		for(i=0; i<tableList.length; i++){
 			var seq = i + 1;

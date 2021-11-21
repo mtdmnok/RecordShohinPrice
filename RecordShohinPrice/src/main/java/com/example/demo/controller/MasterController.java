@@ -4,7 +4,9 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,6 +35,7 @@ import com.example.demo.repository.UserRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sun.xml.messaging.saaj.packaging.mime.internet.ParseException;
+
 
 @Controller
 public class MasterController {
@@ -75,111 +78,115 @@ public class MasterController {
 			@RequestParam(name = "item_name", required = false) String itemName,
 			@RequestParam(name = "user_name", required = false) String userName,
 			@RequestParam(name = "selectItem", required = false) String item) {
-		//レコードリスト
-		//List<RecordEntity> targetRecordList = masterDao.findRecord(shopId, categoryId, itemId);
-		//List<String> targetRecordList = (List<String>) shopDao.findShop(shopName);
 		
 		//返却用
 		ArrayList<MasterResultEntity> resultList = new ArrayList();
 		
-
-//		for(RecordEntity record : targetRecordList) {
-//			MasterResultEntity t = new MasterResultEntity();
-//			//ユーザーID
-//			t.setUser_id(record.getUser_id());
-//			//購入日
-//			t.setPurchace_date(record.getPurchace_date());
-//			//店舗ID
-//			//t.setShop_id(record.getShop_id());
-//			//店舗名
-//			t.setShop_id(shopRepository.findShop(record.getShop_id()).getShop_name());
-//			//カテゴリーID
-//			//t.setCategory_id(record.getCategory_id());
-//			//カテゴリー
-//			t.setCategory_id(categoryRepository.findCategory(record.getCategory_id()).getCategory());
-//			//品物ID
-//			t.setItem_id(record.getItem_id());
-//			t.setItem_id(itemRepository.findItem(record.getItem_id()).getItem());
-//			//価格
-//			t.setPrice(record.getPrice());
-//			resultList.add(t);
-//		}
 		//model.addAttribute("resultList", targetRecordList);
 		model.addAttribute("shop", shopRepository.findAll());
 		model.addAttribute("category", categoryRepository.findAll());
 		model.addAttribute("item", itemRepository.findAll());
 		model.addAttribute("user", userRepository.findAll());
 	return "master";
-//	return new ModelAndView("");
 	}
 	
 	
-//	@RequestMapping(value = "/resistMaster", params = "searchBtn", method = RequestMethod.POST)
-//	public String search(Model model,
-//			@RequestParam(name = "shop_name", required = false) String shopName,
-//			@RequestParam(name = "category_name", required = false) String categoryName,
-//			@RequestParam(name = "item_name", required = false) String itemName,
-//			@RequestParam(name = "user_name", required = false) String userName,
-//			@RequestParam(name = "selectRadioItem", required = false) String radioItem) {
-	
 	@GetMapping(value = "/resistMaster2")
 	@ResponseBody
+//	public Map<String, String> search(
 	public ArrayList<String> search(
 			@RequestParam("selectRadioItem") String selectRadioItem,
 			@RequestParam("inputItem") String inputItem) {
-		
-		//店舗の場合
-		if (selectRadioItem.equals("1")) {
-			List<ShopEntity> targetRecordList = shopRepository.findShop("%" + inputItem + "%");
-			if(targetRecordList == null || targetRecordList.size() == 0) {
-				return null;
-			}
-			for(ShopEntity targetList : targetRecordList) {
-				// エンコード
-				targetList.setShop_id(encode(targetList.getShop_id()));
-				targetList.setShop_name(encode(targetList.getShop_name()));
-			}
-			return getJsonShop(targetRecordList);
 			
-		} else if (selectRadioItem.equals("2")) {
-			//品目の場合
-			List<CategoryEntity> targetRecordList = categoryRepository.findCategory("%" + inputItem + "%");
-			if(targetRecordList == null || targetRecordList.size() == 0) {
-				return null;
-			}
-			for(CategoryEntity targetList : targetRecordList) {
-				// エンコード
-				targetList.setCategory_id(encode(targetList.getCategory_id()));
-				targetList.setCategory(encode(targetList.getCategory()));
-			}
-			return getJsonCategory(targetRecordList);
+			// ①マップを作ってみる
+			Map<String, String> map = new HashMap<>();
+			List<Map<String, String>> rsltList = new ArrayList<Map<String, String>>();
+			// ②リストを作ってみる
+			List<List> resultList = new ArrayList<List>();
 			
-		} else if (selectRadioItem.equals("3")) {
-			//商品名の場合
-			List<ItemEntity> targetRecordList = itemRepository.findItem("%" + inputItem + "%");
-			if(targetRecordList == null || targetRecordList.size() == 0) {
-				return null;
+			//店舗の場合
+			if (selectRadioItem.equals("1")) {
+				List<ShopEntity> targetRecordList = shopRepository.findShop("%" + inputItem + "%");
+				if(targetRecordList == null || targetRecordList.size() == 0) {
+					return null;
+				}
+				for(ShopEntity targetList : targetRecordList) {
+					// エンコード
+					//元のソース
+//					targetList.setShop_id(encode(targetList.getShop_id()));
+//					targetList.setShop_name(encode(targetList.getShop_name()));
+					//①
+					map.put("id", targetList.getShop_id().toString());
+					map.put("name", targetList.getShop_name());
+					rsltList.add(map);
+					//②
+//					List<String> recordList = new ArrayList<String>();
+//					recordList.add(targetList.getShop_id());
+//					recordList.add(targetList.getShop_name());
+//					resultList.add(recordList);
+				}
+				
+				return getJson(map);
 			}
-			for(ItemEntity targetList : targetRecordList) {
-				// エンコード
-				targetList.setItem_id(encode(targetList.getItem_id()));
-				targetList.setItem(encode(targetList.getItem()));
-			}
-			return getJsonItem(targetRecordList);
 			
-		} else if (selectRadioItem.equals("4")) {
-			//ユーザー名の場合
-			List<LoginUser> targetRecordList = userRepository.findLikeUser("%" + inputItem + "%");
-			if(targetRecordList == null || targetRecordList.size() == 0) {
-				return null;
-			}
-			for(LoginUser targetList : targetRecordList) {
-				// エンコード
-				targetList.setUserName(encode(targetList.getUserName()));
-			}
-			return getJsonUser(targetRecordList);
-		}
-		
+
+			
+			
+			
+		// 一旦コメントアウト
+//		//店舗の場合
+//		if (selectRadioItem.equals("1")) {
+//			List<ShopEntity> targetRecordList = shopRepository.findShop("%" + inputItem + "%");
+//			if(targetRecordList == null || targetRecordList.size() == 0) {
+//				return null;
+//			}
+//			for(ShopEntity targetList : targetRecordList) {
+//				// エンコード
+//				targetList.setShop_id(encode(targetList.getShop_id()));
+//				targetList.setShop_name(encode(targetList.getShop_name()));
+//			}
+//			
+//			return getJsonShop(targetRecordList);
+//			
+//		} else if (selectRadioItem.equals("2")) {
+//			//品目の場合
+//			List<CategoryEntity> targetRecordList = categoryRepository.findCategory("%" + inputItem + "%");
+//			if(targetRecordList == null || targetRecordList.size() == 0) {
+//				return null;
+//			}
+//			for(CategoryEntity targetList : targetRecordList) {
+//				// エンコード
+//				targetList.setCategory_id(encode(targetList.getCategory_id()));
+//				targetList.setCategory(encode(targetList.getCategory()));
+//			}
+//			return getJsonCategory(targetRecordList);
+//			
+//		} else if (selectRadioItem.equals("3")) {
+//			//商品名の場合
+//			List<ItemEntity> targetRecordList = itemRepository.findItem("%" + inputItem + "%");
+//			if(targetRecordList == null || targetRecordList.size() == 0) {
+//				return null;
+//			}
+//			for(ItemEntity targetList : targetRecordList) {
+//				// エンコード
+//				targetList.setItem_id(encode(targetList.getItem_id()));
+//				targetList.setItem(encode(targetList.getItem()));
+//			}
+//			return getJsonItem(targetRecordList);
+//			
+//		} else if (selectRadioItem.equals("4")) {
+//			//ユーザー名の場合
+//			List<LoginUser> targetRecordList = userRepository.findLikeUser("%" + inputItem + "%");
+//			if(targetRecordList == null || targetRecordList.size() == 0) {
+//				return null;
+//			}
+//			for(LoginUser targetList : targetRecordList) {
+//				// エンコード
+//				targetList.setUserName(encode(targetList.getUserName()));
+//			}
+//			return getJsonUser(targetRecordList);
+//		}
+//		
 		
 
 		
@@ -194,6 +201,51 @@ public class MasterController {
 		//return "master";
 		return null;
 	}
+	
+	// テスト①
+	/**
+	 * 引数のmapオブジェクトをJSON文字列に変換する
+	 * @param ShopEntityのリスト
+	 * @return 変換後のJSON文字列
+	 */
+	private ArrayList<String> getJson(Map<String, String> map) {
+		String retVal = null;
+		ArrayList<String> arrayRetVal = new ArrayList<String>();
+		ObjectMapper objectMapper = new ObjectMapper();
+		try {
+			for (Map.Entry<String, String> entry : map.entrySet()) {
+//			for(ShopEntity targetList : targetRecordList) {
+				retVal = objectMapper.writeValueAsString(entry);
+				arrayRetVal.add(retVal);
+			}
+		} catch (JsonProcessingException e) {
+		System.err.println(e);
+		}
+		return arrayRetVal;
+	}
+	
+	//テスト②
+	/**
+	 * 引数のListオブジェクトをJSON文字列に変換する
+	 * @param ShopEntityのリスト
+	 * @return 変換後のJSON文字列
+	 */
+//	private ArrayList<String> getJson(List list) {
+//		String retVal = null;
+//		ArrayList<String> arrayRetVal = new ArrayList<String>();
+//		ObjectMapper objectMapper = new ObjectMapper();
+//		try {
+//			//リストのリスト形式にしているため、ここをどう変更したらよいかわからない。
+//			for(ShopEntity targetList : list) {
+//				retVal = objectMapper.writeValueAsString(targetList);
+//				arrayRetVal.add(retVal);
+//			}
+//		} catch (JsonProcessingException e) {
+//		System.err.println(e);
+//		}
+//		return arrayRetVal;
+//	}
+	
 	
 	/**
 	 * 引数の文字列をエンコードする
