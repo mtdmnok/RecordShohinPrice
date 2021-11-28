@@ -53,8 +53,8 @@ function OnButtonClick() {
 		console.log(data);
 		// データをテーブルタグに表示
 		const tableList = JSON.parse(data);
-		// マップで受け取ったとき、どうやって値を取り出したらよいかわからない・・・。
-		console.log(JSON.parse(tableList[0]).value);
+		console.log(Object.keys(data).length);
+		console.log(JSON.parse(tableList[0])["name"]);
 		let i = 0;
 		for(i=0; i<tableList.length; i++){
 			var seq = i + 1;
@@ -67,11 +67,9 @@ function OnButtonClick() {
 				trTag.append("<td><input type=\"radio\" name=\"radioResult\" class=\"tableRadio\" id=\"rd\"" + seq + "></input></td>");
 			}
 			//trTag.append($("<td></td>").text(decodeURI(JSON.parse(tableList[i]).shop_name));
-			trTag.append("<td><input type= \"text\" value= \"" + decodeURI(JSON.parse(tableList[i]).shop_name)+ "\"" + "id=" + txtSeq +" style=\"border: none;\" readOnly></input></td>")
-			trTag.append("<input type= \"hidden\" value= \"" + decodeURI(JSON.parse(tableList[i]).shop_id)+ "\"" + "id=" + txtSeq +" readOnly></input>")
+			trTag.append("<td><input type= \"text\" value= \"" + decodeURI(JSON.parse(tableList[i])["name"])+ "\"" + "id=" + txtSeq +" style=\"border: none;\" readOnly></input></td>")
+			trTag.append("<input type= \"hidden\" value= \"" + decodeURI(JSON.parse(tableList[i])["id"])+ "\"" + "id=" + txtSeq +" readOnly></input>")
 			trTag.append("<td><input class=\"edtbtn\" type=\"button\" id=\"" + btnSeq + "\"value=\"編集\" onclick=\"editRow(this)\"</td>");
-			//placeholder使う場合
-//			trTag.append("<td width=\"20%\"><input type= \"text\" placeholder= \"" + decodeURI(JSON.parse(tableList[i]).shop_name) +"\"" +"></input></td>")
             $('#resistTable').append(trTag);
 		}
 		// Ajaxが異常終了した場合

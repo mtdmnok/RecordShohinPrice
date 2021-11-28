@@ -99,10 +99,10 @@ public class MasterController {
 			@RequestParam("inputItem") String inputItem) {
 			
 			// ①マップを作ってみる
-			Map<String, String> map = new HashMap<>();
+			//Map<String, String> map = new HashMap<>();
 			List<Map<String, String>> rsltList = new ArrayList<Map<String, String>>();
 			// ②リストを作ってみる
-			List<List> resultList = new ArrayList<List>();
+			//List<List> resultList = new ArrayList<List>();
 			
 			//店舗の場合
 			if (selectRadioItem.equals("1")) {
@@ -116,6 +116,7 @@ public class MasterController {
 //					targetList.setShop_id(encode(targetList.getShop_id()));
 //					targetList.setShop_name(encode(targetList.getShop_name()));
 					//①
+					Map<String, String> map = new HashMap<>();
 					map.put("id", targetList.getShop_id().toString());
 					map.put("name", targetList.getShop_name());
 					rsltList.add(map);
@@ -126,7 +127,7 @@ public class MasterController {
 //					resultList.add(recordList);
 				}
 				
-				return getJson(map);
+				return getJson(rsltList);
 			}
 			
 
@@ -208,15 +209,17 @@ public class MasterController {
 	 * @param ShopEntityのリスト
 	 * @return 変換後のJSON文字列
 	 */
-	private ArrayList<String> getJson(Map<String, String> map) {
+	private ArrayList<String> getJson(List<Map<String, String>> aryMap) {
 		String retVal = null;
 		ArrayList<String> arrayRetVal = new ArrayList<String>();
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {
-			for (Map.Entry<String, String> entry : map.entrySet()) {
+			for (Map<String, String> targetList : aryMap) {
+				for (Map.Entry<String, String> entry : targetList.entrySet()) {
 //			for(ShopEntity targetList : targetRecordList) {
-				retVal = objectMapper.writeValueAsString(entry);
-				arrayRetVal.add(retVal);
+					retVal = objectMapper.writeValueAsString(entry);
+					arrayRetVal.add(retVal);
+				}
 			}
 		} catch (JsonProcessingException e) {
 		System.err.println(e);
