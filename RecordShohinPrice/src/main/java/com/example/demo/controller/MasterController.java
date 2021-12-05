@@ -94,15 +94,12 @@ public class MasterController {
 	@GetMapping(value = "/resistMaster2")
 	@ResponseBody
 //	public Map<String, String> search(
-	public ArrayList<String> search(
+	public ArrayList<ArrayList<String>> search(
 			@RequestParam("selectRadioItem") String selectRadioItem,
 			@RequestParam("inputItem") String inputItem) {
-			
-			// ①マップを作ってみる
-			//Map<String, String> map = new HashMap<>();
-			List<Map<String, String>> rsltList = new ArrayList<Map<String, String>>();
-			// ②リストを作ってみる
-			//List<List> resultList = new ArrayList<List>();
+
+			// マップを入れる配列
+			List<ArrayList<Map<String, String>>> mapList = new ArrayList<ArrayList<Map<String, String>>>();
 			
 			//店舗の場合
 			if (selectRadioItem.equals("1")) {
@@ -116,19 +113,36 @@ public class MasterController {
 //					targetList.setShop_id(encode(targetList.getShop_id()));
 //					targetList.setShop_name(encode(targetList.getShop_name()));
 					//①
+					ArrayList<Map<String, String>> rsltList = new ArrayList<Map<String, String>>();
 					Map<String, String> map = new HashMap<>();
 					map.put("id", targetList.getShop_id().toString());
 					map.put("name", targetList.getShop_name());
 					rsltList.add(map);
-					//②
-//					List<String> recordList = new ArrayList<String>();
-//					recordList.add(targetList.getShop_id());
-//					recordList.add(targetList.getShop_name());
-//					resultList.add(recordList);
-				}
-				
-				return getJson(rsltList);
+					mapList.add(rsltList);
+				}	
+//				return getJson(rsltList);
+				return getJson(mapList);
+//			}
+			} else if (selectRadioItem.equals("2")) {
+			//品目の場合
+			List<CategoryEntity> targetRecordList = categoryRepository.findCategory("%" + inputItem + "%");
+			if(targetRecordList == null || targetRecordList.size() == 0) {
+				return null;
 			}
+			for(CategoryEntity targetList : targetRecordList) {
+				// エンコード
+//				targetList.setCategory_id(encode(targetList.getCategory_id()));
+//				targetList.setCategory(encode(targetList.getCategory()));
+				ArrayList<Map<String, String>> rsltList = new ArrayList<Map<String, String>>();
+				Map<String, String> map = new HashMap<>();
+				map.put("id", targetList.getCategory_id().toString());
+				map.put("name", targetList.getCategory().toString());
+				rsltList.add(map);
+				mapList.add(rsltList);
+			}
+			return getJson(mapList);
+			
+		}
 			
 
 			
@@ -209,20 +223,49 @@ public class MasterController {
 	 * @param ShopEntityのリスト
 	 * @return 変換後のJSON文字列
 	 */
-	private ArrayList<String> getJson(List<Map<String, String>> aryMap) {
+//	private ArrayList<String> getJson(List<Map<String, String>> aryMap) {
+//		String retVal = null;
+//		ArrayList<String> arrayRetVal = new ArrayList<String>();
+//		ObjectMapper objectMapper = new ObjectMapper();
+//		try {
+//			for (Map<String, String> targetList : aryMap) {
+//				for (Map.Entry<String, String> entry : targetList.entrySet()) {
+////			for(ShopEntity targetList : targetRecordList) {
+//					retVal = objectMapper.writeValueAsString(entry);
+//					arrayRetVal.add(retVal);
+//				}
+//			}
+//		} catch (JsonProcessingException e) {
+//		System.err.println(e);
+//		}
+//		return arrayRetVal;
+//	}
+	
+	// テスト①の修正版
+	/**
+	 * 引数のmapオブジェクトをJSON文字列に変換する
+	 * @param 取得下データをマップに入れた、配列の配列
+	 * @return 変換後のJSON文字列
+	 */
+	private ArrayList<ArrayList<String>> getJson(List<ArrayList<Map<String, String>>> aryAryMap) {
 		String retVal = null;
-		ArrayList<String> arrayRetVal = new ArrayList<String>();
+		
+		ArrayList<ArrayList<String>> arrayRetVal = new ArrayList<ArrayList<String>>();
 		ObjectMapper objectMapper = new ObjectMapper();
 		try {
-			for (Map<String, String> targetList : aryMap) {
-				for (Map.Entry<String, String> entry : targetList.entrySet()) {
+			for (ArrayList<Map<String, String>> aryMap : aryAryMap) {
+				ArrayList<String> arrayVal = new ArrayList<String>();
+				for (Map<String, String> targetList : aryMap) {
+					for (Map.Entry<String, String> entry : targetList.entrySet()) {
 //			for(ShopEntity targetList : targetRecordList) {
-					retVal = objectMapper.writeValueAsString(entry);
-					arrayRetVal.add(retVal);
+						retVal = objectMapper.writeValueAsString(entry);
+						arrayVal.add(retVal);
+					}
 				}
+				arrayRetVal.add(arrayVal);
 			}
 		} catch (JsonProcessingException e) {
-		System.err.println(e);
+			System.err.println(e);
 		}
 		return arrayRetVal;
 	}

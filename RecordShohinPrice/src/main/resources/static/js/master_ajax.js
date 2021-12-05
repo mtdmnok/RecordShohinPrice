@@ -54,7 +54,7 @@ function OnButtonClick() {
 		// データをテーブルタグに表示
 		const tableList = JSON.parse(data);
 		console.log(Object.keys(data).length);
-		console.log(JSON.parse(tableList[0])["name"]);
+		console.log(JSON.parse(tableList[0][0])["name"]);
 		let i = 0;
 		for(i=0; i<tableList.length; i++){
 			var seq = i + 1;
@@ -67,8 +67,8 @@ function OnButtonClick() {
 				trTag.append("<td><input type=\"radio\" name=\"radioResult\" class=\"tableRadio\" id=\"rd\"" + seq + "></input></td>");
 			}
 			//trTag.append($("<td></td>").text(decodeURI(JSON.parse(tableList[i]).shop_name));
-			trTag.append("<td><input type= \"text\" value= \"" + decodeURI(JSON.parse(tableList[i])["name"])+ "\"" + "id=" + txtSeq +" style=\"border: none;\" readOnly></input></td>")
-			trTag.append("<input type= \"hidden\" value= \"" + decodeURI(JSON.parse(tableList[i])["id"])+ "\"" + "id=" + txtSeq +" readOnly></input>")
+			trTag.append("<td><input type= \"text\" value= \"" + decodeURI(JSON.parse(tableList[i][0])["name"])+ "\"" + "id=" + txtSeq +" style=\"border: none;\" readOnly></input></td>")
+			trTag.append("<input type= \"hidden\" value= \"" + decodeURI(JSON.parse(tableList[i][1])["id"])+ "\"" + "id=" + txtSeq +" readOnly></input>")
 			trTag.append("<td><input class=\"edtbtn\" type=\"button\" id=\"" + btnSeq + "\"value=\"編集\" onclick=\"editRow(this)\"</td>");
             $('#resistTable').append(trTag);
 		}
