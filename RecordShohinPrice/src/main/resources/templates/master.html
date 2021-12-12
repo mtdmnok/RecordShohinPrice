@@ -31,7 +31,7 @@
 		<div>
 			<input type="radio" name="selectRadioItem" value="2" id="radio2">
 				品目：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="text" class="selectCategory"　name="category_name" value="">
+			<input type="text" class="selectCategory" name="category_name" value="">
 		</div>
 
 		<!-- 商品名 -->
@@ -65,19 +65,19 @@
 			
 		<tbody>
 			
-			　<!-- 検索結果表示 -->
-			　<tr th:each="result : ${resultList}" th:object="${result}">
-			　	<td><input type="radio" class="tableRadio" name="radioResult"></input></td>
-			　	<td th:text="*{shop_name}"></td>
+			 <!-- 検索結果表示 -->
+			 <tr th:each="result : ${resultList}" th:object="${result}">
+			 	<td><input type="radio" class="tableRadio" name="radioResult"></input></td>
+			 	<td th:text="*{shop_name}"></td>
 				<td></td>
-			　</tr>
+			 </tr>
 			
-			　<!-- 入力欄 -->
-			　<tr>
+			 <!-- 入力欄 -->
+			 <tr>
 				<td><input type="radio" name="radioResult"></input></td>
 				<td><input type="text"></input></td>
 				<td></td>
-			　</tr>
+			 </tr>
 			</tbody>
 		</table>
 

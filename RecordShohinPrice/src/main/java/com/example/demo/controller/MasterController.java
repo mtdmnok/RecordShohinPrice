@@ -131,8 +131,6 @@ public class MasterController {
 			}
 			for(CategoryEntity targetList : targetRecordList) {
 				// エンコード
-//				targetList.setCategory_id(encode(targetList.getCategory_id()));
-//				targetList.setCategory(encode(targetList.getCategory()));
 				ArrayList<Map<String, String>> rsltList = new ArrayList<Map<String, String>>();
 				Map<String, String> map = new HashMap<>();
 				map.put("id", targetList.getCategory_id().toString());
@@ -140,8 +138,39 @@ public class MasterController {
 				rsltList.add(map);
 				mapList.add(rsltList);
 			}
-			return getJson(mapList);
-			
+			return getJson(mapList);	
+//		} else if (selectRadioItem.equals("3")) {
+//			//商品名の場合
+//			List<ItemEntity> targetRecordList = itemRepository.findItem("%" + inputItem + "%");
+//			if(targetRecordList == null || targetRecordList.size() == 0) {
+//				return null;
+//			}
+//			for(ItemEntity targetList : targetRecordList) {
+//				// エンコード
+//				ArrayList<Map<String, String>> rsltList = new ArrayList<Map<String, String>>();
+//				Map<String, String> map = new HashMap<>();
+//				map.put("id", targetList.getItem_id().toString());
+//				map.put("name", targetList.getItem().toString());
+//				rsltList.add(map);
+//				mapList.add(rsltList);
+//			}
+//			return getJson(mapList);	
+//		} else if (selectRadioItem.equals("4")) {
+//			//ユーザー名の場合
+//			List<LoginUser> targetRecordList = userRepository.findUserName("%" + inputItem + "%");
+//			if(targetRecordList == null || targetRecordList.size() == 0) {
+//				return null;
+//			}
+//			for(LoginUser targetList : targetRecordList) {
+//				// エンコード
+//				ArrayList<Map<String, String>> rsltList = new ArrayList<Map<String, String>>();
+//				Map<String, String> map = new HashMap<>();
+//				map.put("id", targetList.getUserId().toString());
+//				map.put("name", targetList.getUserName().toString());
+//				rsltList.add(map);
+//				mapList.add(rsltList);
+//			}
+//			return getJson(mapList);	
 		}
 			
 

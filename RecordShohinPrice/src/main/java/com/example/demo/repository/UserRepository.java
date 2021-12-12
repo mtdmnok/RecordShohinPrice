@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import com.example.demo.entity.CategoryEntity;
 import com.example.demo.entity.LoginUser;
 
 
@@ -21,4 +23,7 @@ public interface UserRepository extends JpaRepository<LoginUser, Integer>{
 	
 	@Query(value = "SELECT * FROM m_shop where user_name LIKE :user_name", nativeQuery = true)
 	public List<LoginUser> findLikeUser(@Param("user_name") String user_name);
+	
+//	@Query(value = "SELECT * FROM m_user where user_name LIKE :user_name", nativeQuery = true)
+//	public List<LoginUser> findUserName(@Param("user_name") String user_name);
 }

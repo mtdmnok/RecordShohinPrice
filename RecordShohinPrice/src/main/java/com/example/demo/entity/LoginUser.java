@@ -26,6 +26,10 @@ public class LoginUser implements Serializable{
 	@Column(name = "user_name")
 	private String userName;
 	
+//	public Long getUserId() {
+//		return userId;
+//	}
+	
 	public String getUserName() {
         return userName;
     }

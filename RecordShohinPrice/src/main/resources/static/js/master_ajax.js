@@ -24,12 +24,12 @@ function OnButtonClick() {
 		targetItem = inputItem[0].value;
 		selectedItem = "2"
 	// 商品名
-	}　else if (check3.checked == true) {
+	} else if (check3.checked == true) {
 		inputItem = document.getElementsByName('item_name');
 		targetItem = inputItem[0].value;
 		selectedItem = "3"
 	// ユーザー名
-	}　else if (check4.checked == true) {
+	} else if (check4.checked == true) {
 		inputItem = document.getElementsByName('user_name');
 		targetItem = inputItem[0].value;
 		selectedItem = "4"
@@ -62,7 +62,7 @@ function OnButtonClick() {
 			var btnSeq = "edtBtn" + String(seq);
 			let trTag = $("<tr />");
 			if(i==0){
-				trTag.append("<td><input type=\"radio\"  name=\"radioResult\" class=\"tableRadio\" id=\"rd\"" + seq + " checked></input></td>");
+				trTag.append("<td><input type=\"radio\" name=\"radioResult\" class=\"tableRadio\" id=\"rd\"" + seq + " checked></input></td>");
 			} else {
 				trTag.append("<td><input type=\"radio\" name=\"radioResult\" class=\"tableRadio\" id=\"rd\"" + seq + "></input></td>");
 			}
