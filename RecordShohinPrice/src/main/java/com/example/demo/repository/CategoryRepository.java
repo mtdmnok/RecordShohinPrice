@@ -10,6 +10,6 @@ import com.example.demo.entity.CategoryEntity;
 
 public interface CategoryRepository extends JpaRepository<CategoryEntity, Long>{
 
-	@Query(value = "SELECT * FROM m_category where category LIKE :category", nativeQuery = true)
+	@Query(value = "SELECT * FROM m_category where category LIKE BINARY :category", nativeQuery = true)
 	public List<CategoryEntity> findCategory(@Param("category") String category);
 }

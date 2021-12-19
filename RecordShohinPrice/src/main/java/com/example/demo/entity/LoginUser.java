@@ -30,6 +30,10 @@ public class LoginUser implements Serializable{
 //		return userId;
 //	}
 	
+	public Long getUserId() {
+		return userId;
+	}
+	
 	public String getUserName() {
         return userName;
     }

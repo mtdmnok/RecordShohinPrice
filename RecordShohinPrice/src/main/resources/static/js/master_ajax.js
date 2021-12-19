@@ -51,11 +51,20 @@ function OnButtonClick() {
 			return;
 		}
 		console.log(data);
+		// すでにあるテーブルデータを削除いておく
+		let tbl = document.getElementById("resistTable");
+		// テーブル行数取得
+		let rowNum = tbl.rows.length;
+		if(rowNum > 2){
+			for(i=1; i<rowNum - 1; i++){
+				tbl.deleteRow(1);
+			}
+		}
 		// データをテーブルタグに表示
 		const tableList = JSON.parse(data);
 		console.log(Object.keys(data).length);
 		console.log(JSON.parse(tableList[0][0])["name"]);
-		let i = 0;
+//		let i = 0;
 		for(i=0; i<tableList.length; i++){
 			var seq = i + 1;
 			var txtSeq = "txt" + String(seq);
@@ -69,7 +78,7 @@ function OnButtonClick() {
 			//trTag.append($("<td></td>").text(decodeURI(JSON.parse(tableList[i]).shop_name));
 			trTag.append("<td><input type= \"text\" value= \"" + decodeURI(JSON.parse(tableList[i][0])["name"])+ "\"" + "id=" + txtSeq +" style=\"border: none;\" readOnly></input></td>")
 			trTag.append("<input type= \"hidden\" value= \"" + decodeURI(JSON.parse(tableList[i][1])["id"])+ "\"" + "id=" + txtSeq +" readOnly></input>")
-			trTag.append("<td><input class=\"edtbtn\" type=\"button\" id=\"" + btnSeq + "\"value=\"編集\" onclick=\"editRow(this)\"</td>");
+			trTag.append("<td><input class=\"edtbtn\" name=\"edtbtn\" type=\"button\" id=\"" + btnSeq + "\"value=\"編集\" onclick=\"editRow(this)\"</td>");
             $('#resistTable').append(trTag);
 		}
 		// Ajaxが異常終了した場合

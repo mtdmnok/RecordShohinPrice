@@ -10,6 +10,6 @@ import com.example.demo.entity.ItemEntity;
 
 public interface ItemRepository extends JpaRepository<ItemEntity, Long>{
 
-	@Query(value = "SELECT * FROM m_item where item LIKE :item", nativeQuery = true)
+	@Query(value = "SELECT * FROM m_item where item LIKE BINARY :item", nativeQuery = true)
 	public List<ItemEntity> findItem(@Param("item") String item);
 }

@@ -24,6 +24,6 @@ public interface UserRepository extends JpaRepository<LoginUser, Integer>{
 	@Query(value = "SELECT * FROM m_shop where user_name LIKE :user_name", nativeQuery = true)
 	public List<LoginUser> findLikeUser(@Param("user_name") String user_name);
 	
-//	@Query(value = "SELECT * FROM m_user where user_name LIKE :user_name", nativeQuery = true)
-//	public List<LoginUser> findUserName(@Param("user_name") String user_name);
+	@Query(value = "SELECT * FROM m_user where user_name LIKE BINARY :user_name", nativeQuery = true)
+	public List<LoginUser> findUserName(@Param("user_name") String user_name);
 }

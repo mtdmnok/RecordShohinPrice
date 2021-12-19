@@ -18,6 +18,9 @@ $(function(){
 		} else if(radioval == 4){
 			$('table#resistTable tbody tr th:nth-child(2)').text('ユーザー名');
 		}
+		// 編集ボタン押下不可にする
+		var edtBtn = document.getElementsByClassName("edtbtn")
+		edtBtn.disabled = true;
 	});
 });
 
