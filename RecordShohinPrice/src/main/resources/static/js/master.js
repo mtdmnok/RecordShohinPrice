@@ -18,9 +18,17 @@ $(function(){
 		} else if(radioval == 4){
 			$('table#resistTable tbody tr th:nth-child(2)').text('ユーザー名');
 		}
+		// 編集ボタンの数
+		var numOfEdtbtn = document.getElementsByClassName("edtbtn").length;
 		// 編集ボタン押下不可にする
-		var edtBtn = document.getElementsByClassName("edtbtn")
-		edtBtn.disabled = true;
+		for(i=1; i<=numOfEdtbtn; i++){
+			var btnId = "edtBtn" + i
+			document.getElementById(btnId).setAttribute("disabled", true);
+		}
+		// 登録ボタンを押下不可にする
+		document.getElementById("registerBtn").setAttribute("disabled", true);
+		// 修正ボタンを押下不可にする
+		document.getElementById("correctBtn").setAttribute("disabled", true);
 	});
 });
 

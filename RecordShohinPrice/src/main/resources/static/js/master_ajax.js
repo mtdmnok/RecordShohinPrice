@@ -81,6 +81,14 @@ function OnButtonClick() {
 			trTag.append("<td><input class=\"edtbtn\" name=\"edtbtn\" type=\"button\" id=\"" + btnSeq + "\"value=\"編集\" onclick=\"editRow(this)\"</td>");
             $('#resistTable').append(trTag);
 		}
+		// 登録ボタンを押下可にする
+		if (document.getElementById("registerBtn").disabled === true){
+			document.getElementById("registerBtn").removeAttribute("disabled");
+		}
+		//修正ボタンを押下可にする
+		if (document.getElementById("correctBtn").disabled === true){
+			document.getElementById("correctBtn").removeAttribute("disabled");
+		}
 		// Ajaxが異常終了した場合
 	}).fail(function(jqXHR, textStatus, errorThrown ) {
 		alert("エラーが発生してデータ取得できませんでした");
