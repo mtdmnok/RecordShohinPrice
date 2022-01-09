@@ -172,77 +172,14 @@ public class MasterController {
 			}
 			return getJson(mapList);	
 		}
-			
-
-			
-			
-			
-		// 一旦コメントアウト
-//		//店舗の場合
-//		if (selectRadioItem.equals("1")) {
-//			List<ShopEntity> targetRecordList = shopRepository.findShop("%" + inputItem + "%");
-//			if(targetRecordList == null || targetRecordList.size() == 0) {
-//				return null;
-//			}
-//			for(ShopEntity targetList : targetRecordList) {
-//				// エンコード
-//				targetList.setShop_id(encode(targetList.getShop_id()));
-//				targetList.setShop_name(encode(targetList.getShop_name()));
-//			}
-//			
-//			return getJsonShop(targetRecordList);
-//			
-//		} else if (selectRadioItem.equals("2")) {
-//			//品目の場合
-//			List<CategoryEntity> targetRecordList = categoryRepository.findCategory("%" + inputItem + "%");
-//			if(targetRecordList == null || targetRecordList.size() == 0) {
-//				return null;
-//			}
-//			for(CategoryEntity targetList : targetRecordList) {
-//				// エンコード
-//				targetList.setCategory_id(encode(targetList.getCategory_id()));
-//				targetList.setCategory(encode(targetList.getCategory()));
-//			}
-//			return getJsonCategory(targetRecordList);
-//			
-//		} else if (selectRadioItem.equals("3")) {
-//			//商品名の場合
-//			List<ItemEntity> targetRecordList = itemRepository.findItem("%" + inputItem + "%");
-//			if(targetRecordList == null || targetRecordList.size() == 0) {
-//				return null;
-//			}
-//			for(ItemEntity targetList : targetRecordList) {
-//				// エンコード
-//				targetList.setItem_id(encode(targetList.getItem_id()));
-//				targetList.setItem(encode(targetList.getItem()));
-//			}
-//			return getJsonItem(targetRecordList);
-//			
-//		} else if (selectRadioItem.equals("4")) {
-//			//ユーザー名の場合
-//			List<LoginUser> targetRecordList = userRepository.findLikeUser("%" + inputItem + "%");
-//			if(targetRecordList == null || targetRecordList.size() == 0) {
-//				return null;
-//			}
-//			for(LoginUser targetList : targetRecordList) {
-//				// エンコード
-//				targetList.setUserName(encode(targetList.getUserName()));
-//			}
-//			return getJsonUser(targetRecordList);
-//		}
-//		
-		
-
-		
-		//検索用
-//		model.addAttribute("shop", shopRepository.findAll());
-//		model.addAttribute("category", categoryRepository.findAll());
-//		model.addAttribute("item", itemRepository.findAll());
-//		model.addAttribute("user", userRepository.findAll());
-//		model.addAttribute("selectRadioItem", radioItem);
-		
-		//List<RecordEntity> targetRecordList = masterDao.findRecord(shopId, categoryId, itemId);) {
-		//return "master";
+		return null;
+	}
+	
+	/*
+	 * 修正処理
+	 * */
+	@GetMapping(value = "/correctMaster")
+	public String result() {
 		return null;
 	}
 	
