@@ -28,7 +28,7 @@ $(function(){
 		// 登録ボタンを押下不可にする
 		document.getElementById("registerBtn").setAttribute("disabled", true);
 		// 修正ボタンを押下不可にする
-		document.getElementById("correctBtn").setAttribute("disabled", true);
+//		document.getElementById("correctBtn").setAttribute("disabled", true);
 	});
 });
 
